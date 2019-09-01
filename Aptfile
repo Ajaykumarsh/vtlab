@@ -1,4 +1,3 @@
-build-essential
 binutils
 libc6
 libcc1-0
@@ -21,3 +20,4 @@ bison
 libisl15
 libisl-dev
 make
+build-essential
