@@ -1,14 +1,14 @@
 <?php
     
-    putenv("PATH=E:\Other\Language\CodeBlocks\MinGW\bin");
+    putenv("PATH=/usr/bin:/usr/lib");
 	$CC="gcc";
-	$out="a.exe";
+	$out="a.out";
 	$code=$_POST["code"];
 	$input=$_POST["input"];
 	$filename_code="main.c";
 	$filename_in="input.txt";
 	$filename_error="error.txt";
-	$executable="a.exe";
+	$executable="a.out";
 	$command=$CC." -lm ".$filename_code;	
 	$command_error=$command." 2>".$filename_error;
 
@@ -21,8 +21,8 @@
 	$file_in=fopen($filename_in,"w+");
 	fwrite($file_in,$input);
 	fclose($file_in);
-	exec("cacls  $executable /g everyone:f"); 
-	exec("cacls  $filename_error /g everyone:f");	
+	exec("chmod a+x $executable"); 
+	//exec("cacls  $filename_error /g everyone:f");	
 
 	shell_exec($command_error);
 	$error=file_get_contents($filename_error);
