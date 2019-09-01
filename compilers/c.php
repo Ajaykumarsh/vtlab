@@ -27,7 +27,7 @@
 
 	shell_exec($command_error);
 	$error=file_get_contents($filename_error);
-	
+	exec("chmod a+x $executable");
 	if(trim($error)=="")
 	{
 		if(trim($input)=="")
@@ -50,12 +50,14 @@
 		echo "<pre>$error</pre>";
 		if(trim($input)=="")
 		{
-			$output=shell_exec($out);
+			exec("chmod a+x $executable"); 
+			$output=shell_exec('./a.out');
 		}
 		else
 		{
+			exec("chmod a+x $executable"); 
 			$out=$out." < ".$filename_in;
-			$output=shell_exec($out);
+			$output=shell_exec('./a.out < '.$filename_in);
 		}
 		echo "<label class=\"writeCode\">Error</label><br><br><pre class=\"GrayBlock\">$output</pre>";
 		// echo "$output";
