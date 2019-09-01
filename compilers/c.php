@@ -1,7 +1,7 @@
 <?php
     
-    putenv("PATH=/usr/bin:/usr/lib:/app/.apt/usr/include:/app/.apt");
-	$CC="gcc";
+    putenv("PATH=/usr/bin:/usr/lib:/app/.apt/usr/include");
+	$CC="gcc --sysroot=/app/.apt";
 	shell_exec("chmod a+x $CC"); 
 	$out="a.out";
 	$code=$_POST["code"];
