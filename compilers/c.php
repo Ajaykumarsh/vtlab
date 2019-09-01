@@ -2,7 +2,7 @@
     
     putenv("PATH=/usr/bin:/usr/lib:/app/.apt/usr/include:/app/.apt/usr/lib");
 	$CC="gcc --sysroot=/app/.apt/";
-	shell_exec('cp /lib/* -r /app/.apt/lib/'); 
+	//shell_exec('cp /lib/* -r /app/.apt/lib/'); 
 	$out="a.out";
 	$code=$_POST["code"];
 	$input=$_POST["input"];
@@ -22,20 +22,22 @@
 	$file_in=fopen($filename_in,"w+");
 	fwrite($file_in,$input);
 	fclose($file_in);
-	exec("chmod a+x $executable"); 
+	
 	//exec("cacls  $filename_error /g everyone:f");	
 
 	shell_exec($command_error);
 	$error=file_get_contents($filename_error);
-
+	
 	if(trim($error)=="")
 	{
 		if(trim($input)=="")
 		{
+			exec("chmod a+x $executable"); 
 			$output=shell_exec($out);
 		}
 		else
 		{
+			exec("chmod a+x $executable"); 
 			$out=$out." < ".$filename_in;
 			$output=shell_exec($out);
 		}
