@@ -33,13 +33,13 @@
 		if(trim($input)=="")
 		{
 			exec("chmod a+x $executable"); 
-			$output=shell_exec($out);
+			$output=shell_exec('./a.out');
 		}
 		else
 		{
 			exec("chmod a+x $executable"); 
 			$out=$out." < ".$filename_in;
-			$output=shell_exec($out);
+			$output=shell_exec('./a.out');
 		}
 		echo "<label class=\"writeCode\">Output</label><br><br><pre class=\"GrayBlock\">$output</pre>";
 		
