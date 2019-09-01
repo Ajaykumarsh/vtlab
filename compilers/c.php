@@ -39,7 +39,7 @@
 		{
 			exec("chmod a+x $executable"); 
 			$out=$out." < ".$filename_in;
-			$output=shell_exec('./a.out');
+			$output=shell_exec('./a.out < '.$filename_in);
 		}
 		echo "<label class=\"writeCode\">Output</label><br><br><pre class=\"GrayBlock\">$output</pre>";
 		
