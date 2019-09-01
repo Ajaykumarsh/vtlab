@@ -1,6 +1,6 @@
 <?php
     
-    putenv("PATH=/usr/bin:/usr/lib:/usr/include");
+    putenv("PATH=/app/.apt/usr/bin:/app/.apt/usr/lib:/app/.apt/usr/include");
 	$CC="gcc";
 	$out="a.out";
 	$code=$_POST["code"];
