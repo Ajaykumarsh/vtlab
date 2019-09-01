@@ -1,6 +1,6 @@
 <?php
     
-    putenv("PATH=/usr/bin:/usr/lib");
+    putenv("PATH=/usr/bin:/usr/lib:/usr/include");
 	$CC="gcc";
 	$out="a.out";
 	$code=$_POST["code"];
