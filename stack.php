@@ -4,11 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <script src="js/jquery-3.4.1.min.js"></script>
   <link rel="stylesheet" href="css/Semantic/semantic.min.css">
-  <script src="css/Semantic/semantic.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/components/accordion.min.js"></script>
+  <script src="js/jquery-3.4.1.min.js"></script>
   <script src="js/script.js"></script>
   <link rel="stylesheet" href="css/home.css">
+  <title>Stack Operations</title>
   <style type="text/css" >
     #editor { 
         position: absolute;
@@ -19,7 +20,6 @@
        
     }
 </style>
-<title>Stack Operations</title>
 </head>
 <body>
   <h1 class="ui header" style="text-align:center" id = "head">
@@ -56,7 +56,7 @@
       <a class="item" id="prereq">
         Theory
       </a>
-      <a class="item" target="_blank" id="list">
+      <a class="item" id="list">
         Compiler
       </a>
       <a class="item" id="faq">
@@ -73,6 +73,27 @@
         There are many real-life examples of a stack. Consider an example of plates stacked over one another in the canteen. The plate which is at the top is the first one to be removed, i.e. the plate which has been placed at the bottommost position remains in the stack for the longest period of time. So, it can be simply seen to follow LIFO(Last In First Out)/FILO(First In Last Out) order.
       </div>
       
+      <div id="pre" style="display: none;">
+        <div class="ui bulleted list">
+          <div class="item">
+          Stack is a linear data structure which follows a particular order in which the operations are performed. The order may be LIFO(Last In First Out) or FILO(First In Last Out).
+          Mainly the following three basic operations are performed in the stack:<br><br>
+            
+            <div class="GrayBlock">
+              <div class="item"><strong>Push:</strong> Adds an item in the stack. If the stack is full, then it is said to be an Overflow condition. (Insert)</div>
+              <div class="item"><strong>Pop:</strong> Removes an item from the stack. The items are popped in the reversed order in which they are pushed. If the stack is empty, then it is said to be an Underflow condition. (Delete)</div>
+              <div class="item"><strong>Display:</strong> Displays the content of the stack.</div>
+            </div></div>
+            <br>
+            <img src="images/stack.png">
+            <br>
+            <div class="item">
+              Stacks are implemented using arrays or Linked Lists. Stacks are Easy to implement and Memory is saved as pointers are not involved. But, it is not dynamic. It doesn’t grow and shrink depending on needs at runtime.
+            </div>
+          </div>
+          <br>
+      </div>
+      
       <div id="lis" style="display: none;">
       <div class="ui form">
         <div id="compilerData">
@@ -84,59 +105,46 @@
          The Integer denotes the value to Insert into the stack.<br>
          Note: The program ends only when a character which is not any of the above options is entered.<br><br>
          <strong>Output Format:</strong><br>
-         Prints one/multiple array of integers, denoting the composition of the stack.<br><br>
-         <div class="ui segment">
-         <div class="ui two column very relaxed grid">
-              <div class="column">
-                <strong>Sample Input</strong><br>
-                a<br>5<br>a<br>8<br>b<br>a<br>7<br>c<br>q
-              </div>
-              <div class="column">
-                <strong>Sample Output</strong><br>
-                7 5<br>
-              </div>
-         </div>
-         <div class="ui vertical divider">and</div>
-         </div>
+         Prints one/multiple array of integers, denoting the composition of the stack.<br> 
         </div><br>
+       
+
+
         
           <form action="compile.php" id="form" name="f2" method="POST" ><br>
           <label class="writeCode">Write Your Code</label><br><br>
-          <div class="ui large segment" style="height:500px;">
-	<div id="editor">/*Type your code here: */
+          <!-- <div class="ui  large segment"  id="editor" style="height:500px;"> -->
+          <!-- <textarea class="field codeBlock"  id="editor" name="code" rows="10" cols="50">
 #include&lt;stdio.h&gt;
 void main()
 {
-int num;
-char ch;
-for(;;) {
-scanf("%c",&ch);
-if(ch=='a') {
-//Insert or push code;
+
+}</textarea><br><br> -->
+
+<div class="ui large segment" style="height:500px;">
+<div id="editor">/*Type your code here: */
+#include&lt;stdio.h&gt;
+void main()
+{
+
 }
-else if(ch=='b') {
-//Pop code;
-}
-else if(ch=='c') {
-//Display code;
-}
-else break;
-}
-}
+
 </div>
+
 </div>
 <div>
 <textarea name="editor" style="display: none;" >
 </div>
 <textarea style="display: none;"></textarea>
-          <input type="hidden" name="extra" value="Content of the extra variable" >
-          <button class="ui left floated button" onclick="myFunction()">Custom Input</button>
+
+<button class="ui left floated button" onclick="myFunction()">Custom Input</button>
           <div id="inputs" style="display:None;">
           <br><br>
           <label for="in" class="writeCode"><br>Enter Your Input</label><br><br>
           <textarea class="field codeBlock" name="input" rows="10" cols="50"></textarea><br><br><br>
           </div>
 
+        
           <input type="submit" id="st" class="ui left floated button" value="Run Code" onclick="myFunction2()">
           <input type="submit" id="subb" class="ui left floated button" value="Submit" onclick="myFunction2()"><br><br><br>
 
@@ -146,15 +154,7 @@ else break;
           $(document).ready(function(){
             $("#st").click(function(){
                   $("#outputBox").html("<div class=\"writeCode\">Loading ......</div>");
-                  document.f2.extra.value = "runn";
-            });
-          });
-          </script>
-          <script type="text/javascript">
-          $(document).ready(function(){
-            $("#subb").click(function(){
-                  $("#outputBox").html("<div class=\"writeCode\">Loading ......</div>");
-                  document.f2.extra.value = "subb";
+                  // var code=editor.getValue();
             });
           });
           </script>
@@ -165,7 +165,7 @@ else break;
               $('form').on('submit', function(e){
                 //prevent form from submitting and leaving page
                 e.preventDefault();
-
+                 
                 // AJAX 
                 $.ajax({
                       type: "POST", //type of submit
@@ -182,14 +182,14 @@ else break;
               });
           });
           </script>
-           <br>
+          <br>
           <div id="outputBox" style="display:None;">Output:<br><br>
           <div name="output"></div><br>
           </div>
           </div>
 
       </div>
-      <br>
+      
       <div id="faqs" style="display: none;">
         <form name="Quiz1">
           <p>1. Yes?<br>
@@ -257,9 +257,7 @@ else break;
       
     </div>
   </div>
-</div>
-  </div>
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.3.3/ace.js" type="text/javascript" charset="utf-8"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.3.3/ace.js" type="text/javascript" charset="utf-8"></script>
 <script>
     var editor = ace.edit("editor");
     editor.setTheme("ace/theme/twilight");
@@ -268,6 +266,11 @@ else break;
 editor.getSession().on("change", function () {
     textarea.val(editor.getSession().getValue());
 });
+  //  function getcodeVal(){
+  //   var code = editor.getValue();
+  //   console.log(code);
+  //  }
 </script>
+  
 </body>
 </html>
