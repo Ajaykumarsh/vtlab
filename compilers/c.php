@@ -50,7 +50,7 @@
 			if($output==$fout) $output="Test case passed.";
 			else $output="Test case failed.";
 		}
-		echo "<label class=\"writeCode\">Output</label><br><br><pre class=\"GrayBlock\">$output</pre>";
+		echo "<label class=\"writeCode\">Output</label><br><br><pre class=\"GrayBlock\">$output $fout</pre>";
 		
         // echo "<textarea id='div' class=\"form-control\" name=\"output\" rows=\"10\" cols=\"50\">$output</textarea><br><br>";
 	}
