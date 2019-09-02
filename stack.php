@@ -104,9 +104,10 @@
 #include&lt;stdio.h&gt;
 void main()
 {
+// Your code goes here
 
 }</textarea><br><br>
-
+          <input type="hidden" name="extra" value="Content of the extra variable" >
           <button class="ui left floated button" onclick="myFunction()">Custom Input</button>
           <div id="inputs" style="display:None;">
           <br><br>
@@ -115,7 +116,7 @@ void main()
           </div>
 
           <input type="submit" id="st" class="ui left floated button" value="Run Code" onclick="myFunction2()">
-          <input type="submit" id="subb" class="ui left floated button" value="Submit" onclick="myFunction2()"><br><br><br>
+          <input type="submit" id="subb" class="ui left floated button" value="Submit" method="POST" action="submit.php"><br><br><br>
 
           </form>
 
@@ -123,6 +124,15 @@ void main()
           $(document).ready(function(){
             $("#st").click(function(){
                   $("#outputBox").html("<div class=\"writeCode\">Loading ......</div>");
+                  document.myform.extra.value = "run";
+            });
+          });
+          </script>
+          <script type="text/javascript">
+          $(document).ready(function(){
+            $("#subb").click(function(){
+                  $("#outputBox").html("<div class=\"writeCode\">Loading ......</div>");
+                  document.myform.extra.value = "subb";
             });
           });
           </script>

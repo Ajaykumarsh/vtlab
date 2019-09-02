@@ -19,9 +19,13 @@
 	$file_code=fopen($filename_code,"w+");
 	fwrite($file_code,$code);
 	fclose($file_code);
-	$file_in=fopen($filename_in,"w+");
+	if($runcode){$file_in=fopen($filename_in,"w+");
 	fwrite($file_in,$input);
-	fclose($file_in);
+	fclose($file_in);}
+	else
+	{
+	$filename_in="./inputs/stackin.txt";
+	}
 	
 	//exec("cacls  $filename_error /g everyone:f");	
 
@@ -30,7 +34,7 @@
 	exec("chmod a+x $executable");
 	if(trim($error)=="")
 	{
-		if(trim($input)=="")
+		if(trim($input)=="" && $runcode)
 		{
 			exec("chmod a+x $executable"); 
 			$output=shell_exec('./a.out');
@@ -48,7 +52,7 @@
 	else if(!strpos($error,"error"))
 	{
 		echo "<pre>$error</pre>";
-		if(trim($input)=="")
+		if(trim($input)=="" && $runcode)
 		{
 			exec("chmod a+x $executable"); 
 			$output=shell_exec('./a.out');

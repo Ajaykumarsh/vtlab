@@ -1,30 +1,17 @@
 <?php
 
 	$languageID="c";
-        error_reporting(0);
-
-
-	if($_FILES["file"]["name"]!="")
+    error_reporting(0);
+    $runcode=1;
+	if($_POST["extra"]=="subb")
 	{
-		include "compilers/make.php";
+		$runcode=0;
 	}
 	else
 	{
-		switch($languageID)
-			{
-				case "c":
-				{
-					include("compilers/c.php");
-					break;
-				}
-				
-				case "java":
-				{	
-					include("compilers/java.php");
-					break;
-				}
-			}
+		$runcode=1;
 	}
+	include("compilers/c.php");
 ?>
 
 
