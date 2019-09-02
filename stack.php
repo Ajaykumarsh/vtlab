@@ -144,7 +144,7 @@ void main()
           <textarea class="field codeBlock" name="input" rows="10" cols="50"></textarea><br><br><br>
           </div>
 
-        
+        <input type="hidden" name="extra" value="Content of the extra variable" >
           <input type="submit" id="st" class="ui left floated button" value="Run Code" onclick="myFunction2()">
           <input type="submit" id="subb" class="ui left floated button" value="Submit" onclick="myFunction2()"><br><br><br>
 
@@ -154,7 +154,15 @@ void main()
           $(document).ready(function(){
             $("#st").click(function(){
                   $("#outputBox").html("<div class=\"writeCode\">Loading ......</div>");
-                  // var code=editor.getValue();
+                  document.f2.extra.value = "runn";
+            });
+          });
+          </script>
+          <script type="text/javascript">
+          $(document).ready(function(){
+            $("#subb").click(function(){
+                  $("#outputBox").html("<div class=\"writeCode\">Loading ......</div>");
+                  document.f2.extra.value = "subb";
             });
           });
           </script>
