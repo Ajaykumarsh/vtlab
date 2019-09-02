@@ -12,7 +12,7 @@
 	$executable="a.out";
 	$command=$CC." -lm ".$filename_code;	
 	$command_error=$command." 2>".$filename_error;
-
+	//$filename_out="./outputs/stackout.txt";
 	//if(trim($code)=="")
 	//die("The code area is empty");
 	
@@ -25,6 +25,9 @@
 	else
 	{
 	$filename_in="./inputs/stackin.txt";
+	$filename_out=fopen("./outputs/stackout.txt", "r");
+	$fout=fread($filename_out,filesize("./outputs/stackout.txt"));
+	fclose($filename_out);
 	}
 	
 	//exec("cacls  $filename_error /g everyone:f");	
@@ -44,6 +47,8 @@
 			exec("chmod a+x $executable"); 
 			$out=$out." < ".$filename_in;
 			$output=shell_exec('./a.out < '.$filename_in);
+			if($output==$fout) $output="Test case passed.";
+			else $output="Test case failed."
 		}
 		echo "<label class=\"writeCode\">Output</label><br><br><pre class=\"GrayBlock\">$output</pre>";
 		
