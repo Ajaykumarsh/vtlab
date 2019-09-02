@@ -110,23 +110,13 @@
         
           <form action="compile.php" id="form" name="f2" method="POST" ><br>
           <label class="writeCode">Write Your Code</label><br><br>
-          <div class="ui large segment" style="height:500px;">
-<div id="editor">
-
-
+          <textarea class="field codeBlock" name="code" rows="10" cols="50">
 #include&lt;stdio.h&gt;
 void main()
 {
+// Your code goes here
 
-}
-
-</div>
-
-</div>
-<div>
-<textarea name="editor" style="display: none;" >
-</div>
-<textarea style="display: none;"></textarea><br><br>
+}</textarea><br><br>
           <input type="hidden" name="extra" value="Content of the extra variable" >
           <button class="ui left floated button" onclick="myFunction()">Custom Input</button>
           <div id="inputs" style="display:None;">
