@@ -5,21 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="css/Semantic/semantic.min.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/components/accordion.min.js"></script>
   <script src="js/jquery-3.4.1.min.js"></script>
+  <script src="css/Semantic/semantic.min.js"></script>
   <script src="js/script.js"></script>
+  <script src="js/questions.js"></script>
   <link rel="stylesheet" href="css/home.css">
   <title>Stack Operations</title>
-  <style type="text/css" >
-    #editor { 
-        position: absolute;
-        top: 0;
-        right: 10px;
-        bottom: 0;
-        left: 0;
-       
-    }
-</style>
+  
 </head>
 <body>
   <h1 class="ui header" style="text-align:center" id = "head">
@@ -32,13 +24,14 @@
   <a class="header item" href="index.php">
     Home
   </a>
+  <a class="item" href="datastructures.php">
+    Data Structures
+  </a>
  <a class="item">
     About Us
   </a> 
-   <!-- <a class="item">
-    Item
-  </a>
-  <a class="item">
+   
+  <!-- <a class="item">
     Item
   </a> -->
 </div>
@@ -56,7 +49,7 @@
       <a class="item" id="prereq">
         Theory
       </a>
-      <a class="item" id="list">
+      <a class="item" target="_blank" id="list">
         Compiler
       </a>
       <a class="item" id="faq">
@@ -85,7 +78,7 @@
               <div class="item"><strong>Display:</strong> Displays the content of the stack.</div>
             </div></div>
             <br>
-            <img src="images/stack.png">
+            <img id="theoryImage" src="images/stack.png">
             <br>
             <div class="item">
               Stacks are implemented using arrays or Linked Lists. Stacks are Easy to implement and Memory is saved as pointers are not involved. But, it is not dynamic. It doesn’t grow and shrink depending on needs at runtime.
@@ -107,8 +100,21 @@
          <strong>Output Format:</strong><br>
          Prints one/multiple array of integers, denoting the composition of the stack.<br> 
         </div><br>
-       
 
+        <div class="ui segment">
+         <div class="ui two column very relaxed grid">
+              <div class="column">
+                <strong>Sample Input</strong><br>
+                a<br>5<br>a<br>8<br>b<br>a<br>7<br>c<br>q
+              </div>
+              <div class="column">
+                <strong>Sample Output</strong><br>
+                5 &emsp; 7<br>
+              </div>
+         </div>
+         <div class="ui vertical divider">and</div>
+         </div>
+        </div><br>
 
         
           <form action="compile.php" id="form" name="f2" method="POST" ><br>
@@ -150,7 +156,7 @@ void main()
 
           </form>
 
-          <script type="text/javascript">
+         <script type="text/javascript">
           $(document).ready(function(){
             $("#st").click(function(){
                   $("#outputBox").html("<div class=\"writeCode\">Loading ......</div>");
@@ -199,7 +205,7 @@ void main()
       </div>
       
       <div id="faqs" style="display: none;">
-        <form name="Quiz1">
+      <form name="Quiz1">
           <p>1. Yes?<br>
             <label><input type="radio" name="q1" value="Ok">Ok</label><br>
             <label><input type="radio" name="q1" value="Sure">Sure</label><br>
@@ -254,16 +260,16 @@ void main()
             <label><input type="radio" name="q8" value="Sure">Sure</label><br>
             <label><input type="radio" name="q8" value="Kewl">Kewl</label><br>
             <label><input type="radio" name="q8" value="Aythu">Aythu</label><br>
-            <span id="q8"></span>
-          </p><br>
+            <span id="q8"></span><br>
           <input type="submit" id="quizSub" class="ui left floated button" value="Submit" onclick="quizCorrection()">
-        </form><br><br>
-        <div id="result"></div>
+        </form>
         </div>
       </div>
       </div>
       
     </div>
+  </div>
+</div>
   </div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.3.3/ace.js" type="text/javascript" charset="utf-8"></script>
 <script>
