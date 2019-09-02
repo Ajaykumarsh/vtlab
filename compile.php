@@ -2,8 +2,9 @@
 
 	$languageID="c";
     error_reporting(0);
-    $runcode=1;
-	if($_POST["extra"]=="subb")
+    $runcode=0;
+    $val=$_POST["extra"];
+	if($val=="subb")
 	{
 		$runcode=0;
 	}

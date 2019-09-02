@@ -124,7 +124,7 @@ void main()
           $(document).ready(function(){
             $("#st").click(function(){
                   $("#outputBox").html("<div class=\"writeCode\">Loading ......</div>");
-                  document.form.extra.value = "run";
+                  document.f2.extra.value = "runn";
             });
           });
           </script>
@@ -132,7 +132,7 @@ void main()
           $(document).ready(function(){
             $("#subb").click(function(){
                   $("#outputBox").html("<div class=\"writeCode\">Loading ......</div>");
-                  document.form.extra.value = "subb";
+                  document.f2.extra.value = "subb";
             });
           });
           </script>
