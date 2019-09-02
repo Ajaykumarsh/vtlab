@@ -48,7 +48,7 @@
 			$out=$out." < ".$filename_in;
 			$output=shell_exec('./a.out < '.$filename_in);
 			if($output==$fout) $output="Test case passed.";
-			else $output="Test case failed."
+			else $output="Test case failed.";
 		}
 		echo "<label class=\"writeCode\">Output</label><br><br><pre class=\"GrayBlock\">$output</pre>";
 		
