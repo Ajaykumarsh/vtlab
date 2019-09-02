@@ -37,18 +37,20 @@
 	exec("chmod a+x $executable");
 	if(trim($error)=="")
 	{
-		if(trim($input)=="" && $runcode)
+		if($runcode)
 		{
 			exec("chmod a+x $executable"); 
 			$output=shell_exec('./a.out');
+			if(trim($input)!="")
+				$output=shell_exec('./a.out < '.$filename_in);
 		}
-		else
+		else 
 		{
 			exec("chmod a+x $executable"); 
 			$out=$out." < ".$filename_in;
 			$output=shell_exec('./a.out < '.$filename_in);
-			if($output==$fout) $output="Test case passed.";
-			else $output="Test case failed.";
+			//if($output==$fout) $output="Test case passed.";
+			//else $output="Test case failed.";
 		}
 		echo "<label class=\"writeCode\">Output</label><br><br><pre class=\"GrayBlock\">$output $fout</pre>";
 		
