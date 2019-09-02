@@ -9,7 +9,17 @@
   <script src="js/jquery-3.4.1.min.js"></script>
   <script src="js/script.js"></script>
   <link rel="stylesheet" href="css/home.css">
-  <title>Stack Operations</title>
+  <style type="text/css" >
+    #editor { 
+        position: absolute;
+        top: 0;
+        right: 10px;
+        bottom: 0;
+        left: 0;
+       
+    }
+</style>
+<title>Stack Operations</title>
 </head>
 <body>
   <h1 class="ui header" style="text-align:center" id = "head">
@@ -100,13 +110,23 @@
         
           <form action="compile.php" id="form" name="f2" method="POST" ><br>
           <label class="writeCode">Write Your Code</label><br><br>
-          <textarea class="field codeBlock" name="code" rows="10" cols="50">
+          <div class="ui large segment" style="height:500px;">
+<div id="editor">
+
+
 #include&lt;stdio.h&gt;
 void main()
 {
-// Your code goes here
 
-}</textarea><br><br>
+}
+
+</div>
+
+</div>
+<div>
+<textarea name="editor" style="display: none;" >
+</div>
+<textarea style="display: none;"></textarea><br><br>
           <input type="hidden" name="extra" value="Content of the extra variable" >
           <button class="ui left floated button" onclick="myFunction()">Custom Input</button>
           <div id="inputs" style="display:None;">
