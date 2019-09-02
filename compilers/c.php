@@ -79,8 +79,8 @@
 	{
 		echo "<label class=\"writeCode\">Error</label><br><br><pre class=\"GrayBlock\">$error</pre>";
 	}
-	exec("del $filename_code");
-	exec("del *.o");
-	exec("del *.txt");
-	exec("del $executable");
+	exec("rm $filename_code");
+	exec("rm *.o");
+	exec("rm *put.txt");
+	exec("rm $executable");
 ?>
