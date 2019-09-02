@@ -93,7 +93,7 @@
               </div>
               <div class="column">
                 <strong>Sample Output</strong><br>
-                5 &emsp; 7<br>
+                7 5<br>
               </div>
          </div>
          <div class="ui vertical divider">and</div>

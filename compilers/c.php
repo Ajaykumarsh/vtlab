@@ -70,7 +70,7 @@
 			$out=$out." < ".$filename_in;
 			$output=shell_exec('./a.out < '.$filename_in);
 		}
-		echo "<label class=\"writeCode\">Error</label><br><br><pre class=\"GrayBlock\">$output $input</pre>";
+		echo "<label class=\"writeCode\">Error</label><br><br><pre class=\"GrayBlock\">$output</pre>";
 		// echo "$output";
 				//echo "<textarea id='div' class=\"form-control\" name=\"output\" rows=\"10\" cols=\"50\">$output</textarea><br><br>";
 		
