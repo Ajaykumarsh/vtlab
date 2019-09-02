@@ -89,6 +89,10 @@
       display: none;
   }
 
+  #theoryImage {
+    width: 100%;
+  }
+
   /* Compiler id's and classes */
 
   #compilerHead {
@@ -112,6 +116,15 @@
     margin-left: 25px;
     margin-right: auto;
     display: inline-block;
+  }
+
+  #editor { 
+      position: absolute;
+      top: 0;
+      right: 10px;
+      bottom: 0;
+      left: 0;
+      
   }
   
   @media screen and (max-width:500px){
@@ -142,6 +155,10 @@
       font-size:20px;
       display: block;
       margin: 8px;
+    }
+
+    #outputBox {
+      margin-top: 25px;
     }
   }
   
