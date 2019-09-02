@@ -116,7 +116,7 @@ void main()
           </div>
 
           <input type="submit" id="st" class="ui left floated button" value="Run Code" onclick="myFunction2()">
-          <input type="submit" id="subb" class="ui left floated button" value="Submit" method="POST" action="submit.php"><br><br><br>
+          <input type="submit" id="subb" class="ui left floated button" value="Submit"><br><br><br>
 
           </form>
 
