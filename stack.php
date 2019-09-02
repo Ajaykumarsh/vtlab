@@ -73,27 +73,6 @@
         There are many real-life examples of a stack. Consider an example of plates stacked over one another in the canteen. The plate which is at the top is the first one to be removed, i.e. the plate which has been placed at the bottommost position remains in the stack for the longest period of time. So, it can be simply seen to follow LIFO(Last In First Out)/FILO(First In Last Out) order.
       </div>
       
-      <div id="pre" style="display: none;">
-        <div class="ui bulleted list">
-          <div class="item">
-          Stack is a linear data structure which follows a particular order in which the operations are performed. The order may be LIFO(Last In First Out) or FILO(First In Last Out).
-          Mainly the following three basic operations are performed in the stack:<br><br>
-            
-            <div class="GrayBlock">
-              <div class="item"><strong>Push:</strong> Adds an item in the stack. If the stack is full, then it is said to be an Overflow condition. (Insert)</div>
-              <div class="item"><strong>Pop:</strong> Removes an item from the stack. The items are popped in the reversed order in which they are pushed. If the stack is empty, then it is said to be an Underflow condition. (Delete)</div>
-              <div class="item"><strong>Display:</strong> Displays the content of the stack.</div>
-            </div></div>
-            <br>
-            <img src="images/stack.png">
-            <br>
-            <div class="item">
-              Stacks are implemented using arrays or Linked Lists. Stacks are Easy to implement and Memory is saved as pointers are not involved. But, it is not dynamic. It doesn’t grow and shrink depending on needs at runtime.
-            </div>
-          </div>
-          <br>
-      </div>
-      
       <div id="lis" style="display: none;">
       <div class="ui form">
         <div id="compilerData">
@@ -105,7 +84,20 @@
          The Integer denotes the value to Insert into the stack.<br>
          Note: The program ends only when a character which is not any of the above options is entered.<br><br>
          <strong>Output Format:</strong><br>
-         Prints one/multiple array of integers, denoting the composition of the stack.<br> 
+         Prints one/multiple array of integers, denoting the composition of the stack.<br><br>
+         <div class="ui segment">
+         <div class="ui two column very relaxed grid">
+              <div class="column">
+                <strong>Sample Input</strong><br>
+                a<br>5<br>a<br>8<br>b<br>a<br>7<br>c<br>q
+              </div>
+              <div class="column">
+                <strong>Sample Output</strong><br>
+                5 &emsp; 7<br>
+              </div>
+         </div>
+         <div class="ui vertical divider">and</div>
+         </div>
         </div><br>
         
           <form action="compile.php" id="form" name="f2" method="POST" ><br>
@@ -115,9 +107,22 @@
 #include&lt;stdio.h&gt;
 void main()
 {
-
+int num;
+char ch;
+for(;;) {
+scanf("%c",&ch);
+if(ch=='a') {
+//Insert or push code;
 }
-
+else if(ch=='b') {
+//Pop code;
+}
+else if(ch=='c') {
+//Display code;
+}
+else break;
+}
+}
 </div>
 </div>
 <div>
