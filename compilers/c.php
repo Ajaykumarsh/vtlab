@@ -4,7 +4,7 @@
 	$CC="gcc --sysroot=/app/.apt/ -w";
 	//shell_exec('cp /lib/* -r /app/.apt/lib/'); 
 	$out="a.out";
-	$code=$_POST["code"];
+	$code=$_POST["editor"];
 	$input=$_POST["input"];
 	$filename_code="main.c";
 	$filename_in="input.txt";

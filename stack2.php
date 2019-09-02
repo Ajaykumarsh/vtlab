@@ -8,18 +8,9 @@
   <script src="css/Semantic/semantic.min.js"></script>
   <script src="js/jquery-3.4.1.min.js"></script>
   <script src="js/script.js"></script>
+  <script src="js/questions.js"></script>
   <link rel="stylesheet" href="css/home.css">
-  <style type="text/css" >
-    #editor { 
-        position: absolute;
-        top: 0;
-        right: 10px;
-        bottom: 0;
-        left: 0;
-       
-    }
-</style>
-<title>Stack Operations</title>
+  <title>Stack Operations</title>
 </head>
 <body>
   <h1 class="ui header" style="text-align:center" id = "head">
@@ -105,26 +96,45 @@
          The Integer denotes the value to Insert into the stack.<br>
          Note: The program ends only when a character which is not any of the above options is entered.<br><br>
          <strong>Output Format:</strong><br>
-         Prints one/multiple array of integers, denoting the composition of the stack.<br> 
+         Prints one/multiple array of integers, denoting the composition of the stack.<br><br>
+         <div class="ui segment">
+         <div class="ui two column very relaxed grid">
+              <div class="column">
+                <strong>Sample Input</strong><br>
+                a<br>5<br>a<br>8<br>b<br>a<br>7<br>c<br>q
+              </div>
+              <div class="column">
+                <strong>Sample Output</strong><br>
+                5 &emsp; 7<br>
+              </div>
+         </div>
+         <div class="ui vertical divider">and</div>
+         </div>
         </div><br>
         
           <form action="compile.php" id="form" name="f2" method="POST" ><br>
           <label class="writeCode">Write Your Code</label><br><br>
-          <div class="ui large segment" style="height:500px;">
-	<div id="editor">/*Type your code here: */
+          <textarea class="field codeBlock" name="code" rows="10" cols="50">
 #include&lt;stdio.h&gt;
 void main()
 {
-
+int num;
+char ch;
+for(;;) {
+scanf("%c",&ch);
+if(ch=='a') {
+//Insert or push code;
 }
+else if(ch=='b') {
+//Pop code;
+}
+else if(ch=='c') {
+//Display code;
+}
+else break;
+}
+}</textarea><br><br>
 
-</div>
-</div>
-<div>
-<textarea name="editor" style="display: none;" >
-</div>
-<textarea style="display: none;"></textarea>
-          <input type="hidden" name="extra" value="Content of the extra variable" >
           <button class="ui left floated button" onclick="myFunction()">Custom Input</button>
           <div id="inputs" style="display:None;">
           <br><br>
@@ -133,7 +143,7 @@ void main()
           </div>
 
           <input type="submit" id="st" class="ui left floated button" value="Run Code" onclick="myFunction2()">
-          <input type="submit" id="subb" class="ui left floated button" value="Submit"><br><br><br>
+          <input type="submit" id="subb" class="ui left floated button" value="Submit" onclick="myFunction2()"><br><br><br>
 
           </form>
 
@@ -141,15 +151,6 @@ void main()
           $(document).ready(function(){
             $("#st").click(function(){
                   $("#outputBox").html("<div class=\"writeCode\">Loading ......</div>");
-                  document.f2.extra.value = "runn";
-            });
-          });
-          </script>
-          <script type="text/javascript">
-          $(document).ready(function(){
-            $("#subb").click(function(){
-                  $("#outputBox").html("<div class=\"writeCode\">Loading ......</div>");
-                  document.f2.extra.value = "subb";
             });
           });
           </script>
@@ -177,14 +178,14 @@ void main()
               });
           });
           </script>
-           <br>
+          <br>
           <div id="outputBox" style="display:None;">Output:<br><br>
           <div name="output"></div><br>
           </div>
           </div>
 
       </div>
-      <br>
+      
       <div id="faqs" style="display: none;">
         <form name="Quiz1">
           <p>1. Yes?<br>
@@ -254,15 +255,6 @@ void main()
   </div>
 </div>
   </div>
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.3.3/ace.js" type="text/javascript" charset="utf-8"></script>
-<script>
-    var editor = ace.edit("editor");
-    editor.setTheme("ace/theme/twilight");
-    editor.session.setMode("ace/mode/c_cpp");
-    var textarea = $('textarea[name="editor"]');
-editor.getSession().on("change", function () {
-    textarea.val(editor.getSession().getValue());
-});
-</script>
+  
 </body>
 </html>

@@ -46,7 +46,7 @@
        </div>
          <div class="content">
            <span class="CardBody">
-             Contains 12 Experiments On Data Structures in C Programming Language
+             Contains 6 Experiments On Data Structures in C Programming Language
            </span>
            <br><br>
            <a class="ui button" href="datastructures.php" >Go</a>
@@ -58,17 +58,17 @@
         <div class="ui raised card" id="car2">
        <div class="content" id="Card2">
       <div class="header">
-         <a href="datastructures.php" >
+         <a href="OopsWithJava.php" >
              OOPS With Java Laboratory
          </a>
       </div>
        </div>
          <div class="content">
            <span class="CardBody">
-             Contains 12 Experiments On Object Oriented Programming in Java
+             Contains 10 Experiments On Object Oriented Programming in Java
            </span>
            <br><br>
-           <a class="ui button" href="datastructures.php" >Go</a>
+           <a class="ui button" href="OopsWithJava.php" >Go</a>
          </div>
     </div>
     </div>
