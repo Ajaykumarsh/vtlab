@@ -98,18 +98,18 @@
          The Integer denotes the value to Insert into the stack.<br>
          Note: The program ends only when a character which is not any of the above options is entered.<br><br>
          <strong>Output Format:</strong><br>
-         Prints one/multiple array of integers, denoting the composition of the stack.<br> 
+         Print one/more array of integers, denoting the composition of the stack.<br> 
         </div><br>
 
         <div class="ui segment">
          <div class="ui two column very relaxed grid">
               <div class="column">
                 <strong>Sample Input</strong><br>
-                a<br>5<br>a<br>8<br>b<br>a<br>7<br>c<br>q
+                a 5<br>a 8<br>c<br>b<br>a 7<br>c<br>q
               </div>
               <div class="column">
                 <strong>Sample Output</strong><br>
-                5 &emsp; 7<br>
+                8 5 <br>7 5 <br>
               </div>
          </div>
          <div class="ui vertical divider">and</div>

@@ -1,9 +1,9 @@
 <?php
 
-    putenv("PATH=C:\Program Files (x86)\Java\jdk1.8.0_112\bin");
+    putenv("PATH=/app/.jdk/bin");
 	$CC="javac";
 	$out="java Main";
-	$code=$_POST["code"];
+	$code=$_POST["editor"];
 	$input=$_POST["input"];
 	$filename_code="Main.java";
 	$filename_in="input.txt";

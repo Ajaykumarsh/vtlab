@@ -1,10 +1,10 @@
 <?php
 
-	$languageID="c";
+	$languageID=$_POST["lang"];
     error_reporting(0);
     $runcode=0;
     $val=$_POST["extra"];
-	if($val=="subb")
+    if($val=="subb")
 	{
 		$runcode=0;
 	}
@@ -12,7 +12,12 @@
 	{
 		$runcode=1;
 	}
-	include("compilers/c.php");
+    if ($languageID=="c")
+    {
+		include("compilers/c.php");
+	}
+	else
+		include("compilers/java.php");
 ?>
 
 
