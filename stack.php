@@ -134,9 +134,7 @@ void main()
 {
 
 }
-
 </div>
-
 </div>
 <div>
 <textarea name="editor" style="display: none;" >
@@ -208,60 +206,71 @@ void main()
       
       <div id="faqs" style="display: none;">
       <form name="Quiz1">
-          <p>1. Yes?<br>
-            <label><input type="radio" name="q1" value="Ok">Ok</label><br>
-            <label><input type="radio" name="q1" value="Sure">Sure</label><br>
-            <label><input type="radio" name="q1" value="Kewl">Kewl</label><br>
-            <label><input type="radio" name="q1" value="Aythu">Aythu</label><br>
+          <p>1. The term Push and Pop is related to<br>
+            <label><input type="radio" name="q1" value="stack">Stack</label><br>
+            <label><input type="radio" name="q1" value="Queue">Queue</label><br>
+            <label><input type="radio" name="q1" value="Both">Both</label><br>
+            <label><input type="radio" name="q1" value="None">None</label><br>
             <span id="q1"></span>
           </p><br>
-          <p>2. Yes?<br>
-            <label><input type="radio" name="q2" value="Ok">Ok</label><br>
-            <label><input type="radio" name="q2" value="Sure">Sure</label><br>
-            <label><input type="radio" name="q2" value="Kewl">Kewl</label><br>
-            <label><input type="radio" name="q2" value="Aythu">Aythu</label><br>
+          <p>2.Choose correct output for the following sequence of operations <br>   
+           push(5)<br>
+push(8)<br>
+pop <br>
+push(2)<br>
+push(5)<br>
+pop<br>
+pop<br>
+pop<br>
+push(1)<br>
+pop<br>
+            <label><input type="radio" name="q2" value="85521">8 5 5 2 1</label><br>
+            <label><input type="radio" name="q2" value="85251">8 5 2 5 1</label><br>
+            <label><input type="radio" name="q2" value="82551">8 2 5 5 1</label><br>
+            <label><input type="radio" name="q2" value="82515">8 2 5 1 5</label><br>
             <span id="q2"></span>
           </p><br>
-          <p>3. Yes?<br>
-            <label><input type="radio" name="q3" value="Ok">Ok</label><br>
-            <label><input type="radio" name="q3" value="Sure">Sure</label><br>
-            <label><input type="radio" name="q3" value="Kewl">Kewl</label><br>
-            <label><input type="radio" name="q3" value="Aythu">Aythu</label><br>
+          <p>3. Stack can be implemented using _________ and ________ ?
+<br>
+            <label><input type="radio" name="q3" value="Array and Binary tree">Array and Binary tree</label><br>
+            <label><input type="radio" name="q3" value="Linked List and Graph">Linked List and Graph</label><br>
+            <label><input type="radio" name="q3" value="Array and Linked List">Array and Linked List</label><br>
+            <label><input type="radio" name="q3" value="Queue and Linked List">Queue and Linked List</label><br>
             <span id="q3"></span>
           </p><br>
-          <p>4. Yes?<br>
-            <label><input type="radio" name="q4" value="Ok">Ok</label><br>
-            <label><input type="radio" name="q4" value="Sure">Sure</label><br>
-            <label><input type="radio" name="q4" value="Kewl">Kewl</label><br>
-            <label><input type="radio" name="q4" value="Aythu">Aythu</label><br>
+          <p>4. Stack data structure cannot be used for<br>
+            <label><input type="radio" name="q4" value="Allocation Resources and Scheduling">Allocation Resources and Scheduling</label><br>
+            <label><input type="radio" name="q4" value="Implementation of Recursive funtion">Implementation of Recursive funtion</label><br>
+            <label><input type="radio" name="q4" value="Reversing String">Reversing String</label><br>
+            <label><input type="radio" name="q4" value="Evaluation of string in postfix form">Evaluation of string in postfix form</label><br>
             <span id="q4"></span>
           </p><br>
-          <p>5. Yes?<br>
-            <label><input type="radio" name="q5" value="Ok">Ok</label><br>
-            <label><input type="radio" name="q5" value="Sure">Sure</label><br>
-            <label><input type="radio" name="q5" value="Kewl">Kewl</label><br>
-            <label><input type="radio" name="q5" value="Aythu">Aythu</label><br>
+          <p>5. Which of the following datastructure is non linear?<br>
+            <label><input type="radio" name="q5" value="Graph">Graph</label><br>
+            <label><input type="radio" name="q5" value="Stack">Stack</label><br>
+            <label><input type="radio" name="q5" value="List">List</label><br>
+            <label><input type="radio" name="q5" value="None of the above">None of the above</label><br>
             <span id="q5"></span>
           </p><br>
-          <p>6. Yes?<br>
-            <label><input type="radio" name="q6" value="Ok">Ok</label><br>
-            <label><input type="radio" name="q6" value="Sure">Sure</label><br>
-            <label><input type="radio" name="q6" value="Kewl">Kewl</label><br>
-            <label><input type="radio" name="q6" value="Aythu">Aythu</label><br>
+          <p>6. Which of the following datastructure is  linear type?<br>
+            <label><input type="radio" name="q6" value="Binary tree">Binary tree</label><br>
+            <label><input type="radio" name="q6" value="Trees">Trees</label><br>
+            <label><input type="radio" name="q6" value="Graph">Graph</label><br>
+            <label><input type="radio" name="q6" value="Stack">Stack</label><br>
             <span id="q6"></span>
           </p><br>
-          <p>7. Yes?<br>
-            <label><input type="radio" name="q7" value="Ok">Ok</label><br>
-            <label><input type="radio" name="q7" value="Sure">Sure</label><br>
-            <label><input type="radio" name="q7" value="Kewl">Kewl</label><br>
-            <label><input type="radio" name="q7" value="Aythu">Aythu</label><br>
+          <p>7. Which of the datastructures cant store the nonhomogenous dataelements<br>
+            <label><input type="radio" name="q7" value="Array">Array</label><br>
+            <label><input type="radio" name="q7" value="stack">Stack</label><br>
+            <label><input type="radio" name="q7" value="Records">Records</label><br>
+            <label><input type="radio" name="q7" value="None of the above">None of the above</label><br>
             <span id="q7"></span>
           </p><br>
-          <p>8. Yes?<br>
-            <label><input type="radio" name="q8" value="Ok">Ok</label><br>
-            <label><input type="radio" name="q8" value="Sure">Sure</label><br>
-            <label><input type="radio" name="q8" value="Kewl">Kewl</label><br>
-            <label><input type="radio" name="q8" value="Aythu">Aythu</label><br>
+          <p>8. The data structure required to check whether an expression contains balanced parenthesis is?<br>
+            <label><input type="radio" name="q8" value="Stack">Stack</label><br>
+            <label><input type="radio" name="q8" value="Queue">Queue</label><br>
+            <label><input type="radio" name="q8" value="Array">Array</label><br>
+            <label><input type="radio" name="q8" value="Tree">Tree</label><br>
             <span id="q8"></span><br>
           <input type="submit" id="quizSub" class="ui left floated button" value="Submit" onclick="quizCorrection()">
         </form><br><br>

@@ -20,9 +20,22 @@
 	$file_code=fopen($filename_code,"w+");
 	fwrite($file_code,$code);
 	fclose($file_code);
-	if($runcode){$file_in=fopen($filename_in,"w+");
-	fwrite($file_in,$input);
-	fclose($file_in);}
+	if($runcode)
+	{
+	if(trim($input)!="")
+	{
+		$file_in=fopen($filename_in,"w+");
+		fwrite($file_in,$input);
+		fclose($file_in);
+		}
+		else
+		{
+		$filename_in="./inputs/run".$pname."in.txt";
+		$filename_out=fopen("./outputs/run".$pname."out.txt", "r");
+		$fout=fread($filename_out,filesize("./outputs/".$pname."out.txt"));
+		fclose($filename_out);
+		}
+	}
 	else
 	{
 	$filename_in="./inputs/".$pname."in.txt";
@@ -41,14 +54,13 @@
 		if($runcode)
 		{
 			exec("chmod a+x $executable"); 
-			$output=shell_exec('./a.out');
-			if(trim($input)!="")
-				$output=shell_exec('./a.out < '.$filename_in);
+			$output=shell_exec('./a.out < '.$filename_in);
+			if($output==$fout) $output="Sample case passed.";
+			else $output="Sample case failed.";
 		}
 		else 
 		{
 			exec("chmod a+x $executable"); 
-			$out=$out." < ".$filename_in;
 			$output=shell_exec('./a.out < '.$filename_in);
 			if($output==$fout) $output="Test case passed.";
 			else $output="Test case failed.";
