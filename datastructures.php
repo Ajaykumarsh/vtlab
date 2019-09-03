@@ -67,7 +67,7 @@
         <div class="ui bulleted list">
           <a class="item" href="stack.php">Operations on Stack</a>
           <a class="item" href="queue.php">Operations on Queue</a>
-          <a class="item" href="#">Operations on Singly Linked List</a>
+          <a class="item" href="singlylinkedlist.php">Operations on Singly Linked List</a>
           <a class="item" href="#">Operations on Doubly Linked List</a>
           <a class="item" href="#">Binary Tree</a>
           <a class="item" href="#">Preorder Traversal in Binary Search Tree</a>
