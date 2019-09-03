@@ -4,6 +4,7 @@
 	$CC="gcc --sysroot=/app/.apt/ -w";
 	//shell_exec('cp /lib/* -r /app/.apt/lib/'); 
 	$out="a.out";
+	$pname=$_POST["prog"];
 	$code=$_POST["editor"];
 	$input=$_POST["input"];
 	$filename_code="main.c";
@@ -24,9 +25,9 @@
 	fclose($file_in);}
 	else
 	{
-	$filename_in="./inputs/stackin.txt";
-	$filename_out=fopen("./outputs/stackout.txt", "r");
-	$fout=fread($filename_out,filesize("./outputs/stackout.txt"));
+	$filename_in="./inputs/".$pname."in.txt";
+	$filename_out=fopen("./outputs/".$pname."out.txt", "r");
+	$fout=fread($filename_out,filesize("./outputs/".$pname."out.txt"));
 	fclose($filename_out);
 	}
 	

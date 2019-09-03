@@ -20,15 +20,19 @@
 	$file_code=fopen($filename_code,"w+");
 	fwrite($file_code,$code);
 	fclose($file_code);
-	$file_in=fopen($filename_in,"w+");
+	if($runcode){$file_in=fopen($filename_in,"w+");
 	fwrite($file_in,$input);
-	fclose($file_in);
-	exec("cacls  $executable /g everyone:f"); 
-	exec("cacls  $filename_error /g everyone:f");	
-
+	fclose($file_in);}
+	else
+	{
+	$filename_in="./inputs/".$pname."in.txt";
+	$filename_out=fopen("./outputs/".$pname."out.txt", "r");
+	$fout=fread($filename_out,filesize("./outputs/".$pname."out.txt"));
+	fclose($filename_out);
+	}
 	shell_exec($command_error);
 	$error=file_get_contents($filename_error);
-
+	
 	if(trim($error)=="")
 	{
 		if(trim($input)=="")
