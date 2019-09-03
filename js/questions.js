@@ -58,4 +58,7 @@ function quizCorrection() {
     }
     var percentage = Math.round(count*10000)/8;
     document.getElementById('result').innerHTML = "Result: " + percentage/100 + "%<br>Correct: " + count + "<br>Wrong: " + (8-count);
+    $('input[type=submit]').click(function() {
+    $(this).attr('disabled', 'disabled');
+    $(this).parents('form').submit();
 }
