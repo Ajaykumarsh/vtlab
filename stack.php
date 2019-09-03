@@ -262,7 +262,9 @@ void main()
             <label><input type="radio" name="q8" value="Aythu">Aythu</label><br>
             <span id="q8"></span><br>
           <input type="submit" id="quizSub" class="ui left floated button" value="Submit" onclick="quizCorrection()">
-        </form>
+        </form><br><br>
+        <div id="result">
+        </div>
         </div>
       </div>
       </div>

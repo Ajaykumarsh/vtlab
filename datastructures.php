@@ -105,5 +105,10 @@
   </div>
 </div>
   </div>
+  <script language='javascript'>
+             $(document).ready(function(){
+                $('.ui.accordion').accordion();
+             });
+</script>
 </body>
 </html>

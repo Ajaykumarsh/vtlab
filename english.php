@@ -95,6 +95,10 @@ It’s also the language of international communication, the media and the inter
   </div>
 </div>
   </div>
-  
+  <script language='javascript'>
+             $(document).ready(function(){
+                $('.ui.accordion').accordion();
+             });
+</script>
 </body>
 </html>
