@@ -153,6 +153,7 @@ void main()
           </div>
 
         <input type="hidden" name="extra" value="Content of the extra variable" >
+        <input type="hidden" name="lang" value="c" >
           <input type="submit" id="st" class="ui left floated button" value="Run Code" onclick="myFunction2()">
           <input type="submit" id="subb" class="ui left floated button" value="Submit" onclick="myFunction2()"><br><br><br>
 
