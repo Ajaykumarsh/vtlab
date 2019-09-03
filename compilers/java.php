@@ -55,7 +55,7 @@
 	}
 	else if(!strpos($error,"error"))
 	{
-		echo "<pre>$error</pre>";
+		//echo "<pre>$error</pre>";
 		if(trim($input)=="")
 		{
 			$output=shell_exec($out);
