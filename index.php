@@ -138,7 +138,7 @@
   <div class="ui inverted  large segment" id="footer">
     <div class="foot">
       <h1>
-        Follow us On Reddit, Instagram, Youtube and Twitter.
+        
       </h1>
 
     </div>
