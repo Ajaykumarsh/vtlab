@@ -38,7 +38,7 @@
 </div>
   <div class="ui container" id="cont">
     <h2 class="ui header" style="font-size:35px; margin-left:10px;">
-    Memorise Me!
+    Game of numbers
     </h2>
     <div class="ui stackable grid">
   <div class="four wide column">
@@ -64,12 +64,12 @@
       <div id="lis" style="display: none;">
       <div class="ui form">
         <div id="compilerData">
-        Arijit is a brilliant boy. He likes memory games. He likes to participate alone but this time he has to have a partner. So he chooses you.<br><br>
+        Gurudeep is a brilliant boy. He likes memory games. He likes to participate alone but this time he has to have a partner. So he chooses you.<br><br>
 
 In this Game , your team will be shown <strong>N numbers</strong> for few minutes . You will have to memorize these numbers.
 <br><br>
 Now, the questioner will ask you <strong>Q queries</strong>, in each query He will give you a number , and you have to tell him <strong>the total number of occurrences of that number in the array of numbers shown to your team </strong>. If the number is not present , then you will have to say <strong>“NOT PRESENT”</strong> (without quotes).<br><br>
-         <strong>Input and Output:</strong><br>
+         <strong>Input and Output:</strong><br><br>
          The first line of input will contain N, an integer, which is the total number of numbers shown to your team.<br><br>
 
 The second line of input contains N space separated integers .<br><br>
@@ -110,12 +110,24 @@ NOT PRESENT<br>
          <div class="ui vertical divider"></div>
          </div>
         </div><br>
+        <div><strong>Explanation</strong><br><br>
+The given array is (1,1,1,2,2,0) of size 6.
+<br><br>
+Total number of queries is 6 also.
+<br><br>
+For the first query i.e for 1 , the total of number of occurrences of 1 in the given array is 3 . Hence the corresponding output is 3.
+<br><br>
+For the second query i.e. for 2, the total of number of occurrences of 2 in the given array is 2 . Hence the corresponding output is 2.
+<br><br>
+For the fifth query i.e. for 3. 3 is not present in the array . So the corresponding output is "NOT PRESENT" (without quotes).
+<br><br>
+        </div>
 
         
           <form action="compile.php" id="form" name="f2" method="POST" ><br>
           <label class="writeCode" for="lang">Choose Language<br></label>
 
-            <select class="ui dropdown" name="language" style="margin-left: 30px;">
+            <select class="ui dropdown" name="lang" style="margin-left: 30px;">
             <option class="item" value="c">C</option>
             <option class="item" value="cpp">C++</option>
             <option class="item" value="java">Java</option>
@@ -145,7 +157,8 @@ NOT PRESENT<br>
           <textarea class="field codeBlock" name="input" rows="5" cols="80"></textarea><br><br><br>
           </div>
 
-        
+        <input type="hidden" name="extra" value="Content of the extra variable" >
+         <input type="hidden" name="prog" value="pr1">
           <input type="submit" id="st" class="ui left floated button" value="Run Code" onclick="myFunction2()">
           <input type="submit" id="subb" class="ui left floated button" value="Submit" onclick="myFunction2()"><br><br><br>
 
@@ -155,7 +168,15 @@ NOT PRESENT<br>
           $(document).ready(function(){
             $("#st").click(function(){
                   $("#outputBox").html("<div class=\"writeCode\">Loading ......</div>");
-                  // var code=editor.getValue();
+                  document.f2.extra.value = "runn";
+            });
+          });
+          </script>
+          <script type="text/javascript">
+          $(document).ready(function(){
+            $("#subb").click(function(){
+                  $("#outputBox").html("<div class=\"writeCode\">Loading ......</div>");
+                  document.f2.extra.value = "subb";
             });
           });
           </script>
