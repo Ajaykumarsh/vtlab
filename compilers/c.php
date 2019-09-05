@@ -22,8 +22,8 @@
 	fclose($file_code);
 	if($runcode)
 	{
-	if(trim($input)!="")
-	{
+		if(trim($input)!="")
+		{
 		$file_in=fopen($filename_in,"w+");
 		fwrite($file_in,$input);
 		fclose($file_in);
@@ -55,7 +55,8 @@
 		{
 			exec("chmod a+x $executable"); 
 			$output=shell_exec('./a.out < '.$filename_in);
-			if($output==$fout) $output="Sample case passed.";
+			if(trim($input)!=""){}
+			else if($output==$fout) $output="Sample case passed.";
 			else $output="Sample case failed.";
 		}
 		else 

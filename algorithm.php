@@ -58,7 +58,7 @@
     <div class="ui segment">
       
       <div id="int">
-      
+      Yo
       </div>
       
       <div id="lis" style="display: none;">
@@ -110,7 +110,7 @@ NOT PRESENT<br>
          <div class="ui vertical divider"></div>
          </div>
         </div><br>
-        <div><strong>Explanation</strong><br><br>
+        <div class="ui form"><strong>Explanation</strong><br><br>
 The given array is (1,1,1,2,2,0) of size 6.
 <br><br>
 Total number of queries is 6 also.
