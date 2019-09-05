@@ -46,10 +46,7 @@
       <a class="active item" id="intro">
         Introduction
       </a>
-      <a class="item" id="prereq">
-        Theory
-      </a>
-      <a class="item" target="_blank" id="list">
+      <a class="item" id="list">
         Compiler
       </a>
       <a class="item" id="faq">
@@ -64,34 +61,14 @@
       Algorithms have a long history and the word can be traced back to the 9th century. At this time the Persian scientist, astronomer and mathematician Abdullah Muhammad bin Musa al-Khwarizmi, often cited as “The father of Algebra”, was indirect responsible for the creation of the term “Algorithm”. In the 12th century one of his books was translated into Latin, where his name was rendered in Latin as “Algorithmi”.
       </div>
       
-      <div id="pre" style="display: none;">
-        <div class="ui bulleted list">
-          <div class="item">
-          Nowadays every person uses the word “Algorithm” as a matter of course, but for the most the exact definition is a mystery. <br><br>
-            
-            <div class="GrayBlock">
-              <div class="item"><strong>Step 1:</strong> We live in the age of information. Analysts are among those inundated with data. But with the aid of powerful computing techniques, analysts can make sense of volumes of data that come in many forms: text, numbers, images, video, audio.</div>
-              <div class="item"><strong>Step 2:</strong> Statisticians at Pacific Northwest National Laboratory are marrying computational power with statistical techniques to sift through all these forms of data together. Their work is being applied in a variety of areas, such as analyzing handwriting and identifying bioagents.</div>
-              <div class="item"><strong>Step 3:</strong> Whether clients come in with existing data or PNNL gathers the data, statisticians help uncover hidden information through exploratory analysis, grouping like kinds of information and extracting key features. Using systematic sampling and experimental design techniques, they ensure data are reliable and will support confident decisions.</div>
-            </div></div>
-            <br>
-            <img id="theoryImage" src="http://cs-exhibitions.uni-klu.ac.at/fileadmin/gdf/gdf01/timeline.png">
-            <br>
-            <div class="item">
-            "We take varying types of information, whether it's text, video or audio and turn it into mathematical representations. Once we have a mathematical representation, we can apply our statistical techniques of clustering and data analysis," said Brent Pulsipher, who manages PNNL's statistical and quantitative sciences group.
-            </div>
-          </div>
-          <br>
-      </div>
-      
       <div id="lis" style="display: none;">
       <div class="ui form">
         <div id="compilerData">
-        Arijit is a brilliant boy. He likes memory games. He likes to participate alone but this time he has to have a partner. So he chooses you.
+        Arijit is a brilliant boy. He likes memory games. He likes to participate alone but this time he has to have a partner. So he chooses you.<br>
 
-In this Game , your team will be shown N numbers for few minutes . You will have to memorize these numbers.
-
-Now, the questioner will ask you Q queries, in each query He will give you a number , and you have to tell him the total number of occurrences of that number in the array of numbers shown to your team . If the number is not present , then you will have to say “NOT PRESENT” (without quotes).<br><br>
+In this Game , your team will be shown <strong>N numbers</strong> for few minutes . You will have to memorize these numbers.
+<br>
+Now, the questioner will ask you <strong>Q queries</strong>, in each query He will give you a number , and you have to tell him <strong>the total number of occurrences of that number in the array of numbers shown to your team </strong>. If the number is not present , then you will have to say <strong>“NOT PRESENT”</strong> (without quotes).<br><br>
          <strong>Input and Output:</strong><br>
          The first line of input will contain N, an integer, which is the total number of numbers shown to your team.
 
@@ -112,6 +89,7 @@ isn’t present then Print “NOT PRESENT” (without quotes) on a new line.<br>
          <div class="ui two column very relaxed grid">
               <div class="column">
                 <strong>Sample Input</strong><br>
+                <pre>
                 6
 1 1 1 2 2 0
 6
@@ -121,15 +99,18 @@ isn’t present then Print “NOT PRESENT” (without quotes) on a new line.<br>
 0
 3
 4
+</pre>
               </div>
               <div class="column">
                 <strong>Sample Output</strong><br>
+                <pre>
                 3
 2
 3
 1
 NOT PRESENT
 NOT PRESENT<br>
+</pre>
               </div>
          </div>
          <div class="ui vertical divider">and</div>
@@ -144,26 +125,16 @@ NOT PRESENT<br>
             <option class="item" value="c">C</option>
             <option class="item" value="cpp">C++</option>
             <option class="item" value="java">Java</option>
-            <option class="item" value="python2.7">Python 2.7</option>
-            <option class="item" value="python3.2">Python 3.2</option>
+            <option class="item" value="py2">Python 2.7</option>
+            <option class="item" value="py3">Python 3.2</option>
             </select><br><br>
 
           <label class="writeCode">Write Your Code</label><br><br>
-          <!-- <div class="ui  large segment"  id="editor" style="height:500px;"> -->
-          <!-- <textarea class="field codeBlock"  id="editor" name="code" rows="10" cols="50">
-#include&lt;stdio.h&gt;
-void main()
-{
-
-}</textarea><br><br> -->
+          
 
 <div class="ui large segment" style="height:500px; font-size: 20px">
 <div id="editor">/*Type your code here: */
-#include&lt;stdio.h&gt;
-void main()
-{
 
-}
 
 </div>
 
