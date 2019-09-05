@@ -154,11 +154,11 @@ For the fifth query i.e. for 3. 3 is not present in the array . So the correspon
           <div id="inputs" style="display:None;">
           <br><br>
           <label for="in" class="writeCode"><br>Enter Your Input</label><br><br>
-          <textarea class="field codeBlock" name="input" rows="5" cols="80"></textarea><br><br><br>
+          <textarea class="field codeBlock" name="input" rows="5" cols="50"></textarea><br><br><br>
           </div>
 
         <input type="hidden" name="extra" value="Content of the extra variable" >
-         <input type="hidden" name="prog" value="pr1">
+         <input type="hidden" name="prog" value="problem1">
           <input type="submit" id="st" class="ui left floated button" value="Run Code" onclick="myFunction2()">
           <input type="submit" id="subb" class="ui left floated button" value="Submit" onclick="myFunction2()"><br><br><br>
 

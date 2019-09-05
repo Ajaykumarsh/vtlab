@@ -152,7 +152,7 @@
              Contains something related to the Pre-placement stuffs
            </span>
            <br><br>
-           <a class="ui button" href="english.php">Go</a>
+           <a class="ui button" href="placement.php">Go</a>
          </div>
   
       </div>

@@ -70,9 +70,9 @@
       
       <div id="lis" style="display: none;">
         <div class="ui bulleted list">
-          <a class="item" href="algorithm.php">First algorithm</a>
-          <a class="item" href="#">Overloading methods & Constructors,e</a>
-          <a class="item" href="#">Packages & Interfaces</a>
+          <a class="item" href="problem1.php">Problem-1</a>
+          <a class="item" href="problem2.php">Problem-2</a>
+          <a class="item" href="problem3.php">Problem-3</a>
           <a class="item" href="#">Exception Handling</a>
           <a class="item" href="#">Multithreaded Programming</a>
           <a class="item" href="#">Generics and String handling</a>
