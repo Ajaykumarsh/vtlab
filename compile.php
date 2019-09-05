@@ -16,6 +16,18 @@
     {
 		include("compilers/c.php");
 	}
+	else if($languageID=="cpp")
+	{
+		include("compilers/cpp.php");
+	}
+	else if($languageID=="py2")
+	{
+		include("compilers/py2.php");
+	}
+	else if($languageID=="py3")
+	{
+		include("compilers/py3.php");
+	}
 	else
 		include("compilers/java.php");
 ?>
