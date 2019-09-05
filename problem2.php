@@ -10,7 +10,7 @@
   <script src="js/script.js"></script>
   <script src="js/questions.js"></script>
   <link rel="stylesheet" href="css/home.css">
-  <title>Stack Operations</title>
+  <title>Problem 2</title>
   
 </head>
 <body>
@@ -38,7 +38,7 @@
 </div>
   <div class="ui container" id="cont">
     <h2 class="ui header" style="font-size:35px; margin-left:10px;">
-    Game of numbers
+    Bracket interpreter
     </h2>
     <div class="ui stackable grid">
   <div class="four wide column">
@@ -64,7 +64,7 @@
       <div id="lis" style="display: none;">
       <div class="ui form">
         <div id="compilerData">
-        A bracket is considered to be any one of the following characters: (, ), {, }, [, or ].
+        A bracket is considered to be any one of the following characters: <strong>(, ), {, }, [, or ]</strong>.
 <br><br>
 Two brackets are considered to be a matched pair if the an opening bracket (i.e., (, [, or {) occurs to the left of a closing bracket (i.e., ), ], or }) of the exact same type. There are three types of matched pairs of brackets: [], {},and ().
 <br><br>

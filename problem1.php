@@ -10,7 +10,7 @@
   <script src="js/script.js"></script>
   <script src="js/questions.js"></script>
   <link rel="stylesheet" href="css/home.css">
-  <title>Stack Operations</title>
+  <title>Problem 1</title>
   
 </head>
 <body>

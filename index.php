@@ -142,7 +142,7 @@
         <div class="ui raised card">
        <div class="content" id="Card5">
       <div class="header">
-         <a href="english.php" >
+         <a href="placement.php" >
              Pre-Placement Training
          </a>
       </div>
