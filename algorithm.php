@@ -38,7 +38,7 @@
 </div>
   <div class="ui container" id="cont">
     <h2 class="ui header" style="font-size:35px; margin-left:10px;">
-    First algorithm
+    Memorise Me!
     </h2>
     <div class="ui stackable grid">
   <div class="four wide column">
@@ -58,39 +58,34 @@
     <div class="ui segment">
       
       <div id="int">
-      Algorithms have a long history and the word can be traced back to the 9th century. At this time the Persian scientist, astronomer and mathematician Abdullah Muhammad bin Musa al-Khwarizmi, often cited as “The father of Algebra”, was indirect responsible for the creation of the term “Algorithm”. In the 12th century one of his books was translated into Latin, where his name was rendered in Latin as “Algorithmi”.
+      
       </div>
       
       <div id="lis" style="display: none;">
       <div class="ui form">
         <div id="compilerData">
-        Arijit is a brilliant boy. He likes memory games. He likes to participate alone but this time he has to have a partner. So he chooses you.<br>
+        Arijit is a brilliant boy. He likes memory games. He likes to participate alone but this time he has to have a partner. So he chooses you.<br><br>
 
 In this Game , your team will be shown <strong>N numbers</strong> for few minutes . You will have to memorize these numbers.
-<br>
+<br><br>
 Now, the questioner will ask you <strong>Q queries</strong>, in each query He will give you a number , and you have to tell him <strong>the total number of occurrences of that number in the array of numbers shown to your team </strong>. If the number is not present , then you will have to say <strong>“NOT PRESENT”</strong> (without quotes).<br><br>
          <strong>Input and Output:</strong><br>
-         The first line of input will contain N, an integer, which is the total number of numbers shown to your team.
+         The first line of input will contain N, an integer, which is the total number of numbers shown to your team.<br><br>
 
-The second line of input contains N space separated integers .
+The second line of input contains N space separated integers .<br><br>
 
-The third line of input contains an integer Q , denoting the total number of integers.
+The third line of input contains an integer Q , denoting the total number of integers.<br><br>
 
-The Next Q lines will contain an integer denoting an integer,
-, for which you have to print the number of occurrences of that number (
+The Next Q lines will contain an integer denoting an integer, Bi, for which you have to print the number of occurrences of that number (Bi) in those N numbers on a new line.<br><br>
 
-) in those N numbers on a new line.
-
-If the number
-isn’t present then Print “NOT PRESENT” (without quotes) on a new line.<br><br>
+If the number Bi isn’t present then Print “NOT PRESENT” (without quotes) on a new line.<br><br>
         </div><br>
 
         <div class="ui segment">
          <div class="ui two column very relaxed grid">
               <div class="column">
                 <strong>Sample Input</strong><br>
-                <pre>
-                6
+                <pre>6
 1 1 1 2 2 0
 6
 1
@@ -103,8 +98,7 @@ isn’t present then Print “NOT PRESENT” (without quotes) on a new line.<br>
               </div>
               <div class="column">
                 <strong>Sample Output</strong><br>
-                <pre>
-                3
+                <pre>3
 2
 3
 1
@@ -113,7 +107,7 @@ NOT PRESENT<br>
 </pre>
               </div>
          </div>
-         <div class="ui vertical divider">and</div>
+         <div class="ui vertical divider"></div>
          </div>
         </div><br>
 
