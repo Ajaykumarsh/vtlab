@@ -10,7 +10,7 @@
   <script src="js/script.js"></script>
   <script src="js/questions.js"></script>
   <link rel="stylesheet" href="css/home.css">
-  <title>Stack Operations</title>
+  <title>Queue Operations</title>
   
 </head>
 <body>
@@ -215,51 +215,61 @@ void main()
             <label><input type="radio" name="q1" value="Tree">Tree</label><br>
             <label><input type="radio" name="q1" value="Queue">Queue</label><br>
             <label><input type="radio" name="q1" value="Stack">Stack</label><br>
+            <span id="q1"></span>
           </p><br>
           <p>2.   A linear list of elements in which deletion can be done from one end (front) and insertion can take place only at the other end (rear) is known as a ?<br>
-            <label><input type="radio" name="q2" value="Queue ">Queue </label><br>
+            <label><input type="radio" name="q2" value="Queue">Queue </label><br>
             <label><input type="radio" name="q2" value="Stack">Stack</label><br>
             <label><input type="radio" name="q2" value="Tree">Tree</label><br>
             <label><input type="radio" name="q2" value="Linked list">Linked list</label><br>
+            <span id="q2"></span>
           </p><br>
           <p>3. A queue is a ??<br>
-            <label><input type="radio" name="q3" value="FIFO (First In First Out) list ">FIFO (First In First Out) list </label><br>
+            <label><input type="radio" name="q3" value="FIFO (First In First Out) list">FIFO (First In First Out) list </label><br>
             <label><input type="radio" name="q3" value="LIFO (Last In First Out) list.">LIFO (Last In First Out) list.</label><br>
             <label><input type="radio" name="q3" value="Ordered array">Ordered array</label><br>
             <label><input type="radio" name="q3" value="Linear tree">Linear tree</label><br>
+            <span id="q3"></span>
           </p><br>
           <p>4.   If the elements “A”, “B”, “C” and “D” are placed in a queue and are deleted one at a time, in what order will they be removed??<br>
             <label><input type="radio" name="q4" value="ABCD">ABCD</label><br>
             <label><input type="radio" name="q4" value="DCBA">DCBA</label><br>
             <label><input type="radio" name="q4" value="DCAB">DCAB</label><br>
             <label><input type="radio" name="q4" value="ABDC">ABDC</label><br>
+            <span id="q4"></span>
           </p><br>
           <p>5. In linked list implementation of a queue, where does a new element be inserted??<br>
             <label><input type="radio" name="q5" value="At the head of link list">At the head of link list</label><br>
             <label><input type="radio" name="q5" value="At the tail of the link list">At the tail of the link list</label><br>
             <label><input type="radio" name="q5" value="At the centre position in the link list">At the centre position in the link list</label><br>
             <label><input type="radio" name="q5" value="None">None</label><br>
+            <span id="q5"></span>
           </p><br>
           <p>6. In the array implementation of circular queue, which of the following operation take worst case linear time??<br>
             <label><input type="radio" name="q6" value="Insertion">Insertion</label><br>
             <label><input type="radio" name="q6" value="Deletion">Deletion</label><br>
             <label><input type="radio" name="q6" value="To empty a queue">To empty a queue</label><br>
             <label><input type="radio" name="q6" value="None">None</label><br>
+            <span id="q6"></span>
           </p><br>
           <p>7. In linked list implementation of queue, if only front pointer is maintained, which of the following operation take worst case linear time??<br>
             <label><input type="radio" name="q7" value="Insertion">Insertion</label><br>
             <label><input type="radio" name="q7" value="Deletion">Deletion</label><br>
             <label><input type="radio" name="q7" value="To empty a queue">To empty a queue</label><br>
             <label><input type="radio" name="q7" value="Both a) and c)">Both a) and c)</label><br>
+            <span id="q7"></span>
           </p><br>
           <p>8. A circular queue is implemented using an array of size 10. The array index starts with 0, front is 6, and rear is 9. The insertion of next element takes place at the array index.<br>
             <label><input type="radio" name="q8" value="0">0</label><br>
             <label><input type="radio" name="q8" value="7">7</label><br>
             <label><input type="radio" name="q8" value="9">9</label><br>
             <label><input type="radio" name="q8" value="10">10</label><br>
+            <span id="q8"></span>
           </p><br>
-          <input type="submit" id="quizSub" class="ui left floated button" value="Submit">
-        </form>
+          <input type="submit" id="quizSub" class="ui left floated button" value="Submit"  onclick="quizCorrection1()">
+        </form><br><br>
+        <div id="result">
+        </div>
         </div>
       </div>
       </div>

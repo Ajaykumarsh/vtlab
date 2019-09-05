@@ -58,68 +58,62 @@
     <div class="ui segment">
       
       <div id="int">
-      Pre-requisites: Arrays.
+      Pre-requisites: Stack, Arrays.
       </div>
       
       <div id="lis" style="display: none;">
       <div class="ui form">
         <div id="compilerData">
-        Gurudeep is a brilliant boy. He likes memory games. He likes to participate alone but this time he has to have a partner. So he chooses you.<br><br>
-
-In this Game , your team will be shown <strong>N numbers</strong> for few minutes . You will have to memorize these numbers.
+        A bracket is considered to be any one of the following characters: (, ), {, }, [, or ].
 <br><br>
-Now, the questioner will ask you <strong>Q queries</strong>, in each query He will give you a number , and you have to tell him <strong>the total number of occurrences of that number in the array of numbers shown to your team </strong>. If the number is not present , then you will have to say <strong>“NOT PRESENT”</strong> (without quotes).<br><br>
-         <strong>Input and Output:</strong><br><br>
-         The first line of input will contain N, an integer, which is the total number of numbers shown to your team.<br><br>
-
-The second line of input contains N space separated integers .<br><br>
-
-The third line of input contains an integer Q , denoting the total number of integers.<br><br>
-
-The Next Q lines will contain an integer denoting an integer, Bi, for which you have to print the number of occurrences of that number (Bi) in those N numbers on a new line.<br><br>
-
-If the number Bi isn’t present then Print “NOT PRESENT” (without quotes) on a new line.<br><br>
+Two brackets are considered to be a matched pair if the an opening bracket (i.e., (, [, or {) occurs to the left of a closing bracket (i.e., ), ], or }) of the exact same type. There are three types of matched pairs of brackets: [], {},and ().
+<br><br>
+A matching pair of brackets is not balanced if the set of brackets it encloses are not matched. For example, {[(])} is not balanced because the contents in between { and } are not balanced. The pair of square brackets encloses a single, unbalanced opening bracket, (, and the pair of parentheses encloses a single, unbalanced closing square bracket, ].
+<br><br>
+By this logic, we say a sequence of brackets is balanced if the following conditions are met:
+<br><br>
+It contains no unmatched brackets.
+The subset of brackets enclosed within the confines of a matched pair of brackets is also a matched pair of brackets.<br><br>
+Given n strings of brackets, determine whether each sequence of 
+brackets is balanced. If a string is balanced, return YES. Otherwise, return NO.<br><br>
+         <strong>Input:</strong><br><br>
+         The first line contains a single integer n, the number of strings. 
+<br><br>
+Each of the next n lines contains a single string s, a sequence of brackets.<br><br>
+<strong>Output:</strong><br><br>
+For each string, print YES or NO.
         </div><br>
 
         <div class="ui segment">
          <div class="ui two column very relaxed grid">
               <div class="column">
                 <strong>Sample Input</strong><br>
-                <pre>6
-1 1 1 2 2 0
-6
-1
-2
-1
-0
-3
-4
+                <pre>3
+{[()]}
+{[(])}
+{{[[(())]]}}
 </pre>
               </div>
               <div class="column">
                 <strong>Sample Output</strong><br>
-                <pre>3
-2
-3
-1
-NOT PRESENT
-NOT PRESENT<br>
+                <pre>YES
+NO
+YES<br>
 </pre>
               </div>
          </div>
          <div class="ui vertical divider"></div>
          </div>
         </div><br>
-        <div class="ui form"><strong>Explanation</strong><br><br>
-The given array is (1,1,1,2,2,0) of size 6.
+        <div class="ui form"><strong>Explanation:</strong><br><br>
+
+
+1.The string {[()]} meets both criteria for being a balanced string, so we print YES on a new line.
 <br><br>
-Total number of queries is 6 also.
+2.The string {[(])} is not balanced because the brackets enclosed by the matched pair { and } are not balanced: [(]).
 <br><br>
-For the first query i.e for 1 , the total of number of occurrences of 1 in the given array is 3 . Hence the corresponding output is 3.
-<br><br>
-For the second query i.e. for 2, the total of number of occurrences of 2 in the given array is 2 . Hence the corresponding output is 2.
-<br><br>
-For the fifth query i.e. for 3. 3 is not present in the array . So the corresponding output is "NOT PRESENT" (without quotes).
+3.The string {{[[(())]]}} meets both criteria for being a balanced string, so we print YES on a new line.
+
 <br><br>
         </div>
 
@@ -158,7 +152,7 @@ For the fifth query i.e. for 3. 3 is not present in the array . So the correspon
           </div>
 
         <input type="hidden" name="extra" value="Content of the extra variable" >
-         <input type="hidden" name="prog" value="problem1">
+         <input type="hidden" name="prog" value="problem2">
           <input type="submit" id="st" class="ui left floated button" value="Run Code" onclick="myFunction2()">
           <input type="submit" id="subb" class="ui left floated button" value="Submit" onclick="myFunction2()"><br><br><br>
 
