@@ -46,10 +46,7 @@
       <a class="active item" id="intro">
         Introduction
       </a>
-      <a class="item" id="prereq">
-        Theory
-      </a>
-      <a class="item" target="_blank" id="list">
+      <a class="item" id="list">
         Compiler
       </a>
       <a class="item" id="faq">
@@ -62,26 +59,6 @@
       
       <div id="int">
       Algorithms have a long history and the word can be traced back to the 9th century. At this time the Persian scientist, astronomer and mathematician Abdullah Muhammad bin Musa al-Khwarizmi, often cited as “The father of Algebra”, was indirect responsible for the creation of the term “Algorithm”. In the 12th century one of his books was translated into Latin, where his name was rendered in Latin as “Algorithmi”.
-      </div>
-      
-      <div id="pre" style="display: none;">
-        <div class="ui bulleted list">
-          <div class="item">
-          Nowadays every person uses the word “Algorithm” as a matter of course, but for the most the exact definition is a mystery. <br><br>
-            
-            <div class="GrayBlock">
-              <div class="item"><strong>Step 1:</strong> We live in the age of information. Analysts are among those inundated with data. But with the aid of powerful computing techniques, analysts can make sense of volumes of data that come in many forms: text, numbers, images, video, audio.</div>
-              <div class="item"><strong>Step 2:</strong> Statisticians at Pacific Northwest National Laboratory are marrying computational power with statistical techniques to sift through all these forms of data together. Their work is being applied in a variety of areas, such as analyzing handwriting and identifying bioagents.</div>
-              <div class="item"><strong>Step 3:</strong> Whether clients come in with existing data or PNNL gathers the data, statisticians help uncover hidden information through exploratory analysis, grouping like kinds of information and extracting key features. Using systematic sampling and experimental design techniques, they ensure data are reliable and will support confident decisions.</div>
-            </div></div>
-            <br>
-            <img id="theoryImage" src="http://cs-exhibitions.uni-klu.ac.at/fileadmin/gdf/gdf01/timeline.png">
-            <br>
-            <div class="item">
-            "We take varying types of information, whether it's text, video or audio and turn it into mathematical representations. Once we have a mathematical representation, we can apply our statistical techniques of clustering and data analysis," said Brent Pulsipher, who manages PNNL's statistical and quantitative sciences group.
-            </div>
-          </div>
-          <br>
       </div>
       
       <div id="lis" style="display: none;">
@@ -144,26 +121,16 @@ NOT PRESENT<br>
             <option class="item" value="c">C</option>
             <option class="item" value="cpp">C++</option>
             <option class="item" value="java">Java</option>
-            <option class="item" value="python2.7">Python 2.7</option>
-            <option class="item" value="python3.2">Python 3.2</option>
+            <option class="item" value="py2">Python 2.7</option>
+            <option class="item" value="py3">Python 3.2</option>
             </select><br><br>
 
           <label class="writeCode">Write Your Code</label><br><br>
-          <!-- <div class="ui  large segment"  id="editor" style="height:500px;"> -->
-          <!-- <textarea class="field codeBlock"  id="editor" name="code" rows="10" cols="50">
-#include&lt;stdio.h&gt;
-void main()
-{
-
-}</textarea><br><br> -->
+          
 
 <div class="ui large segment" style="height:500px; font-size: 20px">
 <div id="editor">/*Type your code here: */
-#include&lt;stdio.h&gt;
-void main()
-{
 
-}
 
 </div>
 
