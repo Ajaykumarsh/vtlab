@@ -64,12 +64,17 @@
       
       <div id="lis" style="display: none;">
         <div class="ui bulleted list">
-          <a class="item" href="quadratic.php">Class fundamentals, declaring Objects</a>
-          <a class="item" href="#">Overloading methods & Constructors,e</a>
-          <a class="item" href="#">Packages & Interfaces</a>
-          <a class="item" href="#">Exception Handling</a>
-          <a class="item" href="#">. Multithreaded Programming</a>
-          <a class="item" href="#">Generics and String handling</a>
+          <a class="item" href="#">Gross Salary and Net Income calculation</a>
+          <a class="item" href="quadratic.php">Roots of a Quadratic Equations</a>
+          <a class="item" href="#">Matrix Multiplication</a>
+          <a class="item" href="#">Complex Number operations using Constructors</a>
+          <a class="item" href="#">Sorting a List with Exception Handling</a>
+          <a class="item" href="#">Interest and Maturity Amount using Interface</a>
+          <a class="item" href="#">Finding Surface area and Volume of Solids using Abstract Classes</a>
+          <a class="item" href="#">Operation on Threads</a>
+          <a class="item" href="#">Operation on File Manipulation</a>
+          <a class="item" href="#">Implementation of Stack from Generic class</a>
+          <a class="item" href="#">String operations</a>
         </div>
       </div>
       
@@ -79,25 +84,34 @@ Understand the importance of Generic classes, Strings and Multithreaded Programm
       
       <div id="faqs" style="display: none;">
       <div class="ui styled accordion">
-          <div class="title" id="dion1">
-            <i class="dropdown icon"></i>What is a dog?
+      <div class="title">
+            <i class="dropdown icon"></i>What is the meaning of OOPS?
           </div>
-          <div>
-            <p style="padding: 10px;display: none;" id="accord1">A dog is a type of domesticated animal. Known for its loyalty and faithfulness, it can be found as a welcome guest in many households across the world.</p>
+          <div class="content">
+            <p class="transition hidden">Object-oriented programming System(OOPs) is a programming paradigm based on the concept of “objects” that contain data and methods. The primary purpose of object-oriented programming is to increase the flexibility and maintainability of programs. Object oriented programming brings together data and its behaviour(methods) in a single location(object) makes it easier to understand how a program works. </p>
           </div>
           
-          <div class="title" id="dion2">
-            <i class="dropdown icon"></i>What kinds of dogs are there? 
-          </div>
-          <div>
-            <p style="padding: 10px;display: none;" id="accord2">There are many breeds of dogs. Each breed varies in size and temperament. Owners often select a breed of dog that they find to be compatible with their own lifestyle and desires from a companion.</p>
+          <div class="title" >
+            <i class="dropdown icon"></i>What are the characteristics of an object?</div>
+          <div class="content">
+            <p class="transition hidden">An Object is a bundle of data and its behaviour(often known as methods), which have states and behaviors. The characteristcs of an Object is:<br><br>
+            <div class="ui bulleted list">
+              <div class="item">Abstraction</div><br>
+              <div class="item">Encapsulation</div><br>
+              <div class="item">Method Invocation</div>
+            </div></p>
           </div>
 
-          <div class="title" id="dion3">
-            <i class="dropdown icon"></i>What is a dog?
-          </div>
-          <div>
-            <p style="padding: 10px;display: none;" id="accord3">A dog is a type of domesticated animal. Known for its loyalty and faithfulness, it can be found as a welcome guest in many households across the world.</p>
+          <div class="title" >
+            <i class="dropdown icon"></i>What is an Abstract method? </div>
+          <div class="content">
+            <p class="transition hidden">
+            <div class="ui bulleted list">
+              <div class="item">A method that is declared but not defined. Only method signature no body.</div><br>
+              <div class="item">Declared using the abstract keyword</div><br>
+              <div class="item">Used to put some kind of compulsion on the class who inherits the class has abstract methods.</div><br>
+              <div class="item">The class that inherits must provide the implementation of all the abstract methods of parent class else declare the subclass as abstract.</div>
+            </div></p>
           </div>
         </div>
       </div>

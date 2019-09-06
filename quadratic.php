@@ -104,14 +104,23 @@
         
           <form action="compile.php" id="form" name="f2" method="POST" ><br>
           <label class="writeCode">Write Your Code</label><br><br>
-          <textarea class="field codeBlock" name="editor" rows="10" cols="50">
+          <div class="ui large segment" style="height:500px;">
+          <div id="editor">
+import java.util.*;
 class Main{
 public static void main(String []args)
 {
 //code
 
 }
-}</textarea><br><br>
+}
+        </div>
+
+        </div>
+        <div>
+        <textarea name="editor" style="display: none;" >
+        </div>
+        <textarea style="display: none;"></textarea>
 
           <button class="ui left floated button" onclick="myFunction()">Custom Input</button>
           <div id="inputs" style="display:None;">
@@ -141,7 +150,7 @@ public static void main(String []args)
                   $("#outputBox").html("<div class=\"writeCode\">Loading ......</div>");
                   document.f2.extra.value = "subb";
             });
-          });
+          }); 
           </script>
 
           <script type="text/javascript">

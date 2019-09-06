@@ -43,31 +43,14 @@
     font-size:17px;
     overflow-wrap: break-word;
   }
-
-  .ui.dropdown {
-    font-size: 15px;
-    margin-left: 30px;
-    margin-top: 20px;
-  }
-
+  
   .ui.button {
-    display:block;
+    display:inline-block;
     float: right;
     font-size:18px;
     padding-top:8px;
     padding-bottom:8px;
   }
-
-  .ui.icon.dropdown.button {
-    margin: 10px;
-    border-radius: 10px;
-    color: black;
-    background-color: greenyellow;
-    text-align: left;
-    float: left;
-    display: block;
-  }
-
   
   #cont {
     padding: 20px;
@@ -141,7 +124,7 @@
       right: 10px;
       bottom: 0;
       left: 0;
-      font-size: 14px;
+      
   }
   
   @media screen and (max-width:500px){

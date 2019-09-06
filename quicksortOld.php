@@ -25,12 +25,12 @@
  <a class="item">
     About Us
   </a> 
-   <a class="item">
+   <!-- <a class="item">
     Item
   </a>
   <a class="item">
     Item
-  </a>
+  </a> -->
 </div>
 </div>
   <div class="ui container" id="cont">
