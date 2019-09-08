@@ -16,21 +16,24 @@
       <a class="ui circular image" href="http://dsce.edu.in"><img src="https://cdn.glitch.com/f3f0a812-ef86-4316-8cee-84e24f8e112e%2Fdsce.png?v=1566407586257"></a>
   Virtual Labs 
 </h1>
-  <div id="toTop">Top!</div>
+<div id="toTop"><i class="chevron up icon"></i></div>
   <div>
   <div class="ui  light grey inverted secondary huge menu">
   <a class="header item" href="index.php">
     Home
   </a>
+  <a href="english.php" class="item">
+    English Language
+  </a>
  <a class="item">
     About Us
   </a> 
-   <a class="item">
+   <!-- <a class="item">
     Contact us
   </a>
   <a class="item">
     Item
-  </a>
+  </a> -->
 </div>
 </div>
   <div class="ui container" id="cont">

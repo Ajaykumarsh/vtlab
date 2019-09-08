@@ -66,7 +66,7 @@
 	}
 	else
 	{
-		echo "<pre>$error</pre>";
+		echo "<label class=\"writeCode\">Error</label><br><br><pre class=\"GrayBlock\">$error</pre>";
 	}
 	exec("rm $filename_code");
 	exec("rm *.txt");

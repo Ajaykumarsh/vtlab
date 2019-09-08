@@ -50,7 +50,7 @@
 		}
 		//echo "<pre>$runtime_error</pre>";
 		//echo "<pre>$output</pre>";
-		echo "$output";
+		echo "<label class=\"writeCode\">Output</label><br><br><pre class=\"GrayBlock\">$output</pre>";
 		  //echo "<textarea id='div' class=\"form-control\" name=\"output\" rows=\"10\" cols=\"50\">$output</textarea><br><br>";
 	}
 	else if(!strpos($error,"error"))
@@ -66,12 +66,12 @@
 			$output=shell_exec($out);
 		}
 		//echo "<pre>$output</pre>";
-		echo "$output";
+		echo "<label class=\"writeCode\">Error</label><br><br><pre class=\"GrayBlock\">$output</pre>";
 		  //echo "<textarea id='div' class=\"form-control\" name=\"output\" rows=\"10\" cols=\"50\">$output</textarea><br><br>";
 	}
 	else
 	{
-		echo "<pre>$error</pre>";
+		echo "<label class=\"writeCode\">Error</label><br><br><pre class=\"GrayBlock\">$error</pre>";
 	}
 	exec("rm $filename_code");
 	exec("rm *put.txt");

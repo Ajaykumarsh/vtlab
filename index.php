@@ -23,7 +23,7 @@
 <h1 style="text-align:center;font-size:40px;margin-left:-10px;">Virtual Tutorial Lab</h1>
   </div>
 <div>
-  
+<div id="toTop"><i class="chevron up icon"></i></div>
   <div class="ui  light grey inverted secondary huge menu">
   <a class="header item" href="index.php">
     Home

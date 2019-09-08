@@ -16,7 +16,7 @@
       <a class="ui circular image" href="http://dsce.edu.in"><img src="https://cdn.glitch.com/f3f0a812-ef86-4316-8cee-84e24f8e112e%2Fdsce.png?v=1566407586257"></a>
   Virtual Labs 
 </h1>
-  <div id="toTop">Top!</div>
+<div id="toTop"><i class="chevron up icon"></i></div>
   <div>
   <div class="ui  light grey inverted secondary huge menu">
   <a class="header item" href="index.php">
@@ -25,11 +25,11 @@
  <a class="item">
     About Us
   </a> 
-   <a class="item">
+   <!-- <a class="item">
     Item
   </a>
   <a class="item">
-    Item
+    Item -->
   </a>
 </div>
 </div>
@@ -86,7 +86,15 @@ It’s also the language of international communication, the media and the inter
           <div class="title" >
             <i class="dropdown icon"></i>What is English? </div>
           <div class="content">
-            <p class="transition hidden">English is a language</p>
+            <p class="transition hidden">English is a West Germanic language that was first spoken in early medieval England and eventually became a globally spoken language.</p>
+          </div>
+
+          <div class="title" >
+            <i class="dropdown icon"></i>What are the different nouns in English? </div>
+          <div class="content">
+            <p class="transition hidden">English nouns are only inflected for number and possession. New nouns can be formed through derivation or compounding. They are semantically divided into proper nouns (names) and common nouns. Common nouns are in turn divided into concrete and abstract nouns, and grammatically into count nouns and mass nouns. <br>
+
+            Most count nouns are inflected for plural number through the use of the plural suffix -s, but a few nouns have irregular plural forms. Mass nouns can only be pluralised through the use of a count noun classifier, e.g. one loaf of bread, two loaves of bread.</p>
           </div>
         </div>
       </div>
