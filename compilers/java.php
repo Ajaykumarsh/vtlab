@@ -32,7 +32,7 @@
 	}
 	shell_exec($command_error);
 	$error=file_get_contents($filename_error);
-	
+	exec("chmod a+x *.class");
 	if(trim($error)=="")
 	{
 		if(trim($input)=="")
