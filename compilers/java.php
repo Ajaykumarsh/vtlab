@@ -73,7 +73,7 @@
 	{
 		echo "<pre>$error</pre>";
 	}
-	exec("del $filename_code");
-	exec("del *.txt");
-	exec("del $executable");
+	exec("rm $filename_code");
+	exec("rm *put.txt");
+	exec("rm $executable");
 ?>
