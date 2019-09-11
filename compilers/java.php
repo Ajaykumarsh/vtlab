@@ -20,9 +20,22 @@
 	$file_code=fopen($filename_code,"w+");
 	fwrite($file_code,$code);
 	fclose($file_code);
-	if($runcode){$file_in=fopen($filename_in,"w+");
-	fwrite($file_in,$input);
-	fclose($file_in);}
+	if($runcode)
+	{
+		if(trim($input)!="")
+		{
+		$file_in=fopen($filename_in,"w+");
+		fwrite($file_in,$input);
+		fclose($file_in);
+		}
+		else
+		{
+		$filename_in="./inputs/run".$pname."in.txt";
+		$filename_out=fopen("./outputs/run".$pname."out.txt", "r");
+		$fout=fread($filename_out,filesize("./outputs/".$pname."out.txt"));
+		fclose($filename_out);
+		}
+	}
 	else
 	{
 	$filename_in="./inputs/".$pname."in.txt";
@@ -35,18 +48,20 @@
 	exec("chmod a+x *.class");
 	if(trim($error)=="")
 	{
-		if(trim($input)=="")
+		if($runcode)
 		{
-			shell_exec($runtime_error_command);
-			$runtime_error=file_get_contents($runtime_file);
-			$output=shell_exec($out);
+			exec("chmod a+x $executable"); 
+			$output=shell_exec($out.' < '.$filename_in);
+			if(trim($input)!=""){}
+			else if($output==$fout) $output="Sample case passed.";
+			else $output="Sample case failed.";
 		}
-		else
+		else 
 		{
-			shell_exec($runtime_error_command);
-			$runtime_error=file_get_contents($runtime_file);
-			$out=$out." < ".$filename_in;
-			$output=shell_exec($out);
+			exec("chmod a+x $executable"); 
+			$output=shell_exec($out.' < '.$filename_in);
+			if($output==$fout) $output="Test case passed.";
+			else $output="Test case failed.";
 		}
 		//echo "<pre>$runtime_error</pre>";
 		//echo "<pre>$output</pre>";
