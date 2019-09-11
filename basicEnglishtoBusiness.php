@@ -82,8 +82,8 @@ If you want to improve your business English, you are going to have to spend tim
         </div>
       </div>
       
-      <div id="lis" style="display: none;">  
-      <iframe style="width:100%; height:100%; position: absolute;" allowfullscreen="allowfullscreen" src="https://www.youtube.com/embed/_2ZDNgtAsbw">
+      <div id="lis" style="display: none; padding: 15px; height: 400px;">  
+      <iframe style="width:100%; height:100%;" allowfullscreen="allowfullscreen" src="https://www.youtube.com/embed/_2ZDNgtAsbw">
 </iframe>      </div>
       
       <div id="faqs" style="display: none;">

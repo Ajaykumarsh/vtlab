@@ -108,8 +108,8 @@ There are no shortcuts in life. Definitely, no shortcuts to learn English.
         </div>
       </div>
       
-      <div id="lis" style="display: none;">  
-      <iframe style="width:100%; height:100%; position: absolute;" allowfullscreen="allowfullscreen" src="https://www.youtube.com/embed/O0qT4cK-wtk">
+      <div id="lis" style="display: none; padding: 15px; height: 400px;">  
+      <iframe style="width:100%; height:100%;" allowfullscreen="allowfullscreen" src="https://www.youtube.com/embed/O0qT4cK-wtk">
 </iframe>       </div>
       
       <div id="faqs" style="display: none;">

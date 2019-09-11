@@ -98,8 +98,8 @@ Another problem I see is that many students study the news. However, the languag
         </div>
       </div>
       
-      <div id="lis" style="display: none;">  
-      <iframe style="width:100%; height:100%; position: absolute;" allowfullscreen="allowfullscreen" src="https://www.youtube.com/embed/XASlOVJFQiw">
+      <div id="lis" style="display: none; padding: 15px; height: 400px;">  
+      <iframe style="width:100%; height:100%;" allowfullscreen="allowfullscreen" src="https://www.youtube.com/embed/XASlOVJFQiw">
 </iframe>      </div>
       
       <div id="faqs" style="display: none;">
