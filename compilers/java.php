@@ -3,6 +3,7 @@
     putenv("PATH=/app/.jdk/bin");
 	$CC="javac";
 	$out="java Main";
+	$pname=$_POST["prog"];
 	$code=$_POST["editor"];
 	$input=$_POST["input"];
 	$filename_code="Main.java";
@@ -86,9 +87,11 @@
 	}
 	else
 	{
-		echo "<label class=\"writeCode\">Error</label><br><br><pre class=\"GrayBlock\">$error $output</pre>";
+		echo "<label class=\"writeCode\">Error</label><br><br><pre class=\"GrayBlock\">$error</pre>";
 	}
 	exec("rm $filename_code");
+	exec("rm $filename_in");
+	exec("rm $filename_error");
 	exec("rm *put.txt");
 	exec("rm $executable");
 ?>

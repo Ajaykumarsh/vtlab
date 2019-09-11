@@ -96,5 +96,6 @@
 	exec("rm $filename_code");
 	exec("rm *.o");
 	exec("rm *put.txt");
+	exec("rm $filename_error");
 	exec("rm $executable");
 ?>
