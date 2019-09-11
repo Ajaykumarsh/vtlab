@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="js/script.js"></script>
+  <script src="script.js"></script>
   <link rel="stylesheet" href="css/home.css">
   <title>4 Basic Rules of English</title>
 </head>
@@ -16,23 +16,20 @@
       <a class="ui circular image" href="http://dsce.edu.in"><img src="https://cdn.glitch.com/f3f0a812-ef86-4316-8cee-84e24f8e112e%2Fdsce.png?v=1566407586257"></a>
   Virtual Labs 
 </h1>
-<div id="toTop"><i class="chevron up icon"></i></div>
+  <div id="toTop">Top!</div>
   <div>
   <div class="ui  light grey inverted secondary huge menu">
   <a class="header item" href="index.php">
     Home
   </a>
-  <a href="english.php" class="item">
-    English Language
-  </a>
  <a class="item">
     About Us
   </a> 
-   <!-- <a class="item">
+   <a class="item">
     Contact us
   </a>
   <a class="item">
-    Item -->
+    Item
   </a>
 </div>
 </div>
@@ -71,7 +68,7 @@
           <div class="item">       
             <div id="inti" align="justify">
  <br><br>1. Don't study grammar too much
-This rule might sound strange to many ESL students, but it is one of the most important rules. If you want to pass examinations, then study grammar. However, if you want to become fluent in English, then you should try to learn English without studying the grammar.
+This rule might sound strange to many ESL students, but it is one of the most important rules. If you want to pass examinations, then study grammar. However, if you want to become fluent in English, then you should try to learn English without studying  too much grammar.
 <br><br>
 Studying grammar will only slow you down and confuse you. You will think about the rules when creating sentences instead of naturally saying a sentence like a native. Remember that only a small fraction of English speakers know more than 20% of all the grammar rules
               <br><br>
@@ -104,13 +101,53 @@ Another problem I see is that many students study the news. However, the languag
       </div>
       
       <div id="lis" style="display: none;">  
-        <video width="630" height="300" controls>
-            <source src="https://cdn.glitch.com/f3f0a812-ef86-4316-8cee-84e24f8e112e%2F4english.mp4.mp4?v=1566839127151" type="video/mp4">
-          Your browser does not support the video tag.
-          </video>      </div>
+      <iframe width="420" height="345" src="https://www.youtube.com/embed/XASlOVJFQiw">
+</iframe>      </div>
       
       <div id="faqs" style="display: none;">
-        1. Is English a language? <br> A: Yes.
+      
+      <form name="Quiz1">
+      Check your Basic English Skills
+          <p>1.She ______in her sleep<br>
+            <label><input type="radio" name="q1" value="Speaks">Speaks</label><br>
+            <label><input type="radio" name="q1" value="Talks">Talks</label><br>
+            <label><input type="radio" name="q1" value="Either could  be used here">Either could  be used here</label><br>
+            <label><input type="radio" name="q1" value="None of these">None of these</label><br>
+            <span id="q1"></span>
+          </p><br>
+          <p>	The phone _________ Can you answer it, please?
+	<br>
+            <label><input type="radio" name="q2" value="rings">rings</label><br>
+            <label><input type="radio" name="q2" value="ring">ring</label><br>
+            <label><input type="radio" name="q2" value="rang">rang</label><br>
+            <label><input type="radio" name="q2" value="is ringing">is ringing</label><br>
+            <span id="q2"></span>
+          </p><br>
+          <p>3. John ,if you keep working like these,you'll make _______ ill.
+<br>
+            <label><input type="radio" name="q3" value="Yourself">Yourself</label><br>
+            <label><input type="radio" name="q3" value="Yourselves">Yourselves</label><br>
+            <label><input type="radio" name="q3" value="You">You</label><br>
+            <label><input type="radio" name="q3" value="None of these">None of these</label><br>
+            <span id="q3"></span>
+          </p><br>
+          <p>4. Do you have any idea how long _____ me to do it? <br>
+            <label><input type="radio" name="q4" value="Did it take">Did it take</label><br>
+            <label><input type="radio" name="q4" value="it took">it took</label><br>
+            <label><input type="radio" name="q4" value="took it">took it </label><br>
+            <label><input type="radio" name="q4" value="None of these">None of these</label><br>
+            <span id="q4"></span>
+          </p><br>
+          <p>5. I was wondering why ______ take the train;it will be quicker.<br>
+            <label><input type="radio" name="q5" value="don't we">don't we</label><br>
+            <label><input type="radio" name="q5" value="we don't">we don't</label><br>
+            <label><input type="radio" name="q5" value="won't we">won't we</label><br>
+            <label><input type="radio" name="q5" value="None of the above">None of the above</label><br>
+            <span id="q5"></span>
+          </p><br>
+          <input type="submit" id="quizSub" class="ui left floated button" value="Submit" onclick="quizCorrection()">
+        </form>
+      
       </div>
     </div>
   </div>

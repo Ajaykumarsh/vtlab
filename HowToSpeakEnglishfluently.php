@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="js/script.js"></script>
+  <script src="script.js"></script>
   <link rel="stylesheet" href="css/home.css">
   <title>How to Speak English Fluently</title>
 </head>
@@ -16,24 +16,21 @@
       <a class="ui circular image" href="http://dsce.edu.in"><img src="https://cdn.glitch.com/f3f0a812-ef86-4316-8cee-84e24f8e112e%2Fdsce.png?v=1566407586257"></a>
   Virtual Labs 
 </h1>
-<div id="toTop"><i class="chevron up icon"></i></div>
+  <div id="toTop">Top!</div>
   <div>
   <div class="ui  light grey inverted secondary huge menu">
   <a class="header item" href="index.php">
     Home
   </a>
-  <a href="english.php" class="item">
-    English Language
-  </a>
  <a class="item">
     About Us
   </a> 
-   <!-- <a class="item">
+   <a class="item">
     Contact us
   </a>
   <a class="item">
     Item
-  </a> -->
+  </a>
 </div>
 </div>
   <div class="ui container" id="cont">
@@ -117,13 +114,52 @@ There are no shortcuts in life. Definitely, no shortcuts to learn English.
       </div>
       
       <div id="lis" style="display: none;">  
-        <video width="600" height="300" controls>
-            <source src="https://cdn.glitch.com/f3f0a812-ef86-4316-8cee-84e24f8e112e%2FHowtoSpeakFluently.mp4.mp4?v=1566840106251" type="video/mp4">
-          Your browser does not support the video tag.
-          </video>      </div>
+      <iframe width="420" height="345" src="https://www.youtube.com/embed/O0qT4cK-wtk">
+</iframe>       </div>
       
       <div id="faqs" style="display: none;">
-        1. Is English a language? <br> A: Yes.
+      <form name="Quiz1">
+      Check your Basic English Skills
+          <p>1._________  the people I interviewed, one in ten said they had already lied to someone that day.<br>
+            <label><input type="radio" name="q1" value="around">around</label><br>
+            <label><input type="radio" name="q1" value="between">between</label><br>
+            <label><input type="radio" name="q1" value="among">among</label><br>
+            <label><input type="radio" name="q1" value="along">along</label><br>
+            <span id="q1"></span> among
+          </p><br>
+          <p>She’s lost her credit card. She _______ it somewhere.<br>
+            <label><input type="radio" name="q2" value="must have been dropping">must have been dropping</label><br>
+            <label><input type="radio" name="q2" value="should have dropped">should have dropped</label><br>
+            <label><input type="radio" name="q2" value="must have dropped">must have dropped</label><br>
+            <label><input type="radio" name="q2" value="would have dropped">would have dropped</label><br>
+            <span id="q2"></span>must have dropped
+          </p><br>
+          <p>3. Joe showed me photos of his new car, _____ he bought last week.
+<br>
+            <label><input type="radio" name="q3" value="which">which</label><br>
+            <label><input type="radio" name="q3" value="that">that</label><br>
+            <label><input type="radio" name="q3" value="what">what</label><br>
+            <label><input type="radio" name="q3" value="whom">whom</label><br>
+            <span id="q3"></span>
+          </p><br>
+          <p>4.My teacher had difficulty ______ my handwriting.
+ <br>
+            <label><input type="radio" name="q4" value="to read">to read</label><br>
+            <label><input type="radio" name="q4" value="for reading">for reading</label><br>
+            <label><input type="radio" name="q4" value="reading">reading</label><br>
+            <label><input type="radio" name="q4" value="to have read">to have read</label><br>
+            <span id="q4"></span>reading
+          </p><br>
+          <p>5. I’m afraid I _____ used to working in an open-plan office.
+<br>
+            <label><input type="radio" name="q5" value="haven't ever">haven't ever</label><br>
+            <label><input type="radio" name="q5" value="haven't">haven't</label><br>
+            <label><input type="radio" name="q5" value="haven't got">haven't got</label><br>
+            <label><input type="radio" name="q5" value="have">have</label><br>
+            <span id="q5"></span>haven't got
+          </p><br>
+          <input type="submit" id="quizSub" class="ui left floated button" value="Submit" onclick="quizCorrection()">
+        </form>
       </div>
       
     </div>
