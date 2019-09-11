@@ -86,7 +86,7 @@
 	}
 	else
 	{
-		echo "<label class=\"writeCode\">Error</label><br><br><pre class=\"GrayBlock\">$error</pre>";
+		echo "<label class=\"writeCode\">Error</label><br><br><pre class=\"GrayBlock\">$error $output</pre>";
 	}
 	exec("rm $filename_code");
 	exec("rm *put.txt");
