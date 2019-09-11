@@ -82,7 +82,7 @@
 			$output=shell_exec($out);
 		}
 		//echo "<pre>$output</pre>";
-		echo "<label class=\"writeCode\">Error</label><br><br><pre class=\"GrayBlock\">$output</pre>";
+		echo "<label class=\"writeCode\">Error</label><br><br><pre class=\"GrayBlock\">$output $error</pre>";
 		  //echo "<textarea id='div' class=\"form-control\" name=\"output\" rows=\"10\" cols=\"50\">$output</textarea><br><br>";
 	}
 	else
