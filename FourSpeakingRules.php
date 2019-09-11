@@ -99,7 +99,7 @@ Another problem I see is that many students study the news. However, the languag
       </div>
       
       <div id="lis" style="display: none;">  
-      <iframe style="width:100%; height:auto;" src="https://www.youtube.com/embed/XASlOVJFQiw">
+      <iframe style="width:100%; height:100%;" src="https://www.youtube.com/embed/XASlOVJFQiw">
 </iframe>      </div>
       
       <div id="faqs" style="display: none;">
@@ -113,16 +113,14 @@ Another problem I see is that many students study the news. However, the languag
             <label><input type="radio" name="q1" value="None of these">None of these</label><br>
             <span id="q1"></span>
           </p><br>
-          <p>	The phone _________. Can you answer it, please?
-	<br>
+          <p>	The phone _________. Can you answer it, please?<br>
             <label><input type="radio" name="q2" value="rings">rings</label><br>
             <label><input type="radio" name="q2" value="ring">ring</label><br>
             <label><input type="radio" name="q2" value="rang">rang</label><br>
             <label><input type="radio" name="q2" value="is ringing">is ringing</label><br>
             <span id="q2"></span>
           </p><br>
-          <p>3. John, if you keep working like these, you'll make _______ ill.
-<br>
+          <p>3. John, if you keep working like these, you'll make _______ ill.<br>
             <label><input type="radio" name="q3" value="Yourself">Yourself</label><br>
             <label><input type="radio" name="q3" value="Yourselves">Yourselves</label><br>
             <label><input type="radio" name="q3" value="You">You</label><br>
@@ -150,7 +148,6 @@ Another problem I see is that many students study the news. However, the languag
     </div>
   </div>
 </div>
-  </div>
-  
+</div>
 </body>
 </html>

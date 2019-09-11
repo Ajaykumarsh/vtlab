@@ -78,14 +78,12 @@ Ask for help. Most likely, the person you are speaking with is aware that you ar
 Practice at Home
 If you want to improve your business English, you are going to have to spend time outside of your office hours doing so. This usually means practicing at home in your free time. There are many ways to do this:
 
-
-
             </div>
         </div>
       </div>
       
       <div id="lis" style="display: none;">  
-      <iframe style="width:100%; height:auto;" src="https://www.youtube.com/embed/_2ZDNgtAsbw">
+      <iframe style="width:100%; height:100%;" src="https://www.youtube.com/embed/_2ZDNgtAsbw">
 </iframe>      </div>
       
       <div id="faqs" style="display: none;">

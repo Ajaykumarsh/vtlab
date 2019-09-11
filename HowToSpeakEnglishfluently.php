@@ -104,14 +104,12 @@ Use the new word immediately to feel confident about it’s usage.
 10. Practice. Practice. Practice. Till it makes you perfect.
 There are no shortcuts in life. Definitely, no shortcuts to learn English.
 <br><br>
- 
-
          </div>  
         </div>
       </div>
       
       <div id="lis" style="display: none;">  
-      <iframe style="width:100%; height:auto;" src="https://www.youtube.com/embed/O0qT4cK-wtk">
+      <iframe style="width:100%; height:100%;" src="https://www.youtube.com/embed/O0qT4cK-wtk">
 </iframe>       </div>
       
       <div id="faqs" style="display: none;">
