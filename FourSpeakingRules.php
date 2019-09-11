@@ -4,10 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="script.js"></script>
+  <link rel="stylesheet" href="css/Semantic/semantic.min.css">
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <script src="css/Semantic/semantic.min.js"></script>
+  <script src="js/script.js"></script>
+  <script src="js/questions.js"></script>
   <link rel="stylesheet" href="css/home.css">
   <title>4 Basic Rules of English</title>
 </head>
@@ -16,17 +17,17 @@
       <a class="ui circular image" href="http://dsce.edu.in"><img src="https://cdn.glitch.com/f3f0a812-ef86-4316-8cee-84e24f8e112e%2Fdsce.png?v=1566407586257"></a>
   Virtual Labs 
 </h1>
-  <div id="toTop">Top!</div>
+  <div id="toTop"><i class="chevron up icon"></i></div>
   <div>
   <div class="ui  light grey inverted secondary huge menu">
   <a class="header item" href="index.php">
     Home
   </a>
- <a class="item">
-    About Us
+ <a href="english.php" class="item">
+    English Speaking
   </a> 
    <a class="item">
-    Contact us
+    About Us
   </a>
 </div>
 </div>
@@ -55,7 +56,7 @@
     <div class="ui segment">
       
       <div id="int">
-       <br>  English is the language of science, of aviation, computers, diplomacy, and tourism. Knowing English increases your chances of getting a good job in a multinational company within your home country or for finding work abroad. 
+         English is the language of science, of aviation, computers, diplomacy, and tourism. Knowing English increases your chances of getting a good job in a multinational company within your home country or for finding work abroad. 
         <br>  <br> 
         It’s also the language of international communication, the media and the internet, so learning English is important for socialising and entertainment as well as work!
       </div>
@@ -64,7 +65,7 @@
         
           <div class="item">       
             <div id="inti" align="justify">
- <br><br>1. Don't study grammar too much
+1. Don't study grammar too much
 This rule might sound strange to many ESL students, but it is one of the most important rules. If you want to pass examinations, then study grammar. However, if you want to become fluent in English, then you should try to learn English without studying  too much grammar.
 <br><br>
 Studying grammar will only slow you down and confuse you. You will think about the rules when creating sentences instead of naturally saying a sentence like a native. Remember that only a small fraction of English speakers know more than 20% of all the grammar rules
@@ -98,7 +99,7 @@ Another problem I see is that many students study the news. However, the languag
       </div>
       
       <div id="lis" style="display: none;">  
-      <iframe width="420" height="345" src="https://www.youtube.com/embed/XASlOVJFQiw">
+      <iframe style="width:100%;" src="https://www.youtube.com/embed/XASlOVJFQiw">
 </iframe>      </div>
       
       <div id="faqs" style="display: none;">
@@ -112,7 +113,7 @@ Another problem I see is that many students study the news. However, the languag
             <label><input type="radio" name="q1" value="None of these">None of these</label><br>
             <span id="q1"></span>
           </p><br>
-          <p>	The phone _________ Can you answer it, please?
+          <p>	The phone _________. Can you answer it, please?
 	<br>
             <label><input type="radio" name="q2" value="rings">rings</label><br>
             <label><input type="radio" name="q2" value="ring">ring</label><br>
@@ -120,7 +121,7 @@ Another problem I see is that many students study the news. However, the languag
             <label><input type="radio" name="q2" value="is ringing">is ringing</label><br>
             <span id="q2"></span>
           </p><br>
-          <p>3. John ,if you keep working like these,you'll make _______ ill.
+          <p>3. John, if you keep working like these, you'll make _______ ill.
 <br>
             <label><input type="radio" name="q3" value="Yourself">Yourself</label><br>
             <label><input type="radio" name="q3" value="Yourselves">Yourselves</label><br>
@@ -128,14 +129,14 @@ Another problem I see is that many students study the news. However, the languag
             <label><input type="radio" name="q3" value="None of these">None of these</label><br>
             <span id="q3"></span>
           </p><br>
-          <p>4. Do you have any idea how long _____ me to do it? <br>
+          <p>4. Do you have any idea how long _______ me to do it? <br>
             <label><input type="radio" name="q4" value="Did it take">Did it take</label><br>
             <label><input type="radio" name="q4" value="it took">it took</label><br>
             <label><input type="radio" name="q4" value="took it">took it </label><br>
             <label><input type="radio" name="q4" value="None of these">None of these</label><br>
             <span id="q4"></span>
           </p><br>
-          <p>5. I was wondering why ______ take the train;it will be quicker.<br>
+          <p>5. I was wondering why _______ take the train;it will be quicker.<br>
             <label><input type="radio" name="q5" value="don't we">don't we</label><br>
             <label><input type="radio" name="q5" value="we don't">we don't</label><br>
             <label><input type="radio" name="q5" value="won't we">won't we</label><br>
