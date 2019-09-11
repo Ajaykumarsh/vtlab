@@ -28,9 +28,6 @@
    <a class="item">
     Contact us
   </a>
-  <a class="item">
-    Item
-  </a>
 </div>
 </div>
   <div class="ui container" id="cont">
