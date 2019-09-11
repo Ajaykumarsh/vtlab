@@ -4,10 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="script.js"></script>
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <link rel="stylesheet" href="css/Semantic/semantic.min.css">
+  <script src="js/semantic.min.js"></script>
+  <script src="js/script.js"></script>
   <link rel="stylesheet" href="css/home.css">
   <title>How to Speak English Fluently</title>
 </head>
@@ -16,20 +16,17 @@
       <a class="ui circular image" href="http://dsce.edu.in"><img src="https://cdn.glitch.com/f3f0a812-ef86-4316-8cee-84e24f8e112e%2Fdsce.png?v=1566407586257"></a>
   Virtual Labs 
 </h1>
-  <div id="toTop">Top!</div>
+  <div id="toTop"><i class="chevron up icon"></i></div>
   <div>
   <div class="ui  light grey inverted secondary huge menu">
   <a class="header item" href="index.php">
     Home
   </a>
- <a class="item">
-    About Us
+ <a href="english.php" class="item">
+    English Speaking
   </a> 
    <a class="item">
-    Contact us
-  </a>
-  <a class="item">
-    Item
+    About Us
   </a>
 </div>
 </div>
@@ -58,7 +55,7 @@
     <div class="ui segment">
       
       <div id="int" align="justify">
-       <br> The problem with thinking in your native language and translating is that it results in sentences that are not correct in English, because the grammar and sentence structure is often different in English and your native language. <br> <br>
+        The problem with thinking in your native language and translating is that it results in sentences that are not correct in English, because the grammar and sentence structure is often different in English and your native language. <br> <br>
 Also, it takes too much time to think and translate when you’re in a conversation – leading to pauses, hesitations, and the inability to speak fast and fluently. <br> <br>
 Many students believe that thinking in English is too difficult, but I’m going to teach you how to succeed. You can learn this skill with practice, whether you’re beginner, intermediate, or advanced.
       </div>
@@ -114,7 +111,7 @@ There are no shortcuts in life. Definitely, no shortcuts to learn English.
       </div>
       
       <div id="lis" style="display: none;">  
-      <iframe width="420" height="345" src="https://www.youtube.com/embed/O0qT4cK-wtk">
+      <iframe style="width:100%; height:auto;" src="https://www.youtube.com/embed/O0qT4cK-wtk">
 </iframe>       </div>
       
       <div id="faqs" style="display: none;">

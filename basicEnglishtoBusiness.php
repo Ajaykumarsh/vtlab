@@ -4,32 +4,29 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="script.js"></script>
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <link rel="stylesheet" href="css/Semantic/semantic.min.css">
+  <script src="js/semantic.min.js"></script>
+  <script src="js/script.js"></script>
   <link rel="stylesheet" href="css/home.css">
-  <title>How to change Basic English into Business English</title>
+  <title>Basic English to Business English</title>
 </head>
 <body>
   <h1 class="ui header" style="text-align:center" id = "head">
       <a class="ui circular image" href="http://dsce.edu.in"><img src="https://cdn.glitch.com/f3f0a812-ef86-4316-8cee-84e24f8e112e%2Fdsce.png?v=1566407586257"></a>
   Virtual Labs 
 </h1>
-  <div id="toTop">Top!</div>
+  <div id="toTop"><i class="chevron up icon"></i></div>
   <div>
   <div class="ui  light grey inverted secondary huge menu">
   <a class="header item" href="index.php">
     Home
   </a>
- <a class="item">
-    About Us
+ <a href="english.php" class="item">
+    English Speaking
   </a> 
    <a class="item">
-    Contact us
-  </a>
-  <a class="item">
-    Item
+    About Us
   </a>
 </div>
 </div>
@@ -58,7 +55,7 @@
     <div class="ui segment">
       
       <div id="int">
-       <br>  English is the language of science, of aviation, computers, diplomacy, and tourism. Knowing English increases your chances of getting a good job in a multinational company within your home country or for finding work abroad. 
+         English is the language of science, of aviation, computers, diplomacy, and tourism. Knowing English increases your chances of getting a good job in a multinational company within your home country or for finding work abroad. 
         <br>  <br> 
         It’s also the language of international communication, the media and the internet, so learning English is important for socialising and entertainment as well as work!
       </div>
@@ -88,7 +85,7 @@ If you want to improve your business English, you are going to have to spend tim
       </div>
       
       <div id="lis" style="display: none;">  
-      <iframe width="420" height="345" src="https://www.youtube.com/embed/_2ZDNgtAsbw">
+      <iframe style="width:100%; height:auto;" src="https://www.youtube.com/embed/_2ZDNgtAsbw">
 </iframe>      </div>
       
       <div id="faqs" style="display: none;">

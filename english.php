@@ -9,7 +9,7 @@
   <script src="js/semantic.min.js"></script>
   <script src="js/script.js"></script>
   <link rel="stylesheet" href="css/home.css">
-  <title>English</title>
+  <title>English Skills</title>
 </head>
 <body>
   <h1 class="ui header" style="text-align:center" id = "head">
@@ -35,7 +35,7 @@
 </div>
   <div class="ui container" id="cont">
     <h2 class="ui header" style="font-size:35px; margin-left:10px;">
-     English
+     English Language Skills
     </h2>
     <div class="ui stackable grid">
   <div class="four wide column">
@@ -58,7 +58,7 @@
     <div class="ui segment">
       
       <div id="int" align="justify">
-       <br> English is the language of science, of aviation, computers, diplomacy, and tourism. Knowing English increases your chances of getting a good job in a multinational company within your home country or for finding work abroad. <br> <br>
+       English is the language of science, of aviation, computers, diplomacy, and tourism. Knowing English increases your chances of getting a good job in a multinational company within your home country or for finding work abroad. <br> <br>
 It’s also the language of international communication, the media and the internet, so learning English is important for socialising and entertainment as well as work!
       </div>
       
@@ -72,12 +72,12 @@ It’s also the language of international communication, the media and the inter
         </div>
       </div>
       
-      <div id="pre" style="display: none;">To make students speak fluently in English.</div>
+      <div id="pre" style="display: none;">To make students speak fluently in English.<br> To be able to use Formal as well as informal English speech.<br> To speak and write in English language.</div>
       
       <div id="faqs" style="display: none;">
         <div class="ui styled accordion">
           <div class="title">
-            <i class="dropdown icon"></i>What are Present,Past and Future tenses
+            <i class="dropdown icon"></i>What are Present, Past and Future tenses?
           </div>
           <div class="content">
             <p class="transition hidden">Verbs come in three tenses: past, present, and future. The past is used to describe things that have already happened (e.g., earlier in the day, yesterday, last week, three years ago). The present tense is used to describe things that are happening right now, or things that are continuous. The future tense describes things that have yet to happen (e.g., later, tomorrow, next week, next year, three years from now</p>
@@ -90,7 +90,7 @@ It’s also the language of international communication, the media and the inter
           </div>
 
           <div class="title" >
-            <i class="dropdown icon"></i>What are the different nouns in English? </div>
+            <i class="dropdown icon"></i>What are the different Nouns in English? </div>
           <div class="content">
             <p class="transition hidden">English nouns are only inflected for number and possession. New nouns can be formed through derivation or compounding. They are semantically divided into proper nouns (names) and common nouns. Common nouns are in turn divided into concrete and abstract nouns, and grammatically into count nouns and mass nouns. <br>
 
