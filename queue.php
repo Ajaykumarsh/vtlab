@@ -59,14 +59,18 @@
   </div>
  <div class="twelve wide stretched column">
     <div class="ui segment">
-      
-      <div id="int">
+
+   <div id="int">
       Queue is an abstract data structure, somewhat similar to Stacks. ... One end is always used to insert data (enqueue) and the other is used to remove data (dequeue). Queue follows First-In-First-Out methodology, i.e., the data item stored first will be accessed first.
-        <br><br>
-        A queue is a useful data structure in programming. It is similar to the ticket queue outside a cinema hall, where the first person entering the queue is the first person who gets the ticket.
+      <br><br>
+      <iframe height="400px" width="100%" src="https://www.youtube.com/embed/gnYM_G1ILm0"  frameborder="0"></iframe>
+      <br><br>
+      <p> A queue is a useful data structure in programming. It is similar to the ticket queue outside a cinema hall, where the first person entering the queue is the first person who gets the ticket.
         <br>
-Queue follows the First In First Out(FIFO) rule - the item that goes in first is the item that comes out first too.
+Queue follows the First In First Out(FIFO) rule - the item that goes in first is the item that comes out first too.</p>
       </div>
+
+
       
       <div id="pre" style="display: none;">
         <div class="ui bulleted list">
