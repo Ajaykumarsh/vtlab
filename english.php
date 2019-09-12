@@ -66,7 +66,7 @@ It’s also the language of international communication, the media and the inter
         <div class="ui bulleted list">
           <a class="item" href="FourSpeakingRules.php">Four Speaking Rules of English</a>
           <a class="item" href="HowToSpeakEnglishfluently.php">How to Speak English fluently</a>
-          <a class="item" href="basicEnglishtoBusiness.php">English Conversations</a>
+          <a class="item" href="basicEnglishtoBusiness.php">How to change Basic English to Business English</a>
           <a class="item" href="#">Verbs</a>
           <a class="item" href="#">Present,Past and future tenses</a>
         </div>

@@ -47,7 +47,7 @@
         Theory
       </a>
       <a class="item" target="_blank" id="list">
-        Compiler
+        Video
       </a>
       <a class="item" id="faq">
         Quiz
@@ -100,128 +100,44 @@ city: This is the third column created as a varchar2 datatype. It can contain nu
       </div>
       
       <div id="lis" style="display: none;">
-      <div class="ui form">
-        <div id="compilerData">
-        Write a program in C to simulate the working of a stack of integers using an array. Provide the following operations:<br>
-         a. Insert<br> b. Delete<br> c. Display.<br><br>
-         <strong>Input Format:</strong><br>
-         Every line consists of one argument, a character. If the character is 'a', the next argument is an integer.<br>
-         The Character denotes the operation. 'a' is to Insert, 'b' is to Delete, and 'c' is to Display.<br>
-         The Integer denotes the value to Insert into the stack.<br>
-         Note: The program ends only when a character which is not any of the above options is entered.<br><br>
-         <strong>Output Format:</strong><br>
-         Prints one/multiple array of integers, denoting the composition of the stack.<br> 
-        </div><br>
-        
-          <form action="compile.php" id="form" name="f2" method="POST" ><br>
-          <label class="writeCode">Write Your Code</label><br><br>
-          <textarea class="field codeBlock" name="code" rows="10" cols="50">
-#include&lt;stdio.h&gt;
-void main()
-{
-
-}</textarea><br><br>
-
-          <button class="ui left floated button" onclick="myFunction()">Custom Input</button>
-          <div id="inputs" style="display:None;">
-          <br><br>
-          <label for="in" class="writeCode"><br>Enter Your Input</label><br><br>
-          <textarea class="field codeBlock" name="input" rows="10" cols="50"></textarea><br><br><br>
+      <iframe width="420" height="345" src="https://www.youtube.com/embed/W3RGQcdrIRY">
+</iframe>
           </div>
 
-          <input type="submit" id="st" class="ui left floated button" value="Run Code" onclick="myFunction2()">
-          <input type="submit" id="subb" class="ui left floated button" value="Submit" onclick="myFunction2()"><br><br><br>
-
-          </form>
-
-          <script type="text/javascript">
-          $(document).ready(function(){
-            $("#st").click(function(){
-                  $("#outputBox").html("<div class=\"writeCode\">Loading ......</div>");
-            });
-          });
-          </script>
-
-          <script type="text/javascript">
-            $(document).ready(function(){
-              //listen for form submission
-              $('form').on('submit', function(e){
-                //prevent form from submitting and leaving page
-                e.preventDefault();
-
-                // AJAX 
-                $.ajax({
-                      type: "POST", //type of submit
-                      cache: false, //important or else you might get wrong data returned to you
-                      url: "compile.php", //destination
-                      datatype: "html", //expected data format from process.php
-                      data: $('form').serialize(), //target your form's data and serialize for a POST
-                      success: function(result) { // data is the var which holds the output of your process.php
-
-                          // locate the div with #result and fill it with returned data from process.php
-                          $('#outputBox').html(result);
-                      }
-                  });
-              });
-          });
-          </script>
-          <br>
-          <div id="outputBox" style="display:None;">Output:<br><br>
-          <div name="output"></div><br>
-          </div>
-          </div>
-
-      </div>
+      
       
       <div id="faqs" style="display: none;">
         <form name="Quiz1">
-          <p>1. Yes?<br>
-            <label><input type="radio" name="q1" value="Ok">Ok</label><br>
-            <label><input type="radio" name="q1" value="Sure">Sure</label><br>
-            <label><input type="radio" name="q1" value="Kewl">Kewl</label><br>
-            <label><input type="radio" name="q1" value="Aythu">Aythu</label><br>
+          <p>1.  A relational database consists of a collection of <br>
+            <label><input type="radio" name="q1" value="Tables">Tables</label><br>
+            <label><input type="radio" name="q1" value="Fields">Fields</label><br>
+            <label><input type="radio" name="q1" value="Records">Records</label><br>
+            <label><input type="radio" name="q1" value="Keys">Keys</label><br>
           </p><br>
-          <p>2. Yes?<br>
-            <label><input type="radio" name="q2" value="Ok">Ok</label><br>
-            <label><input type="radio" name="q2" value="Sure">Sure</label><br>
-            <label><input type="radio" name="q2" value="Kewl">Kewl</label><br>
-            <label><input type="radio" name="q2" value="Aythu">Aythu</label><br>
+          <p>2. A ________ in a table represents a relationship among a set of values. <br>
+            <label><input type="radio" name="q2" value="Column"> Column</label><br>
+            <label><input type="radio" name="q2" value="Key">Key</label><br>
+            <label><input type="radio" name="q2" value="Row">Row</label><br>
+            <label><input type="radio" name="q2" value="Entry">Entry</label><br>
           </p><br>
-          <p>3. Yes?<br>
-            <label><input type="radio" name="q3" value="Ok">Ok</label><br>
-            <label><input type="radio" name="q3" value="Sure">Sure</label><br>
-            <label><input type="radio" name="q3" value="Kewl">Kewl</label><br>
-            <label><input type="radio" name="q3" value="Aythu">Aythu</label><br>
+          <p>3. The term _______ is used to refer to a row. <br>
+            <label><input type="radio" name="q3" value="Attribute">Attribute</label><br>
+            <label><input type="radio" name="q3" value="Tuple">Tuple</label><br>
+            <label><input type="radio" name="q3" value="Field">Field</label><br>
+            <label><input type="radio" name="q3" value="Instance">Instance</label><br>
           </p><br>
-          <p>4. Yes?<br>
-            <label><input type="radio" name="q4" value="Ok">Ok</label><br>
-            <label><input type="radio" name="q4" value="Sure">Sure</label><br>
-            <label><input type="radio" name="q4" value="Kewl">Kewl</label><br>
-            <label><input type="radio" name="q4" value="Aythu">Aythu</label><br>
+          <p>4. The term attribute refers to a ___________ of a table.<br>
+            <label><input type="radio" name="q4" value="Record">Record</label><br>
+            <label><input type="radio" name="q4" value="Column">Column</label><br>
+            <label><input type="radio" name="q4" value="Tuple"> Tuple</label><br>
+            <label><input type="radio" name="q4" value="Key">Key</label><br>
           </p><br>
-          <p>5. Yes?<br>
-            <label><input type="radio" name="q5" value="Ok">Ok</label><br>
-            <label><input type="radio" name="q5" value="Sure">Sure</label><br>
-            <label><input type="radio" name="q5" value="Kewl">Kewl</label><br>
-            <label><input type="radio" name="q5" value="Aythu">Aythu</label><br>
-          </p><br>
-          <p>6. Yes?<br>
-            <label><input type="radio" name="q6" value="Ok">Ok</label><br>
-            <label><input type="radio" name="q6" value="Sure">Sure</label><br>
-            <label><input type="radio" name="q6" value="Kewl">Kewl</label><br>
-            <label><input type="radio" name="q6" value="Aythu">Aythu</label><br>
-          </p><br>
-          <p>7. Yes?<br>
-            <label><input type="radio" name="q7" value="Ok">Ok</label><br>
-            <label><input type="radio" name="q7" value="Sure">Sure</label><br>
-            <label><input type="radio" name="q7" value="Kewl">Kewl</label><br>
-            <label><input type="radio" name="q7" value="Aythu">Aythu</label><br>
-          </p><br>
-          <p>8. Yes?<br>
-            <label><input type="radio" name="q8" value="Ok">Ok</label><br>
-            <label><input type="radio" name="q8" value="Sure">Sure</label><br>
-            <label><input type="radio" name="q8" value="Kewl">Kewl</label><br>
-            <label><input type="radio" name="q8" value="Aythu">Aythu</label><br>
+          <p>5.For each attribute of a relation, there is a set of permitted values, called the ________ of that attribute.
+<br>
+            <label><input type="radio" name="q5" value="Domain">Domain</label><br>
+            <label><input type="radio" name="q5" value="Relation">Relation</label><br>
+            <label><input type="radio" name="q5" value="Set">Set</label><br>
+            <label><input type="radio" name="q5" value="Schema">Schema</label><br>
           </p><br>
           <input type="submit" id="quizSub" class="ui left floated button" value="Submit">
         </form>
