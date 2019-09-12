@@ -206,31 +206,31 @@ void main()
       
       <div id="faqs" style="display: none;">
       <form name="Quiz1">
-          <p>1. The term Push and Pop is related to<br>
+          <p>1. The terms Push and Pop is related to<br>
             <label><input type="radio" name="q1" value="stack">Stack</label><br>
             <label><input type="radio" name="q1" value="Queue">Queue</label><br>
             <label><input type="radio" name="q1" value="Both">Both</label><br>
             <label><input type="radio" name="q1" value="None">None</label><br>
             <span id="q1"></span>
           </p><br>
-          <p>2.Choose correct output for the following sequence of operations <br>   
-           push(5)<br>
-push(8)<br>
-pop <br>
-push(2)<br>
-push(5)<br>
-pop<br>
-pop<br>
-pop<br>
-push(1)<br>
-pop<br>
+          <p>2.Choose the correct output for the following sequence of operations:<br>   
+            push(5)<br>
+            push(8)<br>
+            pop <br>
+            push(2)<br>
+            push(5)<br>
+            pop<br>
+            pop<br>
+            pop<br>
+            push(1)<br>
+            pop<br>
             <label><input type="radio" name="q2" value="85521">8 5 5 2 1</label><br>
             <label><input type="radio" name="q2" value="85251">8 5 2 5 1</label><br>
             <label><input type="radio" name="q2" value="82551">8 2 5 5 1</label><br>
             <label><input type="radio" name="q2" value="82515">8 2 5 1 5</label><br>
             <span id="q2"></span>
           </p><br>
-          <p>3. Stack can be implemented using _________ and ________ ?
+          <p>3. Stacks can be implemented using _________ and ________
 <br>
             <label><input type="radio" name="q3" value="Array and Binary tree">Array and Binary tree</label><br>
             <label><input type="radio" name="q3" value="Linked List and Graph">Linked List and Graph</label><br>
@@ -245,28 +245,28 @@ pop<br>
             <label><input type="radio" name="q4" value="Evaluation of string in postfix form">Evaluation of string in postfix form</label><br>
             <span id="q4"></span>
           </p><br>
-          <p>5. Which of the following datastructure is non linear?<br>
+          <p>5. Which of the following datastructure is non linear<br>
             <label><input type="radio" name="q5" value="Graph">Graph</label><br>
             <label><input type="radio" name="q5" value="Stack">Stack</label><br>
             <label><input type="radio" name="q5" value="List">List</label><br>
             <label><input type="radio" name="q5" value="None of the above">None of the above</label><br>
             <span id="q5"></span>
           </p><br>
-          <p>6. Which of the following datastructure is  linear type?<br>
+          <p>6. Which of the following datastructure is linear<br>
             <label><input type="radio" name="q6" value="Binary tree">Binary tree</label><br>
             <label><input type="radio" name="q6" value="Trees">Trees</label><br>
             <label><input type="radio" name="q6" value="Graph">Graph</label><br>
             <label><input type="radio" name="q6" value="Stack">Stack</label><br>
             <span id="q6"></span>
           </p><br>
-          <p>7. Which of the datastructures cant store the nonhomogenous dataelements<br>
+          <p>7. Which of the datastructures cannot store non-homogenous Data Elements<br>
             <label><input type="radio" name="q7" value="Array">Array</label><br>
             <label><input type="radio" name="q7" value="stack">Stack</label><br>
             <label><input type="radio" name="q7" value="Records">Records</label><br>
             <label><input type="radio" name="q7" value="None of the above">None of the above</label><br>
             <span id="q7"></span>
           </p><br>
-          <p>8. The data structure required to check whether an expression contains balanced parenthesis is?<br>
+          <p>8. The data structure required to check whether an expression contains balanced parenthesis is<br>
             <label><input type="radio" name="q8" value="Stack">Stack</label><br>
             <label><input type="radio" name="q8" value="Queue">Queue</label><br>
             <label><input type="radio" name="q8" value="Array">Array</label><br>

@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <script src="js/jquery-3.4.1.min.js"></script>
   <link rel="stylesheet" href="css/Semantic/semantic.min.css">
+  <script src="js/jquery-3.4.1.min.js"></script>
   <script src="css/Semantic/semantic.min.js"></script>
   <script src="js/script.js"></script>
   <link rel="stylesheet" href="css/home.css">
@@ -55,7 +55,7 @@
     </div>
   </div>
  <div class="twelve wide stretched column">
-    <div class="ui segment">
+    <div class="ui clearing segment">
       
       <div id="int">
         To understand how various data structures work. To understand some important applictions of various data structures. 
@@ -64,14 +64,56 @@
       </div>
       
       <div id="lis" style="display: none;">
-        <div class="ui bulleted list">
-          <a class="item" href="stack.php">Operations on Stack</a>
-          <a class="item" href="queue.php">Operations on Queue</a>
-          <a class="item" href="singlylinkedlist.php">Operations on Singly Linked List</a>
-          <a class="item" href="#">Operations on Doubly Linked List</a>
-          <a class="item" href="#">Binary Tree</a>
-          <a class="item" href="#">Preorder Traversal in Binary Search Tree</a>
+      <div style="display:inline-block;">
+      <button class="ui icon dropdown button">
+        <span class="text">Operations on Stack</span>
+        <div class="menu">
+          <a class="item" href="stack.php">Stack</a>
+          <a class="item" href="stack.php">Calculator</a>
+          <a class="item" href="ratmaze.php">Maze</a>
         </div>
+      </button><br>
+      <button class="ui icon dropdown button">
+        <span class="text">Operations on Queue</span>
+        <div class="menu">
+          <a class="item" href="queue.php">Queue</a>
+          <a class="item" href="queue.php">Calculator</a>
+          <a class="item" href="queue.php">Maze</a>
+        </div>
+      </button><br>
+      <div class="ui icon dropdown button">
+        <span class="text">Operations on Singly Linked List</span>
+        <div class="menu">
+          <a class="item" href="singlylinkedlist.php">Singly Linked List</a>
+          <a class="item" href="singlylinkedlist.php">Calculator</a>
+          <a class="item" href="singlylinkedlist.php">Maze</a>
+        </div>
+      </div><br>
+      <div class="ui icon dropdown button">
+        <span class="text">Operations on Doubly Linked List</span>
+        <div class="menu">
+          <a class="item" href="stack.php">Stack</a>
+          <a class="item" href="stack.php">Calculator</a>
+          <a class="item" href="stack.php">Maze</a>
+        </div>
+      </div><br>
+      <div class="ui icon dropdown button">
+        <span class="text">Binary Tree</span>
+        <div class="menu">
+          <a class="item" href="stack.php">Stack</a>
+          <a class="item" href="stack.php">Calculator</a>
+          <a class="item" href="stack.php">Maze</a>
+        </div>
+      </div><br>
+      <div class="ui icon dropdown button">
+        <span class="text">Preorder Traversal in Binary Search Tree</span>
+        <div class="menu">
+          <a class="item" href="stack.php">Stack</a>
+          <a class="item" href="stack.php">Calculator</a>
+          <a class="item" href="stack.php">Maze</a>
+        </div>
+      </div><br>
+      </div>
       </div>
       
       <div id="pre" style="display: none;">To make students get better at Data Structures in C.</div>
@@ -79,25 +121,26 @@
       <div id="faqs" style="display: none;">
       <div class="ui styled accordion">
           <div class="title" id="dion1">
-            <i class="dropdown icon"></i>What is a dog?
+            <i class="dropdown icon"></i>What is a datastructure?
           </div>
           <div>
-            <p style="padding: 10px;display: none;" id="accord1">A dog is a type of domesticated animal. Known for its loyalty and faithfulness, it can be found as a welcome guest in many households across the world.</p>
+            <p style="padding: 10px;display: none;" id="accord1">In computer science, a data structure is a data organization, management, and storage format that enables efficient access and modification. More precisely, a data structure is a collection of data values, the relationships among them, and the functions or operations that can be applied to the data.</p>
           </div>
           
           <div class="title" id="dion2">
-            <i class="dropdown icon"></i>What kinds of dogs are there? 
+            <i class="dropdown icon"></i>What are some types of datastructures? 
           </div>
           <div>
-            <p style="padding: 10px;display: none;" id="accord2">There are many breeds of dogs. Each breed varies in size and temperament. Owners often select a breed of dog that they find to be compatible with their own lifestyle and desires from a companion.</p>
+            <p style="padding: 10px;display: none;" id="accord2">There are many datastructures. Some of them are: <br>
+            Array<br>List<br>Union<br>Trees</p>
           </div>
 
-          <div class="title" id="dion3">
+          <!-- <div class="title" id="dion3">
             <i class="dropdown icon"></i>What is a dog?
           </div>
           <div>
             <p style="padding: 10px;display: none;" id="accord3">A dog is a type of domesticated animal. Known for its loyalty and faithfulness, it can be found as a welcome guest in many households across the world.</p>
-          </div>
+          </div> -->
         </div>
       </div>
       
@@ -108,6 +151,7 @@
   <script language='javascript'>
              $(document).ready(function(){
                 $('.ui.accordion').accordion();
+                $('.ui.dropdown').dropdown();
              });
 </script>
 </body>
