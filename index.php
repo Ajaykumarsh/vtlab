@@ -112,7 +112,7 @@
              Contains 12 Experiments On Database Management in Oracle SQL
            </span>
            <br><br>
-           <a class="ui button" href="datastructures.php" >Go</a>
+           <a class="ui button" href="dbms.php" >Go</a>
          </div>
   
       </div>
