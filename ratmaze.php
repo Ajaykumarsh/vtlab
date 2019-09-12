@@ -100,19 +100,14 @@ The maze is given using a binary matrix, where it is marked with 1, it is a vali
          <div class="ui two column very relaxed grid">
               <div class="column">
                 <strong>Sample Input</strong><br>
-                <pre>    {0,1,0,1,1},
-    {0,0,0,0,0},
-    {1,0,1,0,1},
-    {0,0,1,0,0},
-    {1,0,0,1,0}</pre>
+                <p>
+                <pre>5 5</pre>
+                0 1 0 1 1<br>0 0 0 0 0<br>1 0 1 0 1<br>0 0 1 0 0<br>1 0 0 1 0
+                </p>
               </div>
               <div class="column">
                 <strong>Sample Output</strong><br>
-                <pre>    {1,0,0,0,0},
-    {1,1,1,1,0},
-    {0,0,0,1,0},
-    {0,0,0,1,1},
-    {0,0,0,0,1}</pre>
+                <p>1 0 0 0 0<br>1 1 1 1 0<br>0 0 0 1 0<br>0 0 0 1 1<br>0 0 0 0 1</p>
               </div>
          </div>
          <div class="ui vertical divider">and</div>
