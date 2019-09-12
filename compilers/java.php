@@ -1,8 +1,8 @@
 <?php
 
     putenv("PATH=/app/.jdk/bin");
-	$CC="javac -Xmx300m -Xss512k -XX:CICompilerCount=2 -Dfile.encoding=UTF-8";
-	$out="java Main";
+	$CC="javac";
+	$out="java Main -Xmx300m -Xss512k -XX:CICompilerCount=2 -Dfile.encoding=UTF-8";
 	$pname=$_POST["prog"];
 	$code=$_POST["editor"];
 	$input=$_POST["input"];
