@@ -2,7 +2,7 @@
 
     putenv("PATH=/app/.jdk/bin");
 	$CC="javac";
-	$out="java Main -Xmx300m -Xss512k -XX:CICompilerCount=2 -Dfile.encoding=UTF-8";
+	$out="java -Xmx300m -Xss512k -XX:CICompilerCount=2 -Dfile.encoding=UTF-8 Main";
 	$pname=$_POST["prog"];
 	$code=$_POST["editor"];
 	$input=$_POST["input"];
@@ -15,9 +15,6 @@
 	$command_error=$command." 2>".$filename_error;
 	$runtime_error_command=$out." 2>".$runtime_file;
 
-	//if(trim($code)=="")
-	//die("The code area is empty");
-	
 	$file_code=fopen($filename_code,"w+");
 	fwrite($file_code,$code);
 	fclose($file_code);
