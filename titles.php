@@ -47,7 +47,7 @@
        </div>
          <div class="content">
            <span class="CardBody">
-             Contains 12 Experiments On Data Structures in C Programming Language
+             Contains 6 Programs with Applications On Data Structures in C Programming Language
            </span>
            <br><br>
            <a class="ui button" href="datastructures.php" >Go</a>
@@ -60,18 +60,59 @@
        <div class="content" id="Card2">
       <div class="header">
          <a href="OopsWithJava.php" >
-             OOPS With Java Laboratory
+             OOPS With Java
          </a>
       </div>
        </div>
          <div class="content">
            <span class="CardBody">
-             Contains 12 Experiments On Object Oriented Programming in Java
+             Contains concepts On Object Oriented Programming in Java
            </span>
            <br><br>
            <a class="ui button" href="OopsWithJava.php" >Go</a>
          </div>
     </div>
+
+    <div class="five wide column">
+        <div class="ui raised card" id="car4">
+       <div class="content" id="Card4">
+      <div class="header">
+         <a href="co.php" >
+             Computer Organisation
+         </a>
+      </div>
+       </div>
+         <div class="content">
+           <span class="CardBody">
+             Contains educational videos on Computer Organisation (CO)
+           </span>
+           <br><br>
+           <a class="ui button" href="co.php" >Go</a>
+         </div>
+  
+      </div>
+      </div>
+
+      <div class="five wide column">
+        <div class="ui raised card" id="car4">
+       <div class="content" id="Card4">
+      <div class="header">
+         <a href="ld.php" >
+             Logic Design
+         </a>
+      </div>
+       </div>
+         <div class="content">
+           <span class="CardBody">
+             Contains educational videos on Logic Design (LD)
+           </span>
+           <br><br>
+           <a class="ui button" href="ld.php" >Go</a>
+         </div>
+  
+      </div>
+      </div>
+
     </div>
     <div class="five wide column">
         <div class="ui  raised card" id="car3">
@@ -97,7 +138,7 @@
         <div class="ui raised card" id="car4">
        <div class="content" id="Card4">
       <div class="header">
-         <a href="datastructures.php" >
+         <a href="dbms.php" >
              Database Management Laboratory
          </a>
       </div>
