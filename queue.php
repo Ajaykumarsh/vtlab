@@ -63,7 +63,7 @@
    <div id="int">
       Queue is an abstract data structure, somewhat similar to Stacks. ... One end is always used to insert data (enqueue) and the other is used to remove data (dequeue). Queue follows First-In-First-Out methodology, i.e., the data item stored first will be accessed first.
       <br><br>
-      <iframe height="400px" width="100%" src="https://www.youtube.com/embed/gnYM_G1ILm0"  frameborder="0"></iframe>
+      <iframe height="400px" width="100%" allowfullscreen="allowfullscreen" src="https://www.youtube.com/embed/gnYM_G1ILm0"  frameborder="0"></iframe>
       <br><br>
       <p> A queue is a useful data structure in programming. It is similar to the ticket queue outside a cinema hall, where the first person entering the queue is the first person who gets the ticket.
         <br>

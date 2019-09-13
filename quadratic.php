@@ -47,12 +47,12 @@
       <a class="item" id="prereq">
         Theory
       </a>
-      <a class="item" target="_blank" id="list">
+      <!-- <a class="item" target="_blank" id="list">
         Compiler
       </a>
       <a class="item" id="faq">
         Quiz
-      </a>
+      </a> -->
     </div>
   </div>
  <div class="twelve wide stretched column">
@@ -63,6 +63,7 @@
       </div>
       
       <div id="pre" style="display: none;">
+      <iframe height="400px" width="100%" allowfullscreen="allowfullscreen" src="https://www.youtube.com/embed/obVYJ18kHEE"  frameborder="0"></iframe>
      
           <div class="item">
           In this program, you'll learn to find all roots of a quadratic equation and print them using format() in Java.

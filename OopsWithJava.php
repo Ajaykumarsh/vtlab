@@ -64,16 +64,21 @@
       
       <div id="lis" style="display: none;">
         <div class="ui bulleted list">
-          <a class="item" href="#">Gross Salary and Net Income calculation</a>
+          <!-- <a class="item" href="#">Gross Salary and Net Income calculation</a> -->
           <a class="item" href="quadratic.php">Roots of a Quadratic Equations</a>
-          <a class="item" href="#">Matrix Multiplication</a>
-          <a class="item" href="#">Complex Number operations using Constructors</a>
-          <a class="item" href="#">Sorting a List with Exception Handling</a>
-          <a class="item" href="#">Interest and Maturity Amount using Interface</a>
-          <a class="item" href="#">Finding Surface area and Volume of Solids using Abstract Classes</a>
-          <a class="item" href="#">Operation on Threads</a>
+          <!-- <a class="item" href="#">Matrix Multiplication</a> -->
+          <!-- Complex Number operations using Constructors -->
+          <a class="item" href="constructors.php">Constructors</a>
+          <!-- Sorting a List with Exception Handling -->
+          <a class="item" href="exceptionhand.php">Exception Handling</a>
+          <!-- Interest and Maturity Amount using Interface -->
+          <a class="item" href="interfaces.php">Interfaces</a>
+          <!-- Finding Surface area and Volume of Solids using Abstract Classes -->
+          <a class="item" href="abstractclass.php">Abstract Classes</a>
+          <a class="item" href="threads.php">Operation on Threads</a>
           <a class="item" href="#">Operation on File Manipulation</a>
-          <a class="item" href="#">Implementation of Stack from Generic class</a>
+          <!-- Implementation of Stack from Generic class -->
+          <a class="item" href="#">Generic class</a>
           <a class="item" href="#">String operations</a>
         </div>
       </div>
