@@ -6,9 +6,9 @@
         <title>Virtual Lab</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="js/jquery-3.4.1.min.js"></script>
         <link rel="stylesheet" href="css/Semantic/semantic.min.css">
         <script src="css/Semantic/semantic.min.js"></script>
-        <script src="js/jquery-3.4.1.min.js"></script>
         <link rel="stylesheet" href="css/home.css">
         <title>Virtual-Labs</title>
 </head>
@@ -37,7 +37,7 @@
 <div id="toTop"><i class="chevron up icon"></i></div>
 <div class="ui container" id="CardGrid">
   <div class="ui stackable grid">
-    <div class="five wide column">
+    <div class="four wide column">
       <div class="ui raised card" id="car1">
        <div class="content" id="Card1">
       <div class="header">
@@ -55,11 +55,11 @@
       </div> 
     </div>
       
-    <div class="five wide column">
+    <div class="four wide column">
         <div class="ui raised card" id="car2">
        <div class="content" id="Card2">
       <div class="header">
-         <a href="OopsWithJava.php" >
+         <a href="OopsWithJava.php">
              OOPS With Java
          </a>
       </div>
@@ -72,10 +72,11 @@
            <a class="ui button" href="OopsWithJava.php" >Go</a>
          </div>
     </div>
+  </div>
 
-    <div class="five wide column">
-        <div class="ui raised card" id="car4">
-       <div class="content" id="Card4">
+    <div class="four wide column">
+        <div class="ui raised card" id="car3">
+       <div class="content" id="Card3">
       <div class="header">
          <a href="co.php" >
              Computer Organisation
@@ -93,7 +94,7 @@
       </div>
       </div>
 
-      <div class="five wide column">
+      <div class="four wide column">
         <div class="ui raised card" id="car4">
        <div class="content" id="Card4">
       <div class="header">
@@ -112,11 +113,10 @@
   
       </div>
       </div>
-
-    </div>
-    <div class="five wide column">
-        <div class="ui  raised card" id="car3">
-       <div class="content" id="Card3">
+      
+    <div class="four wide column">
+        <div class="ui  raised card" id="car5">
+       <div class="content" id="Card5">
       <div class="header">
          <a href="datastructures.php" >
              Computer Networks Laboratory
@@ -134,9 +134,9 @@
       </div>
       </div>
       
-      <div class="five wide column">
-        <div class="ui raised card" id="car4">
-       <div class="content" id="Card4">
+      <div class="four wide column">
+        <div class="ui raised card" id="car6">
+       <div class="content" id="Card6">
       <div class="header">
          <a href="dbms.php" >
              Database Management Laboratory
@@ -154,9 +154,9 @@
       </div>
       </div>
   
-      <div class="five wide column">
+      <div class="four wide column">
         <div class="ui raised card">
-       <div class="content" id="Card5">
+       <div class="content" id="Card7">
       <div class="header">
          <a href="english.php" >
              English Language
@@ -174,9 +174,9 @@
       </div>
       </div>
 
-      <div class="five wide column">
+      <div class="four wide column">
         <div class="ui raised card">
-       <div class="content" id="Card5">
+       <div class="content" id="Card8">
       <div class="header">
          <a href="placement.php" >
              Pre-Placement Training
