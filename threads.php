@@ -62,7 +62,7 @@
       A quadratic equation is an equation of the second degree, meaning it contains at least one term that is squared. The standard form is ax² + bx + c = 0 with a, b, and c being constants, or numerical coefficients, and x is an unknown variable.
       </div> -->
       
-      <div id="pre" style="display: none;">
+      <div id="pre">
       <iframe height="400px" width="100%" allowfullscreen="allowfullscreen" src="https://www.youtube.com/embed/D_8Tuq8PQgw"  frameborder="0"></iframe>
      
           <!-- <div class="item">

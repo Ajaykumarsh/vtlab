@@ -4,9 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="js/jquery-3.4.1.min.js"></script>
   <link rel="stylesheet" href="css/Semantic/semantic.min.css">
   <script src="css/Semantic/semantic.min.js"></script>
-  <script src="js/jquery-3.4.1.min.js"></script>
   <script src="js/script.js"></script>
   <link rel="stylesheet" href="css/home.css">
   <title>Java lab</title>
@@ -78,7 +78,7 @@
           <a class="item" href="threads.php">Operation on Threads</a>
           <a class="item" href="#">Operation on File Manipulation</a>
           <!-- Implementation of Stack from Generic class -->
-          <a class="item" href="#">Generic class</a>
+          <a class="item" href="generic.php">Generic class</a>
           <a class="item" href="#">String operations</a>
         </div>
       </div>
