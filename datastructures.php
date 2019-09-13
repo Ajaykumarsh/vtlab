@@ -69,7 +69,7 @@
         <span class="text">Operations on Stack</span>
         <div class="menu">
           <a class="item" href="stack.php">Stack</a>
-          <a class="item" href="stack.php">Calculator</a>
+          <a class="item" href="infixtopostfix.php">Infix to Postfix</a>
           <a class="item" href="ratmaze.php">Maze</a>
         </div>
       </button><br>

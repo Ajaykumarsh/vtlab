@@ -19,6 +19,7 @@
   Virtual Labs 
 </h1>
 <div id="toTop"><i class="chevron up icon"></i></div>
+<div id="toTop"><i class="chevron up icon"></i></div>
   <div class="ui  light grey inverted secondary huge menu">
   <a class="header item" href="index.php">
     Home
