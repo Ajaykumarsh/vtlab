@@ -13,9 +13,9 @@
   <title>Constructors</title>
 </head>
 <body>
-  <h1 class="ui header" style="text-align:center" id = "head">
+<h1 class="ui header" style="text-align:center" id = "head">
       <a class="ui circular image" href="http://dsce.edu.in"><img src="images/dscelogo.jpg"></a>
-  Virtual Labs 
+  <a href="titles.php">Virtual Labs</a>
 </h1>
   <div id="toTop"><i class="chevron up icon"></i></div>
   <div>

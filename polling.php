@@ -13,9 +13,9 @@
   <title>Differences of Polling, Interrupts, DMA</title>
 </head>
 <body>
-  <h1 class="ui header" style="text-align:center" id = "head">
-      <a class="ui circular image" href="http://dsce.edu.in"><img src="https://cdn.glitch.com/f3f0a812-ef86-4316-8cee-84e24f8e112e%2Fdsce.png?v=1566407586257"></a>
-  Virtual Labs 
+<h1 class="ui header" style="text-align:center" id = "head">
+      <a class="ui circular image" href="http://dsce.edu.in"><img src="images/dscelogo.jpg"></a>
+  <a href="titles.php">Virtual Labs</a>
 </h1>
   <div id="toTop"><i class="chevron up icon"></i></div>
   <div>
