@@ -17,7 +17,7 @@
   <div class="ui header" style="text-align:center;" id ="head">
   <a class="ui circular image" href="http://dsce.edu.in"><img src="images/dscelogo.jpg"></a>  <span style="color:#3053AB"> Dayananda Sagar College Of Engineering</span> 
  
- <br><p style="font-size:25px;margin-top:-8px; text-align: center;">Learning initiative by the Department of Computer Science</p>
+  <br><p style="font-size:25px;margin-top:10px; text-align: center;">A Self Learning initiative by the Department of Computer Science</p>
 </div>
 <div>
 <div id="toTop"><i class="chevron up icon"></i></div>
@@ -73,7 +73,7 @@
       <h2 style="margin-top:15px;color:#365CCF;">
        Under the Guidance of :
       </h2>
-      <p style="color:#E9F035;">HOD of Computer Science Prof Ramesh Babu.</p>
+      <p style="color:#E9F035;">HOD of Computer Science Dr. Ramesh Babu</p>
       <p style="margin-left:20px;color:#E9F035;">Prof. Amutha</p>
       <p style="margin-left:20px;color:#E9F035;">Prof. Anitha </p>
       <p></p>
