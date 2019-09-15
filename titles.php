@@ -166,7 +166,7 @@
        </div>
          <div class="content">
            <span class="CardBody">
-             Contains something related to the English Language
+             Contains educational videos on Learning the English Language better
            </span>
            <br><br>
            <a class="ui button" href="english.php">Go</a>
@@ -186,7 +186,7 @@
        </div>
          <div class="content">
            <span class="CardBody">
-             Contains something related to the Pre-placement stuffs
+             Contains concepts which help students in Placements
            </span>
            <br><br>
            <a class="ui button" href="placement.php">Go</a>

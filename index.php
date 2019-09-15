@@ -39,7 +39,7 @@
 <div id="toTop"><i class="chevron up icon"></i></div>
 <div class="ui container" id="CardGrid">
 
-<h1 style="text-align:center;font-size:40px;margin-left:-10px;">Virtual Tutorial Lab</h1><br><br>
+<h1 style="text-align:center;font-size:40px;margin-left:-10px;"><a style="color:black;" href="titles.php">Virtual Tutorial Lab</a></h1><br><br>
 <span style="font-size:17px;">Virtual Tutorial Lab is an initiative taken by the <strong>Department of Computer Science Engineering</strong>, Dayananda Sagar Institutions to help students to get better at Laboratory programs as well as Placements. </span><br><br>
 
   <div class="headerr">Vision of the Department</div><br><br>
