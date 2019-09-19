@@ -1,8 +1,8 @@
 <?php
 
     putenv("PATH=/app/.jdk/bin");
+    shell_exec("unset JAVA_TOOL_OPTIONS");
 	$CC="javac";
-	shell_exec("unset JAVA_TOOL_OPTIONS");
 	$out="java Main";
 	$pname=$_POST["prog"];
 	$code=$_POST["editor"];
