@@ -3,7 +3,7 @@
     putenv("PATH=/app/.jdk/bin");
     shell_exec("set JAVA_TOOL_OPTIONS=\"\"");
 	$CC="javac";
-	$out="java -Xmx300m -Xss512k -XX:CICompilerCount=2 -Dfile.encoding=UTF-8 Main";
+	$out="java Main";
 	$pname=$_POST["prog"];
 	$code=$_POST["editor"];
 	$input=$_POST["input"];
