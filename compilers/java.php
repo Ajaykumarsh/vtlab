@@ -42,7 +42,8 @@
 	$fout=fread($filename_out,filesize("./outputs/".$pname."out.txt"));
 	fclose($filename_out);
 	}
-	shell_exec($command_error);
+	exec("unset JAVA_TOOL_OPTIONS");
+	shell_exec("unset JAVA_TOOL_OPTIONS && "$command_error);
 	$error=file_get_contents($filename_error);
 	exec("chmod a+x *.class");
 	if(trim($error)=="")
