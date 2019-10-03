@@ -10,6 +10,7 @@
         <link rel="stylesheet" href="css/Semantic/semantic.min.css">
         <script src="css/Semantic/semantic.min.js"></script>
         <link rel="stylesheet" href="css/home.css">
+        <link rel="icon" href="images\dscelogo.png">
         <title>Virtual-Labs</title>
 </head>
 <body>
@@ -119,7 +120,7 @@
         <div class="ui  raised card" id="car5">
        <div class="content" id="Card5">
       <div class="header">
-         <a href="datastructures.php" >
+         <a href="cn.php" >
              Computer Networks Laboratory
          </a>
       </div>

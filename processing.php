@@ -10,6 +10,7 @@
   <script src="js/script.js"></script>
   <script src="js/questions.js"></script>
   <link rel="stylesheet" href="css/home.css">
+  <link rel="icon" href="images\dscelogo.png">
   <title>How processing is done inside your Computer</title>
 </head>
 <body>

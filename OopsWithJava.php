@@ -9,6 +9,7 @@
   <script src="css/Semantic/semantic.min.js"></script>
   <script src="js/script.js"></script>
   <link rel="stylesheet" href="css/home.css">
+  <link rel="icon" href="images\dscelogo.png">
   <title>Java lab</title>
 </head>
 <body>
