@@ -10,6 +10,7 @@
         <script src="css/Semantic/semantic.min.js"></script>
         <script src="js/jquery-3.4.1.min.js"></script>
         <link rel="stylesheet" href="css/home.css">
+        <link rel="icon" href="images\dscelogo.png">
         <title>Virtual-Labs</title>
 </head>
 <body>
