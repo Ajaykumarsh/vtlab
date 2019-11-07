@@ -12,22 +12,20 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-// prepare and bind
-$stmt = $conn->prepare("INSERT INTO userdata (username, semester, usn, mobile_no, email, passwd) VALUES (?, ?, ?, ?, ?, ?)");
-$stmt->bind_param("sssiss",$username, $semester, $usn, $mobile_no, $email, $passwd);
-
-// set parameters and execute
-$username = $_POST['name'];
-$semester = $_POST['sem'];
 $usn = $_POST['usn'];
-$mobile_no = $_POST['mbno'];
-$email = $_POST['email'];
 $passwd = $_POST['password'];
 
-$stmt->execute();
+$sql = "SELECT * FROM userdata where usn = \"$usn\" and passwd = \"$passwd\" ";
+$result = $conn->query($sql);
 
-echo "Registered successfully";
+if ($result->num_rows == 1)
+{
+    $row = $result->fetch_assoc();
+    $_POST['name']=$row["username"];
+} else {
+    header("Location: login.php");
+    exit;
+}
 
-$stmt->close();
 $conn->close();
 ?>

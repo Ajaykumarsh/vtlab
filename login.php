@@ -2,7 +2,7 @@
 if(session_status()==PHP_SESSION_NONE)
 {
   session_start();
-  if(!isset($_SESSION['username']))
+  if(isset($_SESSION['username']))
   {
     header("Location: index.php");
     exit;
@@ -59,7 +59,7 @@ if(session_status()==PHP_SESSION_NONE)
                     <label>Password</label>
                     <input type="password" name="password" placeholder="Password" style="width: 300px;">
             </div>
-            <input type="hidden" namw="session_type" value="login">
+            <input type="hidden" name="session_type" value="login">
             <button class="ui button" type="submit" style="float: none;">Login</button>
           </form>
           <div>

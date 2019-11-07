@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <?php
 echo session_status();
+session_start();
 if($_POST)
 {
   if($_POST['session_type']=="register")
@@ -11,12 +12,15 @@ if($_POST)
   {
     require_once("loginprocess.php");
   }
-  else eecho("ERROR SESSION TYPE MISMATCH-- titles.php");
-session_start();
+  else echo("ERROR SESSION TYPE MISMATCH-- titles.php");
+
 $_SESSION["username"]=$_POST['name'];
+$_SESSION["usn"]=$_POST['usn'];
+
 echo session_status();
+echo $_SESSION["username"];
 }
-else
+else if(!isset($_SESSION["username"]))
 {
   header("Location: index.php");
   exit;
