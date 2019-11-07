@@ -34,22 +34,23 @@
               Item
             </a> -->
           </div>
-    <div class="ui container" id="#logcont">
+    <div class="ui container" id="#logcont" style="padding-bottom: 20px;">
             <h2 class="ui header" style="font-size:35px; margin-left:10px;">
                     Registration Form
                   </h2>
+        <div style="padding-right: 100px; padding-left: 100px;">
         <form class="ui form" action="titles.php" method="POST">
             <div class="field">
               <label>USN</label>
-              <input type="text" name="usn" placeholder="USN number">
+              <input type="text" name="usn" placeholder="USN number" style="width: 400px;">
             </div>
             <div class="field">
               <label>Name</label>
-              <input type="text" name="name" placeholder="Name">
+              <input type="text" name="name" placeholder="Name" style="width: 400px;">
             </div>
             <div class="field">
             <label>Semester</label>
-            <select class="ui dropdown" name="sem">
+            <select class="ui dropdown" name="sem" style="margin-left: 0px; width: 400px;">
                     <option class="item" value="I">I</option>
                     <option class="item" value="II">II</option>
                     <option class="item" value="III">III</option>
@@ -59,18 +60,19 @@
             </div>
             <div class="field">
                     <label>Mobile number</label>
-                    <input type="number" name="mbno" placeholder="Mobile number">
+                    <input type="number" name="mbno" placeholder="Mobile number" style="width: 400px;">
             </div>
             <div class="field">
                     <label>Email</label>
-                    <input type="email" name="email" placeholder="Email">
+                    <input type="email" name="email" placeholder="Email" style="width: 400px;">
             </div>
             <div class="field">
                     <label>Password</label>
-                    <input type="password" name="password" placeholder="Password">
+                    <input type="password" name="password" placeholder="Password" style="width: 400px;">
             </div>
             <input type="hidden" name="session_type" value="register">
-            <button class="ui button" type="submit">Submit</button>
+            <button class="ui button" type="submit" style="float: none; margin-top: 20px;">Register</button>
           </form>
+        </div>
     </div>
 </body>
