@@ -36,7 +36,7 @@
           </div>
     <div class="ui container" id="#logcont">
             <h2 class="ui header" style="font-size:35px; margin-left:10px;">
-                    Register <Form></Form>
+                    Registration Form
                   </h2>
         <form class="ui form" action="titles.php" method="POST">
             <div class="field">
