@@ -1,4 +1,26 @@
 <!DOCTYPE html>
+<?php
+echo session_status();
+if($_POST)
+{
+  if($_POST['session_type']=="register")
+  {
+   require_once("registerprocess.php");
+  }
+  else
+  {
+    require_once("loginprocess.php");
+  }
+session_start();
+$_SESSION["username"]=$_POST['name'];
+echo session_status();
+}
+else
+{
+  header("Location: index.php");
+  exit;
+}
+?>
 <html>
 <head>
         <meta charset="utf-8">
