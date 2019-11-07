@@ -1,3 +1,14 @@
+<?php
+if(session_status()==PHP_SESSION_NONE)
+{
+  session_start();
+  if(!isset($_SESSION['username']))
+  {
+    header("Location: index.php");
+    exit;
+  }
+}
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -39,7 +50,7 @@
                     Login <Form></Form>
                   </h2>
         <div style="padding-right: 100px; padding-left: 100px;">
-        <form class="ui form" action="loginprocess.php">
+        <form class="ui form" action="titles.php" method="POST">
             <div class="field">
               <label>USN</label>
               <input type="text" name="usn" placeholder="type your USN number" style="width: 300px;">
@@ -48,6 +59,7 @@
                     <label>Password</label>
                     <input type="password" name="password" placeholder="Password" style="width: 300px;">
             </div>
+            <input type="hidden" namw="session_type" value="login">
             <button class="ui button" type="submit" style="float: none;">Login</button>
           </form>
           <div>

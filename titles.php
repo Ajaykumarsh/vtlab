@@ -7,10 +7,11 @@ if($_POST)
   {
    require_once("registerprocess.php");
   }
-  else
+  else if($_POST['session_type']=="login")
   {
     require_once("loginprocess.php");
   }
+  else eecho("ERROR SESSION TYPE MISMATCH-- titles.php");
 session_start();
 $_SESSION["username"]=$_POST['name'];
 echo session_status();
