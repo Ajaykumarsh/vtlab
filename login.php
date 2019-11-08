@@ -47,7 +47,7 @@ if(session_status()==PHP_SESSION_NONE)
           </div>
     <div class="ui container" style="padding-bottom: 20px;">
             <h2 class="ui header" style="font-size:35px; margin-left:10px;">
-                    Login <Form></Form>
+                    Login
                   </h2>
         <div style="padding-right: 100px; padding-left: 100px;">
         <form class="ui form" action="process.php" method="POST">

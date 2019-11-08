@@ -1,5 +1,4 @@
 <?php
-echo session_status();
 session_start();
 if($_POST)
 {
@@ -13,17 +12,17 @@ if($_POST)
   }
   else echo("ERROR SESSION TYPE MISMATCH-- titles.php");
   
-$_SESSION["username"]=$_POST['name'];
-$_SESSION["usn"]=$_POST['usn'];
+  $_SESSION["username"]=$_POST['name'];
+  $_SESSION["usn"]=$_POST['usn'];
 
-echo session_status();
-echo $_SESSION["username"];
+  echo session_status();
+  echo $_SESSION["username"];
 
   header("Location: titles.php");
   exit;
 
 }
-else if(!isset($_SESSION["username"]))
+else
 {
   header("Location: index.php");
   exit;
