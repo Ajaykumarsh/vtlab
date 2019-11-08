@@ -15,7 +15,7 @@ if ($conn->connect_error) {
 $usn = $_POST['usn'];
 $passwd = $_POST['password'];
 
-$sql = "SELECT * FROM userdata where usn = \"$usn\" and passwd = \"$passwd\" ";
+$sql = "SELECT username FROM userdata where usn = \"$usn\" and passwd = \"$passwd\" ";
 $result = $conn->query($sql);
 
 if ($result->num_rows == 1)

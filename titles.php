@@ -39,12 +39,12 @@ if(session_status()==PHP_SESSION_NONE)
  <a class="item">
     About Us
   </a> 
-   <!-- <a class="item">
-    Item
+   <a class="item">
+   <?php echo $_SESSION["username"]; ?>
   </a>
-  <a class="item">
-    Item
-  </a> -->
+  <a class="item" href="logoutprocess.php">
+    Logout
+  </a>
 </div>
 </div>
 <div id="toTop"><i class="chevron up icon"></i></div>

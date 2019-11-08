@@ -29,12 +29,13 @@
  <a class="item">
     About Us
   </a> 
-   <!-- <a class="item">
-    Item
+  <a class="item" href="login.php">
+    Login
   </a>
-  <a class="item">
-    Item
-  </a> -->
+  <a class="item" href="register.php">
+    Register
+  </a>
+  
 </div>
 </div>
 <div id="toTop"><i class="chevron up icon"></i></div>
