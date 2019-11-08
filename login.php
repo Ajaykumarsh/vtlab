@@ -50,7 +50,7 @@ if(session_status()==PHP_SESSION_NONE)
                     Login <Form></Form>
                   </h2>
         <div style="padding-right: 100px; padding-left: 100px;">
-        <form class="ui form" action="titles.php" method="POST">
+        <form class="ui form" action="process.php" method="POST">
             <div class="field">
               <label>USN</label>
               <input type="text" name="usn" placeholder="type your USN number" style="width: 300px;">

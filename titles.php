@@ -1,29 +1,13 @@
 <!DOCTYPE html>
 <?php
-echo session_status();
-session_start();
-if($_POST)
+if(session_status()==PHP_SESSION_NONE)
 {
-  if($_POST['session_type']=="register")
+  session_start();
+  if(!isset($_SESSION['username']))
   {
-   require_once("registerprocess.php");
+    header("Location: index.php");
+    exit;
   }
-  else if($_POST['session_type']=="login")
-  {
-    require_once("loginprocess.php");
-  }
-  else echo("ERROR SESSION TYPE MISMATCH-- titles.php");
-
-$_SESSION["username"]=$_POST['name'];
-$_SESSION["usn"]=$_POST['usn'];
-
-echo session_status();
-echo $_SESSION["username"];
-}
-else if(!isset($_SESSION["username"]))
-{
-  header("Location: index.php");
-  exit;
 }
 ?>
 <html>
