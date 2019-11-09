@@ -4,11 +4,11 @@ if($_POST)
 {
   if($_POST['session_type']=="register")
   {
-   require_once("registerprocess.php");
+   require_once("process/registerprocess.php");
   }
   else if($_POST['session_type']=="login")
   {
-    require_once("loginprocess.php");
+    require_once("process/loginprocess.php");
   }
   else echo("ERROR SESSION TYPE MISMATCH in titles.php");
   
