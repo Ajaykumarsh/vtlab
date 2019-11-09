@@ -4,9 +4,13 @@ if(session_status()==PHP_SESSION_NONE)
   session_start();
   if(isset($_SESSION['username']))
   {
-    $_SESSION['already_logged'] = "true";
     header("Location: titles.php");
     exit;
+  }
+  if(isset($_SESSION["login_error"]))
+  {
+    echo "<script>alert(\"Incorrect credentials!\")</script>";
+    unset($_SESSION["login_error"]);
   }
 }
 ?>
@@ -18,9 +22,9 @@ if(session_status()==PHP_SESSION_NONE)
         <title>Virtual Lab</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="js/jquery-3.4.1.min.js"></script>
         <link rel="stylesheet" href="css/Semantic/semantic.min.css">
         <script src="css/Semantic/semantic.min.js"></script>
-        <script src="js/jquery-3.4.1.min.js"></script>
         <link rel="stylesheet" href="css/home.css">
         <link rel="icon" href="images\dscelogo.png">
         <title>Login</title>
@@ -71,3 +75,4 @@ if(session_status()==PHP_SESSION_NONE)
         </div>
     </div>
 </body>
+</html>
