@@ -68,7 +68,7 @@
   </div>
 <a href="titles.php" style="font-size:20px; margin: 10px; float: left;" class="ui green button">Go to Virtual Labs</a><br><br><br>
 
-  </div>
+  </div> 
   <div class="ui inverted  large segment" >
     <div class="ui grid" style="" >
       <div class="five wide column" style="text-align:right ;">
