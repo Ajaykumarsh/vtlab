@@ -1,3 +1,6 @@
+ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '1234';
+use virtuallabsdsce;
+
 create table userdata ( 
 	username varchar(50),
     semester varchar(6),

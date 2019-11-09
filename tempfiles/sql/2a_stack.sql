@@ -1,3 +1,5 @@
+use virtuallabsdsce;
+
 insert into questions_ds values ( 'st1', 'The terms Push and Pop is related to', 'st1a');
 insert into questions_ds values ( 'st2', 'Choose the correct output for the following sequence of operations:<br>push(5)<br>push(8)<br>pop() <br>push(2)<br>push(5)<br>pop()<br>pop()<br>pop()<br>push(1)<br>pop()', 'st2a');
 insert into questions_ds values ( 'st3', 'Stacks can be implemented using _________ and ________', 'st3c');
@@ -46,4 +48,3 @@ insert into answer_ds values ('st8a', 'Stack');
 insert into answer_ds values ('st8b', 'Queue');
 insert into answer_ds values ('st8c', 'Array');
 insert into answer_ds values ('st8d', 'Tree');
-

@@ -1,3 +1,5 @@
+use virtuallabsdsce;
+
 insert into questions_eng values ( 'hts1', '________  the people I interviewed, one in ten said they had already lied to someone that day.', 'hts1c');
 insert into questions_eng values ( 'hts2', 'She\'s lost her credit card. She _______ it somewhere.', 'hts2c');
 insert into questions_eng values ( 'hts3', 'Joe showed me photos of his new car, _____ he bought last week.', 'hts3a');
@@ -28,4 +30,3 @@ insert into answer_eng values ('hts5a', 'haven\'t ever');
 insert into answer_eng values ('hts5b', 'haven\'t');
 insert into answer_eng values ('hts5c', 'haven\'t got');
 insert into answer_eng values ('hts5d', 'have');
-

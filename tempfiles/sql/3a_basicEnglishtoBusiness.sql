@@ -1,3 +1,5 @@
+use virtuallabsdsce;
+
 insert into questions_eng values ( 'en1', 'Mike _______ his teeth before breakfast every morning.', 'en1c');
 insert into questions_eng values ( 'en2', 'How many students in your class _______ from Korea?', 'en2b');
 insert into questions_eng values ( 'en3', 'At a school dance:<br>Jane: "__________ yourself?"<br>Mary: "Yes, I\'m having a great time!"', 'en3d');
@@ -28,4 +30,3 @@ insert into answer_eng values ('en5a', 'will look');
 insert into answer_eng values ('en5b', 'looking');
 insert into answer_eng values ('en5c', 'look');
 insert into answer_eng values ('en5d', 'am looking');
-

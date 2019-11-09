@@ -1,3 +1,5 @@
+use virtuallabsdsce;
+
 drop table user_scores;
 drop table userdata;
 drop table quiz;
@@ -17,3 +19,5 @@ drop table answer_ld;
 drop table answer_cn;
 drop table answer_dbms;
 drop table answer_eng;
+
+create database virtuallabsdsce;

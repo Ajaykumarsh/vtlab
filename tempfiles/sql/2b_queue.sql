@@ -1,3 +1,5 @@
+use virtuallabsdsce;
+
 insert into questions_ds values ( 'que1', 'Which data structure is needed to convert Infix notation to Postfix notation', 'que1d');
 insert into questions_ds values ( 'que2', 'A linear list of elements in which deletion takes place from one end (front) and insertion takes place only at the other end (rear) is known as a', 'que2a');
 insert into questions_ds values ( 'que3', 'A queue is a', 'que3a');
@@ -46,4 +48,3 @@ insert into answer_ds values ('que8a', '0');
 insert into answer_ds values ('que8b', '7');
 insert into answer_ds values ('que8c', '9');
 insert into answer_ds values ('que8d', '10');
-
