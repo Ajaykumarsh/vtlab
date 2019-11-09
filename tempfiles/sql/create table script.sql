@@ -7,8 +7,6 @@ create table userdata (
     passwd varchar(20)
     );
 
-create table quiz ( question_no int unique , answer_no numeric(4));
-
 create table user_scores (
 	usn varchar(20),
     quiz_score numeric(2),
