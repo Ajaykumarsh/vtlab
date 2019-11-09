@@ -1,3 +1,12 @@
+insert into questions_ds values ( 'st1', 'The terms Push and Pop is related to', 'st1a');
+insert into questions_ds values ( 'st2', 'Choose the correct output for the following sequence of operations:<br>push(5)<br>push(8)<br>pop() <br>push(2)<br>push(5)<br>pop()<br>pop()<br>pop()<br>push(1)<br>pop()', 'st2a');
+insert into questions_ds values ( 'st3', 'Stacks can be implemented using _________ and ________', 'st3c');
+insert into questions_ds values ( 'st4', 'Stack data structure cannot be used for', 'st4a');
+insert into questions_ds values ( 'st5', 'Which of the following datastructure is non linear', 'st5a');
+insert into questions_ds values ( 'st6', 'Which of the following datastructure is linear', 'st6d');
+insert into questions_ds values ( 'st7', 'Which of the datastructures cannot store non-homogenous Data Elements', 'st7a');
+insert into questions_ds values ( 'st8', 'The data structure required to check whether an expression contains balanced parenthesis is', 'st8a');
+
 insert into answer_ds values ('st1a', 'Stack');
 insert into answer_ds values ('st1b', 'Queue');
 insert into answer_ds values ('st1c', 'Both');
