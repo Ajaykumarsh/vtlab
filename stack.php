@@ -221,73 +221,44 @@ void main()
       
       <div id="faqs" style="display: none;">
       <form name="Quiz1">
-          <p>1. The terms Push and Pop is related to<br>
-            <label><input type="radio" name="q1" value="stack">Stack</label><br>
-            <label><input type="radio" name="q1" value="Queue">Queue</label><br>
-            <label><input type="radio" name="q1" value="Both">Both</label><br>
-            <label><input type="radio" name="q1" value="None">None</label><br>
-            <span id="q1"></span>
-          </p><br>
-          <p>2.Choose the correct output for the following sequence of operations:<br>   
-            push(5)<br>
-            push(8)<br>
-            pop <br>
-            push(2)<br>
-            push(5)<br>
-            pop<br>
-            pop<br>
-            pop<br>
-            push(1)<br>
-            pop<br>
-            <label><input type="radio" name="q2" value="85521">8 5 5 2 1</label><br>
-            <label><input type="radio" name="q2" value="85251">8 5 2 5 1</label><br>
-            <label><input type="radio" name="q2" value="82551">8 2 5 5 1</label><br>
-            <label><input type="radio" name="q2" value="82515">8 2 5 1 5</label><br>
-            <span id="q2"></span>
-          </p><br>
-          <p>3. Stacks can be implemented using _________ and ________
-<br>
-            <label><input type="radio" name="q3" value="Array and Binary tree">Array and Binary tree</label><br>
-            <label><input type="radio" name="q3" value="Linked List and Graph">Linked List and Graph</label><br>
-            <label><input type="radio" name="q3" value="Array and Linked List">Array and Linked List</label><br>
-            <label><input type="radio" name="q3" value="Queue and Linked List">Queue and Linked List</label><br>
-            <span id="q3"></span>
-          </p><br>
-          <p>4. Stack data structure cannot be used for<br>
-            <label><input type="radio" name="q4" value="Allocation Resources and Scheduling">Allocation Resources and Scheduling</label><br>
-            <label><input type="radio" name="q4" value="Implementation of Recursive funtion">Implementation of Recursive funtion</label><br>
-            <label><input type="radio" name="q4" value="Reversing String">Reversing String</label><br>
-            <label><input type="radio" name="q4" value="Evaluation of string in postfix form">Evaluation of string in postfix form</label><br>
-            <span id="q4"></span>
-          </p><br>
-          <p>5. Which of the following datastructure is non linear<br>
-            <label><input type="radio" name="q5" value="Graph">Graph</label><br>
-            <label><input type="radio" name="q5" value="Stack">Stack</label><br>
-            <label><input type="radio" name="q5" value="List">List</label><br>
-            <label><input type="radio" name="q5" value="None of the above">None of the above</label><br>
-            <span id="q5"></span>
-          </p><br>
-          <p>6. Which of the following datastructure is linear<br>
-            <label><input type="radio" name="q6" value="Binary tree">Binary tree</label><br>
-            <label><input type="radio" name="q6" value="Trees">Trees</label><br>
-            <label><input type="radio" name="q6" value="Graph">Graph</label><br>
-            <label><input type="radio" name="q6" value="Stack">Stack</label><br>
-            <span id="q6"></span>
-          </p><br>
-          <p>7. Which of the datastructures cannot store non-homogenous Data Elements<br>
-            <label><input type="radio" name="q7" value="Array">Array</label><br>
-            <label><input type="radio" name="q7" value="stack">Stack</label><br>
-            <label><input type="radio" name="q7" value="Records">Records</label><br>
-            <label><input type="radio" name="q7" value="None of the above">None of the above</label><br>
-            <span id="q7"></span>
-          </p><br>
-          <p>8. The data structure required to check whether an expression contains balanced parenthesis is<br>
-            <label><input type="radio" name="q8" value="Stack">Stack</label><br>
-            <label><input type="radio" name="q8" value="Queue">Queue</label><br>
-            <label><input type="radio" name="q8" value="Array">Array</label><br>
-            <label><input type="radio" name="q8" value="Tree">Tree</label><br>
-            <span id="q8"></span><br>
-          <input type="submit" id="quizSub" class="ui left floated button" value="Submit" onclick="quizCorrection()">
+      <?php
+        $servername = "localhost:3306";
+        $db_username = "root";
+        $password = "1234";
+        $dbname = "virtuallabsdsce";
+
+        // Create connection
+        $conn = new mysqli($servername, $db_username, $password, $dbname);
+
+        // Check connection
+        if ($conn->connect_error) {
+            die("Connection failed: " . $conn->connect_error);
+        }
+
+        $a= [1,2,3,4,5,6,7,8];
+        $opt = ['a','b','c','d'];
+        $questionno = 1;
+        shuffle($a);
+        foreach($a as $i)
+        {
+          $query = "select question from questions_ds where question_no like \"st$i\"";
+          $question_name = $conn->query($query);
+          $row = $question_name->fetch_assoc();
+          echo "<p>".$questionno.". ".$row['question']."<br>";
+          shuffle($opt);
+          foreach($opt as $j)
+          {
+            $option_name = $conn->query("select options_name from answer_ds where option_no like \"st$i$j\"");
+            $row =$option_name->fetch_assoc();
+            echo "<label><input type=\"radio\" name=\"st".$i."\" value=\"st".$i.$j."\">".$row['options_name']."</label><br>";
+          }
+          echo "<span id=\"st".$i."\"></span></p><br>";
+          $questionno += 1;
+        }
+        $conn->close();
+        
+        ?>
+        <input type="submit" id="quizSub" class="ui left floated button" value="Submit" onclick="quizCorrection()">
         </form><br><br>
         <div id="result">
         </div>
