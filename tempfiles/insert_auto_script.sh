@@ -7,7 +7,7 @@ for z in $(ls *php);do
     b='a';
     echo "  --> $z  done";
     while read p;do
-    echo "insert into answer_$1 values ('en$j$b', '$p');" >> $z.sql;
+    echo "insert into answer_$1 values ($1$j$b', '$p');" >> $z.sql;
     i=`expr $i + 1`;
     if [ $b == 'a' ];then b='b';
     elif [ $b == 'b' ];then b='c';
@@ -16,3 +16,4 @@ for z in $(ls *php);do
     if [ $i -eq 4 ];then i=0; j=`expr $j + 1`; echo "" >> $z.sql; fi
     done < temp.txt
 done;
+rm temp.txt
