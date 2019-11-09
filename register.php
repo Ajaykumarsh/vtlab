@@ -53,15 +53,15 @@ if(session_status()==PHP_SESSION_NONE)
         <form class="ui form" action="process.php" method="POST">
             <div class="field">
               <label>USN</label>
-              <input type="text" name="usn" placeholder="USN number" style="width: 400px;">
+              <input type="text" name="usn" placeholder="USN number" style="width: 400px;" required>
             </div>
             <div class="field">
               <label>Name</label>
-              <input type="text" name="name" placeholder="Name" style="width: 400px;">
+              <input type="text" name="name" placeholder="Name" style="width: 400px;" required>
             </div>
             <div class="field">
             <label>Semester</label>
-            <select class="ui dropdown" name="sem" style="margin-left: 0px; width: 400px;">
+            <select class="ui dropdown" name="sem" style="margin-left: 0px; width: 400px;" required>
                     <option class="item" value="I">I</option>
                     <option class="item" value="II">II</option>
                     <option class="item" value="III">III</option>
@@ -71,15 +71,15 @@ if(session_status()==PHP_SESSION_NONE)
             </div>
             <div class="field">
                     <label>Mobile number</label>
-                    <input type="number" name="mbno" placeholder="Mobile number" style="width: 400px;">
+                    <input type="tel" pattern="[0-9]{10}" name="mbno" placeholder="Mobile number" style="width: 400px;" required>
             </div>
             <div class="field">
                     <label>Email</label>
-                    <input type="email" name="email" placeholder="Email" style="width: 400px;">
+                    <input type="email" name="email" placeholder="Email" style="width: 400px;" required>
             </div>
             <div class="field">
                     <label>Password</label>
-                    <input type="password" name="password" placeholder="Password" style="width: 400px;">
+                    <input type="password" name="password" placeholder="Password" style="width: 400px;" required>
             </div>
             <input type="hidden" name="session_type" value="register">
             <button class="ui button" type="submit" style="float: none; margin-top: 20px;">Register</button>
