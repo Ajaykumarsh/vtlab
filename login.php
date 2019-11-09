@@ -4,9 +4,13 @@ if(session_status()==PHP_SESSION_NONE)
   session_start();
   if(isset($_SESSION['username']))
   {
-    $_SESSION['already_logged'] = "true";
     header("Location: titles.php");
     exit;
+  }
+  if(isset($_SESSION["login_error"]))
+  {
+    echo "<script>alert(\"Incorrect credentials!\")</script>";
+    unset($_SESSION["login_error"]);
   }
 }
 ?>
@@ -71,3 +75,4 @@ if(session_status()==PHP_SESSION_NONE)
         </div>
     </div>
 </body>
+</html>

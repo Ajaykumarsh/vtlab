@@ -23,6 +23,7 @@ if ($result->num_rows == 1)
     $row = $result->fetch_assoc();
     $_POST['name']=$row["username"];
 } else {
+    $_SESSION['login_error'] = "true";
     header("Location: login.php");
     exit;
 }
