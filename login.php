@@ -58,11 +58,11 @@ if(session_status()==PHP_SESSION_NONE)
         <form class="ui form" action="process.php" method="POST">
             <div class="field">
               <label>USN</label>
-              <input type="text" name="usn" placeholder="type your USN number" style="width: 300px;">
+              <input type="text" name="usn" placeholder="type your USN number" style="width: 300px;" required>
             </div>
             <div class="field">
                     <label>Password</label>
-                    <input type="password" name="password" placeholder="Password" style="width: 300px;">
+                    <input type="password" name="password" placeholder="Password" style="width: 300px;" required>
             </div>
             <input type="hidden" name="session_type" value="login">
             <button class="ui button" type="submit" style="float: none;">Login</button>
