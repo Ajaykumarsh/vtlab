@@ -42,10 +42,15 @@ if(session_status()==PHP_SESSION_NONE)
  <a class="item">
     About Us
   </a> 
-   
-  <!-- <a class="item">
-    Item
-  </a> -->
+ <?php
+    if(!isset($_SESSION["username"])) echo "<a class=\"item\" href=\"login.php\">Login</a><a class=\"item\" href=\"register.php\">Register</a>";
+    else 
+    { 
+      echo "<a class=\"item\">"; 
+      echo $_SESSION['username'];
+      echo "</a><a class=\"item\" href=\"logoutprocess.php\">Logout</a>";
+    }
+    ?>
 </div>
 </div>
   <div class="ui container" id="cont">
