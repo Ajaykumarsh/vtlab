@@ -13,10 +13,9 @@ create table userdata (
 create table user_scores (
 	usn varchar(20),
     quiz_score numeric(2),
-    program_score int,
-    quiz_no int unique,
-    program_no int unique,
-    primary key(usn, quiz_no, program_no),
+    program_solved boolean,
+    topic_name varchar(5) unique,
+    primary key(usn, topic_name),
     foreign key(usn) references userdata(usn));
     
 create table questions_ds ( question_no varchar(5) primary key , question varchar(200), answer_no varchar(5));

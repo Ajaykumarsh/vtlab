@@ -30,17 +30,17 @@
 		}
 		else
 		{
-		$filename_in="./inputs/run".$pname."in.txt";
-		$filename_out=fopen("./outputs/run".$pname."out.txt", "r");
-		$fout=fread($filename_out,filesize("./outputs/".$pname."out.txt"));
+		$filename_in="inputs\\run".$pname."in.txt";
+		$filename_out=fopen("outputs\\run".$pname."out.txt", "r");
+		$fout=fread($filename_out,filesize("outputs\\run".$pname."out.txt"));
 		fclose($filename_out);
 		}
-	}
+	}`
 	else
 	{
-	$filename_in="./inputs/".$pname."in.txt";
-	$filename_out=fopen("./outputs/".$pname."out.txt", "r");
-	$fout=fread($filename_out,filesize("./outputs/".$pname."out.txt"));
+	$filename_in="inputs\\".$pname."in.txt";
+	$filename_out=fopen("outputs\\".$pname."out.txt", "r");
+	$fout=fread($filename_out,filesize("outputs\\".$pname."out.txt"));
 	fclose($filename_out);
 	}
 	
