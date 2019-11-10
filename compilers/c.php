@@ -20,6 +20,7 @@
 	$file_code=fopen($filename_code,"w+");
 	fwrite($file_code,$code);
 	fclose($file_code);
+	
 	if($runcode)
 	{
 		if(trim($input)!="")
@@ -31,6 +32,7 @@
 		else
 		{
 		$filename_in="inputs\\run".$pname."in.txt";
+		exec("cacls  outputs\\run".$pname."out.txt /g everyone:f");
 		$filename_out=fopen("outputs\\run".$pname."out.txt", "r");
 		$fout=fread($filename_out,filesize("outputs\\run".$pname."out.txt"));
 		fclose($filename_out);
@@ -44,11 +46,11 @@
 	fclose($filename_out);
 	}
 	
-	//exec("cacls  $filename_error /g everyone:f");	
+	exec("cacls  $filename_in /g everyone:f");	
 
 	shell_exec($command_error);
 	$error=file_get_contents($filename_error);
-	exec("chmod a+x $executable");
+	//exec("chmod a+x $executable");
 	if(trim($error)=="")
 	{
 		if($runcode)
