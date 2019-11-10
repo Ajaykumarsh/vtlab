@@ -229,12 +229,11 @@ void main()
         }
         
         echo "<input type=\"hidden\" name=\"quizID\" value=\"ds.que.8\">";
-        echo "<input type=\"submit\" id=\"quizSub\" class=\"ui left floated button\" value=\"Submit\">";
+        echo "<div id=\"result\"><input type=\"submit\" id=\"quizSub\" class=\"ui left floated button\" value=\"Submit\"></div>";
         }
         $conn->close();
         ?>
-        </form><br><br>
-        <div id="result"></div>
+        </form>
         </div>
       </div>
       </div>

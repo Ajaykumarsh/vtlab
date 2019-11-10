@@ -34,20 +34,17 @@ if($_POST)
       $result=$conn->query($sql);
       $row=$result->fetch_assoc();
       echo "<script>$(\"#$name$a\").html(\"<code style='color:red;'>Incorrect answer.</code><br><code style='color:red;'>Correct answer: ".$row["options_name"]."</code><br>\");</script>";
-    }
+    } 
 
     $a = $a - 1;
     $thing=$_POST['$name$a'];
   }
-  
-  echo "<script>document.getElementById('result').innerHTML = \"<br>Correct:  $total / $num\";
-  $(\"#quiz\").submit(function() {
-    $(\"#quizSub\").attr('disabled', true);
-});</script>";
+  $percent = round(($total*100/$num), 1);
+  echo "<script>document.getElementById('result').innerHTML = \"Correct:  $total / $num<br>Score: $percent%\";</script>";
   $stmt = $conn->prepare("INSERT INTO user_scores (usn, quiz_score, topic_name) VALUES (?, ?, ?)");
   $stmt->bind_param("sis",$usn, $quiz_score, $topic_name);
   $usn=$_SESSION["usn"];
-  $quiz_score=$total;
+  $quiz_score=$percent;
   $topic_name=$name;
   
   $stmt->execute();

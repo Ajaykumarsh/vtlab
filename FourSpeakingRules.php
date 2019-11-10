@@ -163,12 +163,11 @@ Another problem I see is that many students study the news. However, the languag
             }
             
         echo "<input type=\"hidden\" name=\"quizID\" value=\"eng.fsr.5\">";
-        echo "<input type=\"submit\" id=\"quizSub\" class=\"ui left floated button\" value=\"Submit\">";
+        echo "<div id=\"result\"><input type=\"submit\" id=\"quizSub\" class=\"ui left floated button\" value=\"Submit\"></div>";
         }
         $conn->close();
         ?>
-        </form><br><br>
-      <div id="result"></div>
+        </form>
       </div>
     </div>
   </div>

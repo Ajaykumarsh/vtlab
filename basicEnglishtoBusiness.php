@@ -146,12 +146,11 @@ If you want to improve your business English, you are going to have to spend tim
             }
             
         echo "<input type=\"hidden\" name=\"quizID\" value=\"eng.en.5\">";
-        echo "<input type=\"submit\" id=\"quizSub\" class=\"ui left floated button\" value=\"Submit\">";
+        echo "<div id=\"result\"><input type=\"submit\" id=\"quizSub\" class=\"ui left floated button\" value=\"Submit\"></div>";
         }
         $conn->close();
         ?>
-            </form><br><br>
-      <div id="result"></div>
+            </form>
       </div>
     </div>
   </div>

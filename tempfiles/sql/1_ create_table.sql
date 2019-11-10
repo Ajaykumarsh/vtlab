@@ -12,7 +12,7 @@ create table userdata (
 
 create table user_scores (
 	usn varchar(20),
-    quiz_score numeric(2),
+    quiz_score numeric(3,1),
     program_solved boolean not null default 0,
     topic_name varchar(5),
     primary key(usn, topic_name),

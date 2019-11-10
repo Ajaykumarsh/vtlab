@@ -171,12 +171,11 @@ There are no shortcuts in life. Definitely, no shortcuts to learn English.
               $questionno += 1;
             }
         echo "<input type=\"hidden\" name=\"quizID\" value=\"eng.hts.5\">";
-        echo "<input type=\"submit\" id=\"quizSub\" class=\"ui left floated button\" value=\"Submit\">";
+        echo "<div id=\"result\"><input type=\"submit\" id=\"quizSub\" class=\"ui left floated button\" value=\"Submit\"></div>";
         }
         $conn->close();
         ?>
-        </form><br><br>
-      <div id="result"></div>
+        </form>
       </div>
       
     </div>
