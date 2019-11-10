@@ -155,9 +155,9 @@ There are no shortcuts in life. Definitely, no shortcuts to learn English.
               {
                 $option_name = $conn->query("select options_name from answer_eng where option_no like \"hts$i$j\"");
                 $row =$option_name->fetch_assoc();
-                echo "<label><input type=\"radio\" name=\"st".$i."\" value=\"st".$i.$j."\">".$row['options_name']."</label><br>";
+                echo "<label><input type=\"radio\" name=\"hts".$i."\" value=\"hts".$i.$j."\">".$row['options_name']."</label><br>";
               }
-              echo "<span id=\"st".$i."\"></span></p><br>";
+              echo "<span id=\"hts".$i."\"></span></p><br>";
               $questionno += 1;
             }
             $conn->close();

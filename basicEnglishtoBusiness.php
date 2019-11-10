@@ -129,9 +129,9 @@ If you want to improve your business English, you are going to have to spend tim
               {
                 $option_name = $conn->query("select options_name from answer_eng where option_no like \"en$i$j\"");
                 $row =$option_name->fetch_assoc();
-                echo "<label><input type=\"radio\" name=\"st".$i."\" value=\"st".$i.$j."\">".$row['options_name']."</label><br>";
+                echo "<label><input type=\"radio\" name=\"en".$i."\" value=\"en".$i.$j."\">".$row['options_name']."</label><br>";
               }
-              echo "<span id=\"st".$i."\"></span></p><br>";
+              echo "<span id=\"en".$i."\"></span></p><br>";
               $questionno += 1;
             }
             $conn->close();
