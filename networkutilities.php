@@ -111,7 +111,7 @@ if(session_status()==PHP_SESSION_NONE)
               echo "<span id=\"nu".$i."\"></span></p><br>";
               $questionno += 1;
             }
-        echo "<input type=\"hidden\" name=\"quizID\" value=\"cn.nu.5\">";
+        echo "<input type=\"hidden\" name=\"quizID\" value=\"cn.nu.8\">";
         echo "<div id=\"result\"><input type=\"submit\" id=\"quizSub\" class=\"ui left floated button\" value=\"Submit\"></div>";
         }
         $conn->close();

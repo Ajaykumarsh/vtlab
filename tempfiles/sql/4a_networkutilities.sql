@@ -6,7 +6,7 @@ insert into questions_cn values ( 'nu3', 'The Utility to find out how many Route
 insert into questions_cn values ( 'nu4', 'Which protocol does PING make use of', 'nu4c');
 insert into questions_cn values ( 'nu5', 'To know the MAC address of a machine, which utility can be used', 'nu5b');
 insert into questions_cn values ( 'nu6', 'NETSTAT is used to', 'nu6a');
-insert into questions_cn values ( 'nu7', 'To know the IPaddress of a server, following utility can be used', 'nu7c');
+insert into questions_cn values ( 'nu7', 'To know the IP Address of a server, following utility can be used', 'nu7c');
 insert into questions_cn values ( 'nu8', 'PING can', 'nu8d');
 
 insert into answer_cn values ('nu1a', 'to test the availability of destination host');
@@ -17,7 +17,7 @@ insert into answer_cn values ('nu1d', 'None of these');
 insert into answer_cn values ('nu2a', 'Netstat');
 insert into answer_cn values ('nu2b', 'PING');
 insert into answer_cn values ('nu2c', 'IPConfig');
-insert into answer_cn values ('nu2d', 'TraceRt');
+insert into answer_cn values ('nu2d', 'TraceRoute');
 
 insert into answer_cn values ('nu3a', 'PING');
 insert into answer_cn values ('nu3b', 'TraceRoute');
@@ -30,7 +30,7 @@ insert into answer_cn values ('nu4c', 'ICMP');
 insert into answer_cn values ('nu4d', 'SMTP');
 
 insert into answer_cn values ('nu5a', 'PING');
-insert into answer_cn values ('nu5b', 'IPCONFIG');
+insert into answer_cn values ('nu5b', 'IPConfig');
 insert into answer_cn values ('nu5c', 'TraceRt');
 insert into answer_cn values ('nu5d', 'None of these');
 
