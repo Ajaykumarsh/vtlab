@@ -10,7 +10,7 @@ if(session_status()==PHP_SESSION_NONE)
 }
 ?>
 <?php
-
+	$S_ID=session_id();
 	$languageID=$_POST["lang"];
     error_reporting(0);
     $runcode=0;
@@ -39,8 +39,13 @@ if(session_status()==PHP_SESSION_NONE)
 	{
 		include("compilers/py3.php");
 	}
-	else
+	else if($languageID=="java")
 		include("compilers/java.php");
+	else
+	{
+		header("Location: titles.php");
+		exit;
+	}
 ?>
 
 

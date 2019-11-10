@@ -1,17 +1,17 @@
 <?php
     
-    putenv("PATH=/usr/bin:/usr/lib:/app/.apt/usr/include:/app/.apt/usr/lib");
-	$CC="gcc --sysroot=/app/.apt/ -w";
+    putenv("PATH=C:\MinGW\bin");
+	$CC="gcc";
 	//shell_exec('cp /lib/* -r /app/.apt/lib/'); 
-	$out="a.out";
+	$out="a".$S_ID;
 	$pname=$_POST["prog"];
 	$code=$_POST["editor"];
 	$input=$_POST["input"];
-	$filename_code="main.c";
-	$filename_in="input.txt";
-	$filename_error="error.txt";
-	$executable="a.out";
-	$command=$CC." -lm ".$filename_code;	
+	$filename_code="main".$S_ID.".c";
+	$filename_in="input".$S_ID.".txt";
+	$filename_error="error".$S_ID.".txt";
+	$executable=$out;
+	$command=$CC." -lm ".$filename_code." -o ".$out;	
 	$command_error=$command." 2>".$filename_error;
 	//$filename_out="./outputs/stackout.txt";
 	//if(trim($code)=="")
@@ -54,7 +54,7 @@
 		if($runcode)
 		{
 			exec("chmod a+x $executable"); 
-			$output=shell_exec('./a.out < '.$filename_in);
+			$output=shell_exec($executable.' < '.$filename_in);
 			if(trim($input)!=""){}
 			else if($output==$fout) $output="Sample case passed.";
 			else $output="Sample case failed.";
@@ -62,7 +62,7 @@
 		else 
 		{
 			exec("chmod a+x $executable"); 
-			$output=shell_exec('./a.out < '.$filename_in);
+			$output=shell_exec($executable.' < '.$filename_in);
 			if($output==$fout) $output="Test case passed.";
 			else $output="Test case failed.";
 		}
@@ -76,13 +76,12 @@
 		if(trim($input)=="" && $runcode)
 		{
 			exec("chmod a+x $executable"); 
-			$output=shell_exec('./a.out');
+			$output=shell_exec($executable);
 		}
 		else
 		{
 			exec("chmod a+x $executable"); 
-			$out=$out." < ".$filename_in;
-			$output=shell_exec('./a.out < '.$filename_in);
+			$output=shell_exec($executable.' < '.$filename_in);
 		}
 		echo "<label class=\"writeCode\">Error</label><br><br><pre class=\"GrayBlock\">$output</pre>";
 		// echo "$output";
@@ -93,9 +92,8 @@
 	{
 		echo "<label class=\"writeCode\">Error</label><br><br><pre class=\"GrayBlock\">$error</pre>";
 	}
-	exec("rm $filename_code");
-	exec("rm *.o");
-	exec("rm *put.txt");
-	exec("rm $filename_error");
-	exec("rm $executable");
+	exec("del /f $filename_code");
+	exec("del /f *".$S_ID."*");
+	exec("del /f $filename_error");
+	exec("del /f $executable");
 ?>
