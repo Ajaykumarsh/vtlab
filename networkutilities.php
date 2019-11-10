@@ -66,64 +66,45 @@ if(session_status()==PHP_SESSION_NONE)
     
 <div id="faqs" style="display: none;">
       
-      <form name="Quiz1">
-      
-          <p>1.Purpose of IP Config is<br>
-            <label><input type="radio" name="q1" value="to test the availability of destination host">to test the availability of destination host</label><br>
-            <label><input type="radio" name="q1" value="to list the parameters of the network interfaces">to list the parameters of the network interfaces</label><br>
-            <label><input type="radio" name="q1" value="to know the IP address of the webserver">to know the IP address of the webserver</label><br>
-            <label><input type="radio" name="q1" value="None of these">None of these</label><br>
-            <span id="q1"></span>
-          </p><br>
-          <p>2.PING can display the round trip time of a packet journey<br>
-            <label><input type="radio" name="q2" value="YES">YES</label><br>
-            <label><input type="radio" name="q2" value="NO">NO</label><br>
-            <span id="q2"></span>
-          </p><br>
-          <p>3.To know whether DHCP is enabled,follow in gutility is used<br>
-            <label><input type="radio" name="q3" value="Netstat">Netstat</label><br>
-            <label><input type="radio" name="q3" value="PING">PING</label><br>
-            <label><input type="radio" name="q3" value="IPConfig">IPConfig</label><br>
-            <label><input type="radio" name="q3" value="TraceRt">TraceRt</label><br>
-            <span id="q3"></span>
-          </p><br>
-          <p>4. Utility to find out how many routers are there from my PC to google server:<br>
-            <label><input type="radio" name="q4" value="PING">PING</label><br>
-            <label><input type="radio" name="q4" value="TraceRoute">TraceRoute</label><br>
-            <label><input type="radio" name="q4" value="Netstat">Netstat</label><br>
-            <label><input type="radio" name="q4" value="IPConfig">IPConfig</label><br>
-            <span id="q4"></span>
-          </p><br>
-          <p>5.PING makes use of following protocol<br>
-            <label><input type="radio" name="q5" value="HTTP">HTTP</label><br>
-            <label><input type="radio" name="q5" value="TCP">TCP</label><br>
-            <label><input type="radio" name="q5" value="ICMP">ICMP</label><br>
-            <label><input type="radio" name="q5" value="SMTP">SMTP</label><br>
-            <span id="q5"></span>
-          </p><br>
-          <p>6.To know the MAC address of my machine,following utility can be used<br>
-            <label><input type="radio" name="q5" value="PING">PING</label><br>
-            <label><input type="radio" name="q5" value="IPCONFIG">IPCONFIG</label><br>
-            <label><input type="radio" name="q5" value="TraceRt">TraceRt</label><br>
-            <label><input type="radio" name="q5" value="None of the above">None of the above</label><br>
-            <span id="q6"></span>
-          </p><br>
-          <p>7.NETSTAT is used to<br>
-            <label><input type="radio" name="q5" value="know the active TCP connections">know the active TCP connections</label><br>
-            <label><input type="radio" name="q5" value="know the DHCP server details">know the DHCP server details</label><br>
-            <label><input type="radio" name="q5" value="know DNS addresses">know DNS addresses</label><br>
-            <label><input type="radio" name="q5" value="Hardware address">Hardware address</label><br>
-            <span id="q7"></span>
-          </p><br>
-          <p>8.To know IPaddress of a server,following utility can be used<br>
-            <label><input type="radio" name="q5" value="IPConfig">IPConfig</label><br>
-            <label><input type="radio" name="q5" value="PING">PING</label><br>
-            <label><input type="radio" name="q5" value="nslookup">nslookup</label><br>
-            <label><input type="radio" name="q5" value="netstat">netstat</label><br>
-            <span id="q8"></span>
-          </p><br>
+      <form name="Quiz1"> 
+      <?php
+            $servername = "localhost:3306";
+            $db_username = "root";
+            $password = "1234";
+            $dbname = "virtuallabsdsce";
 
-          <input type="submit" id="quizSub" class="ui left floated button" value="Submit" onclick="quizCorrection()">
+            // Create connection
+            $conn = new mysqli($servername, $db_username, $password, $dbname);
+
+            // Check connection
+            if ($conn->connect_error) {
+                die("Connection failed: " . $conn->connect_error);
+            }
+
+            $a= [1,2,3,4,5];
+            $opt = ['a','b','c','d']; 
+            $questionno = 1;
+            shuffle($a);
+            foreach($a as $i)
+            {
+              $query = "select question from questions_cn where question_no like \"nu$i\"";
+              $question_name = $conn->query($query);
+              $row = $question_name->fetch_assoc();
+              echo "<p>".$questionno.". ".$row['question']."<br>";
+              shuffle($opt);
+              foreach($opt as $j)
+              {
+                $option_name = $conn->query("select options_name from answer_cn where option_no like \"nu$i$j\"");
+                $row =$option_name->fetch_assoc();
+                echo "<label><input type=\"radio\" name=\"nu".$i."\" value=\"nu".$i.$j."\">".$row['options_name']."</label><br>";
+              }
+              echo "<span id=\"nu".$i."\"></span></p><br>";
+              $questionno += 1;
+            }
+            $conn->close();
+            
+            ?>
+            <input type="submit" id="quizSub" class="ui left floated button" value="Submit" onclick="quizCorrection()">
         </form>
       
       </div>
