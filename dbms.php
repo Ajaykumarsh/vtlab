@@ -77,7 +77,7 @@ if(session_status()==PHP_SESSION_NONE)
 <br> <br>
 The main aim of a DBMS is to supply a way to store up and retrieve database information that is both convenient and efficient. By data, we mean known facts that can be recorded and that have embedded meaning.
 <br> <br>
-     <iframe width="420" height="345" src="https://www.youtube.com/embed/FR4QIeZaPeM">
+     <iframe height="400px" width="100%" allowfullscreen="allowfullscreen" src="https://www.youtube.com/embed/FR4QIeZaPeM" frameborder="0">
 </iframe>
       </div>
       
