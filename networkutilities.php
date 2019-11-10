@@ -88,7 +88,7 @@ if(session_status()==PHP_SESSION_NONE)
             if ($res->num_rows == 1)
             { 
               $row = $res->fetch_assoc();
-              echo "Quiz already attemped!<br>Your score: ".$row["quiz_score"]."%";
+              echo "Quiz already attemped!<br><br>Your score: ".$row["quiz_score"]."%";
             }
             else{
             $a= [1,2,3,4,5,6,7,8];

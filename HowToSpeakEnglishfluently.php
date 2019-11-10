@@ -156,7 +156,7 @@ There are no shortcuts in life. Definitely, no shortcuts to learn English.
             if ($res->num_rows == 1)
             { 
               $row = $res->fetch_assoc();
-              echo "Quiz already attemped! Your score: ".$row["quiz_score"];
+              echo "Quiz already attemped!<br><br>Your score: ".$row["quiz_score"];
             }
             else{
             $a= [1,2,3,4,5];

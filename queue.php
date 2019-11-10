@@ -184,7 +184,7 @@ void main()
           </div>
           </div>
 
-      </div>
+      </div> 
       
       <div id="faqs" style="display: none;">
       <form name="quiz" id="quiz" action="quizProcess.php" method="POST">
@@ -209,7 +209,7 @@ void main()
         if ($res->num_rows == 1)
         { 
           $row = $res->fetch_assoc();
-          echo "Quiz already attemped! Your score: ".$row["quiz_score"];
+          echo "Quiz already attemped!<br><br>Your score: ".$row["quiz_score"];
         }
         else{
         $a= [1,2,3,4,5,6,7,8];

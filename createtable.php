@@ -9,7 +9,7 @@ if(session_status()==PHP_SESSION_NONE)
   }
 }
 ?>
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -34,15 +34,21 @@ if(session_status()==PHP_SESSION_NONE)
   <a class="header item" href="index.php">
     Home
   </a>
+  <a class="item" href="dbms.php">
+    Database Management
+  </a>
  <a class="item">
     About Us
   </a> 
-   <!-- <a class="item">
-    Item
-  </a>
-  <a class="item">
-    Item
-  </a> -->
+  <?php
+    if(!isset($_SESSION["username"])) echo "<a class=\"item\" href=\"login.php\">Login</a><a class=\"item\" href=\"register.php\">Register</a>";
+    else 
+    { 
+      echo "<a class=\"item\">"; 
+      echo $_SESSION['username'];
+      echo "</a><a class=\"item\" href=\"logoutprocess.php\">Logout</a>";
+    }
+    ?>
 </div>
 </div>
   <div class="ui container" id="cont">
@@ -79,7 +85,7 @@ To create a table, you have to name that table and define its columns and dataty
         <div class="ui bulleted list">
           <div class="item">
           table_name: It specifies the name of the table which you want to create. <br><br>
-column1, column2, ... column n: It specifies the columns which you want to add in the table.<br> <br>Every column must have a datatype. Every column should either be defined as "NULL" or "NOT NULL". In the case, the value is left blank; it is treated as "NULL" as default.
+column1, column2, ... column n: It specifies the columns which you want to add in the table.<br> <br>Every column must have a datatype. Every column should either be defined as "NULL" or "NOT NULL". In the case, the value is left blank; it is treated as "NULL" as default.<br>
           <div class="GrayBlock">
           CREATE TABLE table_name  
            (   
@@ -93,7 +99,7 @@ column1, column2, ... column n: It specifies the columns which you want to add i
             
             <br>
             <div class="item">
-             For Example: Here we are creating a table named customers. This table doesn't have any primary key.
+             For Example: Here we are creating a table named customers. This table doesn't have any primary key.<br>
              <div class="GrayBlock">
              CREATE TABLE customers  
                (   customer_id number(10) NOT NULL,  
@@ -101,7 +107,7 @@ column1, column2, ... column n: It specifies the columns which you want to add i
                 city varchar2(50)  
                );  
             </div>
-            This table contains three columns
+            This table contains three columns<br><br>
 
 customer_id: It is the first column created as a number datatype (maximum 10 digits in length) and cannot contain null values. <br><br>
 customer_name: it is the second column created as a varchar2 datatype (50 maximum characters in length) and cannot contain null values.<br><br>
@@ -112,46 +118,64 @@ city: This is the third column created as a varchar2 datatype. It can contain nu
       </div>
       
       <div id="lis" style="display: none;">
-      <iframe width="420" height="345" src="https://www.youtube.com/embed/W3RGQcdrIRY">
-</iframe>
+      <iframe height="400px" width="100%" allowfullscreen="allowfullscreen" src="https://www.youtube.com/embed/W3RGQcdrIRY" frameborder="0">
+</iframe> 
           </div>
 
       
       
       <div id="faqs" style="display: none;">
-        <form name="Quiz1">
-          <p>1.  A relational database consists of a collection of <br>
-            <label><input type="radio" name="q1" value="Tables">Tables</label><br>
-            <label><input type="radio" name="q1" value="Fields">Fields</label><br>
-            <label><input type="radio" name="q1" value="Records">Records</label><br>
-            <label><input type="radio" name="q1" value="Keys">Keys</label><br>
-          </p><br>
-          <p>2. A ________ in a table represents a relationship among a set of values. <br>
-            <label><input type="radio" name="q2" value="Column"> Column</label><br>
-            <label><input type="radio" name="q2" value="Key">Key</label><br>
-            <label><input type="radio" name="q2" value="Row">Row</label><br>
-            <label><input type="radio" name="q2" value="Entry">Entry</label><br>
-          </p><br>
-          <p>3. The term _______ is used to refer to a row. <br>
-            <label><input type="radio" name="q3" value="Attribute">Attribute</label><br>
-            <label><input type="radio" name="q3" value="Tuple">Tuple</label><br>
-            <label><input type="radio" name="q3" value="Field">Field</label><br>
-            <label><input type="radio" name="q3" value="Instance">Instance</label><br>
-          </p><br>
-          <p>4. The term attribute refers to a ___________ of a table.<br>
-            <label><input type="radio" name="q4" value="Record">Record</label><br>
-            <label><input type="radio" name="q4" value="Column">Column</label><br>
-            <label><input type="radio" name="q4" value="Tuple"> Tuple</label><br>
-            <label><input type="radio" name="q4" value="Key">Key</label><br>
-          </p><br>
-          <p>5.For each attribute of a relation, there is a set of permitted values, called the ________ of that attribute.
-<br>
-            <label><input type="radio" name="q5" value="Domain">Domain</label><br>
-            <label><input type="radio" name="q5" value="Relation">Relation</label><br>
-            <label><input type="radio" name="q5" value="Set">Set</label><br>
-            <label><input type="radio" name="q5" value="Schema">Schema</label><br>
-          </p><br>
-          <input type="submit" id="quizSub" class="ui left floated button" value="Submit">
+      <form name="quiz" id="quiz" action="quizProcess.php" method="POST">
+      <?php
+        $servername = "localhost:3306";
+        $db_username = "root";
+        $password = "1234";
+        $dbname = "virtuallabsdsce";
+
+        // Create connection
+        $conn = new mysqli($servername, $db_username, $password, $dbname);
+
+        // Check connection
+        if ($conn->connect_error) {
+            die("Connection failed: " . $conn->connect_error);
+        }
+
+        $usn=$_SESSION["usn"];
+        $query = "select * from user_scores where usn='$usn' and topic_name='ct'";
+        $res=$conn->query($query);
+        
+        if ($res->num_rows == 1)
+        { 
+          $row = $res->fetch_assoc();
+          echo "Quiz already attemped!<br><br>Your score: ".$row["quiz_score"];
+        }
+        else{
+        $a= [1,2,3,4,5,6,7,8];
+        $opt = ['a','b','c','d'];
+        $questionno = 1;
+        shuffle($a);
+        foreach($a as $i)
+        {
+          $query = "select question from questions_dbms where question_no like \"ct$i\"";
+          $question_name = $conn->query($query);
+          $row = $question_name->fetch_assoc();
+          echo "<p>".$questionno.". ".$row['question']."<br>";
+          shuffle($opt);
+          foreach($opt as $j)
+          {
+            $option_name = $conn->query("select options_name from answer_dbms where option_no like \"ct$i$j\"");
+            $row =$option_name->fetch_assoc();
+            echo "<label><input type=\"radio\" name=\"ct".$i."\" value=\"ct".$i.$j."\">".$row['options_name']."</label><br>";
+          }
+          echo "<span id=\"ct".$i."\"></span></p><br>";
+          $questionno += 1;
+        }
+        
+        echo "<input type=\"hidden\" name=\"quizID\" value=\"dbms.ct.8\">";
+        echo "<div id=\"result\"><input type=\"submit\" id=\"quizSub\" class=\"ui left floated button\" value=\"Submit\"></div>";
+        }
+        $conn->close();
+        ?>
         </form>
         </div>
       </div>
