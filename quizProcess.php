@@ -40,7 +40,18 @@ if($_POST)
     $thing=$_POST['$name$a'];
   }
   
-  echo "<script>document.getElementById('result').innerHTML = \"<br>Correct:  $total / $num\";</script>";
+  echo "<script>document.getElementById('result').innerHTML = \"<br>Correct:  $total / $num\";
+  $(\"#quiz\").submit(function() {
+    $(\"#quizSub\").attr('disabled', true);
+});</script>";
+  $stmt = $conn->prepare("INSERT INTO user_scores (usn, quiz_score, topic_name) VALUES (?, ?, ?)");
+  $stmt->bind_param("sis",$usn, $quiz_score, $topic_name);
+  $usn=$_SESSION["usn"];
+  $quiz_score=$total;
+  $topic_name=$name;
+  
+  $stmt->execute();
+  $conn->close();
 }
 else
 {

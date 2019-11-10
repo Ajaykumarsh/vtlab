@@ -13,8 +13,8 @@ create table userdata (
 create table user_scores (
 	usn varchar(20),
     quiz_score numeric(2),
-    program_solved boolean,
-    topic_name varchar(5) unique,
+    program_solved boolean not null default 0,
+    topic_name varchar(5),
     primary key(usn, topic_name),
     foreign key(usn) references userdata(usn));
     
