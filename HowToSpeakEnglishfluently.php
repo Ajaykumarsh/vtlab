@@ -126,46 +126,44 @@ There are no shortcuts in life. Definitely, no shortcuts to learn English.
       
       <div id="faqs" style="display: none;">
       <form name="Quiz1">
-      Check your Basic English Skills
-          <p>1._________  the people I interviewed, one in ten said they had already lied to someone that day.<br>
-            <label><input type="radio" name="q1" value="around">around</label><br>
-            <label><input type="radio" name="q1" value="between">between</label><br>
-            <label><input type="radio" name="q1" value="among">among</label><br>
-            <label><input type="radio" name="q1" value="along">along</label><br>
-            <span id="q1"></span> among
-          </p><br>
-          <p>She’s lost her credit card. She _______ it somewhere.<br>
-            <label><input type="radio" name="q2" value="must have been dropping">must have been dropping</label><br>
-            <label><input type="radio" name="q2" value="should have dropped">should have dropped</label><br>
-            <label><input type="radio" name="q2" value="must have dropped">must have dropped</label><br>
-            <label><input type="radio" name="q2" value="would have dropped">would have dropped</label><br>
-            <span id="q2"></span>must have dropped
-          </p><br>
-          <p>3. Joe showed me photos of his new car, _____ he bought last week.
-<br>
-            <label><input type="radio" name="q3" value="which">which</label><br>
-            <label><input type="radio" name="q3" value="that">that</label><br>
-            <label><input type="radio" name="q3" value="what">what</label><br>
-            <label><input type="radio" name="q3" value="whom">whom</label><br>
-            <span id="q3"></span>
-          </p><br>
-          <p>4.My teacher had difficulty ______ my handwriting.
- <br>
-            <label><input type="radio" name="q4" value="to read">to read</label><br>
-            <label><input type="radio" name="q4" value="for reading">for reading</label><br>
-            <label><input type="radio" name="q4" value="reading">reading</label><br>
-            <label><input type="radio" name="q4" value="to have read">to have read</label><br>
-            <span id="q4"></span>reading
-          </p><br>
-          <p>5. I’m afraid I _____ used to working in an open-plan office.
-<br>
-            <label><input type="radio" name="q5" value="haven't ever">haven't ever</label><br>
-            <label><input type="radio" name="q5" value="haven't">haven't</label><br>
-            <label><input type="radio" name="q5" value="haven't got">haven't got</label><br>
-            <label><input type="radio" name="q5" value="have">have</label><br>
-            <span id="q5"></span>haven't got
-          </p><br>
-          <input type="submit" id="quizSub" class="ui left floated button" value="Submit" onclick="quizCorrection()">
+      <?php
+            $servername = "localhost:3306";
+            $db_username = "root";
+            $password = "1234";
+            $dbname = "virtuallabsdsce";
+
+            // Create connection
+            $conn = new mysqli($servername, $db_username, $password, $dbname);
+
+            // Check connection
+            if ($conn->connect_error) {
+                die("Connection failed: " . $conn->connect_error);
+            }
+
+            $a= [1,2,3,4,5];
+            $opt = ['a','b','c','d']; 
+            $questionno = 1;
+            shuffle($a);
+            foreach($a as $i)
+            {
+              $query = "select question from questions_eng where question_no like \"hts$i\"";
+              $question_name = $conn->query($query);
+              $row = $question_name->fetch_assoc();
+              echo "<p>".$questionno.". ".$row['question']."<br>";
+              shuffle($opt);
+              foreach($opt as $j)
+              {
+                $option_name = $conn->query("select options_name from answer_eng where option_no like \"hts$i$j\"");
+                $row =$option_name->fetch_assoc();
+                echo "<label><input type=\"radio\" name=\"st".$i."\" value=\"st".$i.$j."\">".$row['options_name']."</label><br>";
+              }
+              echo "<span id=\"st".$i."\"></span></p><br>";
+              $questionno += 1;
+            }
+            $conn->close();
+            
+            ?>
+            <input type="submit" id="quizSub" class="ui left floated button" value="Submit" onclick="quizCorrection()">
         </form>
       </div>
       

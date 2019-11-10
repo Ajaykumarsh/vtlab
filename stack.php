@@ -236,7 +236,7 @@ void main()
         }
 
         $a= [1,2,3,4,5,6,7,8];
-        $opt = ['a','b','c','d'];
+        $opt = ['a','b','c','d']; 
         $questionno = 1;
         shuffle($a);
         foreach($a as $i)

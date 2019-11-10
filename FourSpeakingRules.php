@@ -117,43 +117,44 @@ Another problem I see is that many students study the news. However, the languag
       <div id="faqs" style="display: none;">
       
       <form name="Quiz1">
-      Check your Basic English Skills
-          <p>1.She ______in her sleep<br>
-            <label><input type="radio" name="q1" value="Speaks">Speaks</label><br>
-            <label><input type="radio" name="q1" value="Talks">Talks</label><br>
-            <label><input type="radio" name="q1" value="Either could  be used here">Either could  be used here</label><br>
-            <label><input type="radio" name="q1" value="None of these">None of these</label><br>
-            <span id="q1"></span>
-          </p><br>
-          <p>	The phone _________. Can you answer it, please?<br>
-            <label><input type="radio" name="q2" value="rings">rings</label><br>
-            <label><input type="radio" name="q2" value="ring">ring</label><br>
-            <label><input type="radio" name="q2" value="rang">rang</label><br>
-            <label><input type="radio" name="q2" value="is ringing">is ringing</label><br>
-            <span id="q2"></span>
-          </p><br>
-          <p>3. John, if you keep working like these, you'll make _______ ill.<br>
-            <label><input type="radio" name="q3" value="Yourself">Yourself</label><br>
-            <label><input type="radio" name="q3" value="Yourselves">Yourselves</label><br>
-            <label><input type="radio" name="q3" value="You">You</label><br>
-            <label><input type="radio" name="q3" value="None of these">None of these</label><br>
-            <span id="q3"></span>
-          </p><br>
-          <p>4. Do you have any idea how long _______ me to do it? <br>
-            <label><input type="radio" name="q4" value="Did it take">Did it take</label><br>
-            <label><input type="radio" name="q4" value="it took">it took</label><br>
-            <label><input type="radio" name="q4" value="took it">took it </label><br>
-            <label><input type="radio" name="q4" value="None of these">None of these</label><br>
-            <span id="q4"></span>
-          </p><br>
-          <p>5. I was wondering why _______ take the train;it will be quicker.<br>
-            <label><input type="radio" name="q5" value="don't we">don't we</label><br>
-            <label><input type="radio" name="q5" value="we don't">we don't</label><br>
-            <label><input type="radio" name="q5" value="won't we">won't we</label><br>
-            <label><input type="radio" name="q5" value="None of the above">None of the above</label><br>
-            <span id="q5"></span>
-          </p><br>
-          <input type="submit" id="quizSub" class="ui left floated button" value="Submit" onclick="quizCorrection()">
+      <?php
+            $servername = "localhost:3306";
+            $db_username = "root";
+            $password = "1234";
+            $dbname = "virtuallabsdsce";
+
+            // Create connection
+            $conn = new mysqli($servername, $db_username, $password, $dbname);
+
+            // Check connection
+            if ($conn->connect_error) {
+                die("Connection failed: " . $conn->connect_error);
+            }
+
+            $a= [1,2,3,4,5];
+            $opt = ['a','b','c','d']; 
+            $questionno = 1;
+            shuffle($a);
+            foreach($a as $i)
+            {
+              $query = "select question from questions_eng where question_no like \"fsr$i\"";
+              $question_name = $conn->query($query);
+              $row = $question_name->fetch_assoc();
+              echo "<p>".$questionno.". ".$row['question']."<br>";
+              shuffle($opt);
+              foreach($opt as $j)
+              {
+                $option_name = $conn->query("select options_name from answer_eng where option_no like \"fsr$i$j\"");
+                $row =$option_name->fetch_assoc();
+                echo "<label><input type=\"radio\" name=\"st".$i."\" value=\"st".$i.$j."\">".$row['options_name']."</label><br>";
+              }
+              echo "<span id=\"st".$i."\"></span></p><br>";
+              $questionno += 1;
+            }
+            $conn->close();
+            
+            ?>
+            <input type="submit" id="quizSub" class="ui left floated button" value="Submit" onclick="quizCorrection()">
         </form>
       
       </div>

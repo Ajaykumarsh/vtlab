@@ -99,48 +99,45 @@ If you want to improve your business English, you are going to have to spend tim
 </iframe>      </div>
       
       <div id="faqs" style="display: none;">
-      <form name="Quiz1">
-      Check your Basic English Skills
-          <p>1.Mike _______ his teeth before breakfast every morning.<br>
-            <label><input type="radio" name="q1" value="will cleaned">	will cleaned</label><br>
-            <label><input type="radio" name="q1" value="is cleaning">is cleaning</label><br>
-            <label><input type="radio" name="q1" value="cleans">cleans</label><br>
-            <label><input type="radio" name="q1" value="clean">clean</label><br>
-            <span id="q1"></span> cleans
-          </p><br>
-          <p>2.How many students in your class ..... from Korea?<br>
-            <label><input type="radio" name="q2" value="comes">comes</label><br>
-            <label><input type="radio" name="q2" value="come">come</label><br>
-            <label><input type="radio" name="q2" value="came">came</label><br>
-            <label><input type="radio" name="q2" value="are coming">are coming</label><br>
-            <span id="q2"></span>
-          </p><br>come
-          <p>3. At a school dance: <br>
-Jane: " Are you enjoying yourself?"<br>
-Mary: "Yes, I'm having a great time!"<br>
-<br>
-            <label><input type="radio" name="q3" value="You enjoying">You enjoying</label><br>
-            <label><input type="radio" name="q3" value="Enjoy you">	Enjoy you</label><br>
-            <label><input type="radio" name="q3" value="Do you enjoy">Do you enjoy</label><br>
-            <label><input type="radio" name="q3" value="Are you enjoying">Are you enjoying</label><br>
-            <span id="q3"></span>Are you enjoying
-          </p><br>
-          <p>4.	What time does the _______? <br>
-            <label><input type="radio" name="q4" value="the train leaves?">	the train leaves?</label><br>
-            <label><input type="radio" name="q4" value="leaves the train?">leaves the train?</label><br>
-            <label><input type="radio" name="q4" value="is the train leaving?">is the train leaving?</label><br>
-            <label><input type="radio" name="q4" value="does the train leave?">does the train leave?</label><br>
-            <span id="q4"></span>train leave?
-          </p><br>
-          <p>5. 	I ________ for my pen. Have you seen it?
-<br>
-            <label><input type="radio" name="q5" value="will look">will look</label><br>
-            <label><input type="radio" name="q5" value="looking">	looking</label><br>
-            <label><input type="radio" name="q5" value="look">look</label><br>
-            <label><input type="radio" name="q5" value="am looking">am looking</label><br>
-            <span id="q5"></span>am looking
-          </p><br>
-          <input type="submit" id="quizSub" class="ui left floated button" value="Submit" onclick="quizCorrection()">
+        <form name="Quiz1">
+            <?php
+            $servername = "localhost:3306";
+            $db_username = "root";
+            $password = "1234";
+            $dbname = "virtuallabsdsce";
+
+            // Create connection
+            $conn = new mysqli($servername, $db_username, $password, $dbname);
+
+            // Check connection
+            if ($conn->connect_error) {
+                die("Connection failed: " . $conn->connect_error);
+            }
+
+            $a= [1,2,3,4,5];
+            $opt = ['a','b','c','d']; 
+            $questionno = 1;
+            shuffle($a);
+            foreach($a as $i)
+            {
+              $query = "select question from questions_eng where question_no like \"en$i\"";
+              $question_name = $conn->query($query);
+              $row = $question_name->fetch_assoc();
+              echo "<p>".$questionno.". ".$row['question']."<br>";
+              shuffle($opt);
+              foreach($opt as $j)
+              {
+                $option_name = $conn->query("select options_name from answer_eng where option_no like \"en$i$j\"");
+                $row =$option_name->fetch_assoc();
+                echo "<label><input type=\"radio\" name=\"st".$i."\" value=\"st".$i.$j."\">".$row['options_name']."</label><br>";
+              }
+              echo "<span id=\"st".$i."\"></span></p><br>";
+              $questionno += 1;
+            }
+            $conn->close();
+            
+            ?>
+            <input type="submit" id="quizSub" class="ui left floated button" value="Submit" onclick="quizCorrection()">
         </form>
       </div>
     </div>
