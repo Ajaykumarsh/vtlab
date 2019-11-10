@@ -91,7 +91,7 @@ if(session_status()==PHP_SESSION_NONE)
               echo "Quiz already attemped!<br>Your score: ".$row["quiz_score"]."%";
             }
             else{
-            $a= [1,2,3,4,5];
+            $a= [1,2,3,4,5,6,7,8];
             $opt = ['a','b','c','d']; 
             $questionno = 1;
             shuffle($a);
