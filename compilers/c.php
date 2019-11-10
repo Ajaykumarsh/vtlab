@@ -32,7 +32,7 @@
 		else
 		{
 		$filename_in="inputs\\run".$pname."in.txt";
-		exec("cacls  outputs\\run".$pname."out.txt /g everyone:f");
+		//exec("cacls  outputs\\run".$pname."out.txt /g everyone:f");
 		$filename_out=fopen("outputs\\run".$pname."out.txt", "r");
 		$fout=fread($filename_out,filesize("outputs\\run".$pname."out.txt"));
 		fclose($filename_out);
@@ -46,7 +46,7 @@
 	fclose($filename_out);
 	}
 	
-	exec("cacls  $filename_in /g everyone:f");	
+	//exec("cacls  $filename_in /g everyone:f");	
 
 	shell_exec($command_error);
 	$error=file_get_contents($filename_error);
@@ -55,7 +55,7 @@
 	{
 		if($runcode)
 		{
-			exec("chmod a+x $executable"); 
+			//exec("chmod a+x $executable"); 
 			$output=shell_exec($executable.' < '.$filename_in);
 			if(trim($input)!=""){}
 			else if($output==$fout) $output="Sample case passed.";
@@ -63,14 +63,14 @@
 		}
 		else 
 		{
-			exec("chmod a+x $executable"); 
+			//exec("chmod a+x $executable"); 
 			$output=shell_exec($executable.' < '.$filename_in);
 			if($output==$fout) $output="Test case passed.";
 			else $output="Test case failed.";
 		}
 		echo "<label class=\"writeCode\">Output</label><br><br><pre class=\"GrayBlock\">$output</pre>";
 		
-        // echo "<textarea id='div' class=\"form-control\" name=\"output\" rows=\"10\" cols=\"50\">$output</textarea><br><br>";
+        //echo "<textarea id='div' class=\"form-control\" name=\"output\" rows=\"10\" cols=\"50\">$output</textarea><br><br>";
 	}
 	else if(!strpos($error,"error"))
 	{
