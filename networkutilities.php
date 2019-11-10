@@ -81,6 +81,16 @@ if(session_status()==PHP_SESSION_NONE)
                 die("Connection failed: " . $conn->connect_error);
             }
 
+            $usn=$_SESSION["usn"];
+            $query = "select * from user_scores where usn='$usn' and topic_name='nu'";
+            $res=$conn->query($query);
+            
+            if ($res->num_rows == 1)
+            { 
+              $row = $res->fetch_assoc();
+              echo "Quiz already attemped! Your score: ".$row["quiz_score"];
+            }
+            else{
             $a= [1,2,3,4,5];
             $opt = ['a','b','c','d']; 
             $questionno = 1;
@@ -101,11 +111,11 @@ if(session_status()==PHP_SESSION_NONE)
               echo "<span id=\"nu".$i."\"></span></p><br>";
               $questionno += 1;
             }
-            $conn->close();
-            
-            ?>
-            <input type="hidden" name="quizID" value="cn.nu.8">
-            <input type="submit" id="quizSub" class="ui left floated button" value="Submit">
+        echo "<input type=\"hidden\" name=\"quizID\" value=\"cn.nu.5\">";
+        echo "<input type=\"submit\" id=\"quizSub\" class=\"ui left floated button\" value=\"Submit\">";
+        }
+        $conn->close();
+        ?>
         </form><br><br>
       <div id="result"></div>
       

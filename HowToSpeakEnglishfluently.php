@@ -125,7 +125,7 @@ There are no shortcuts in life. Definitely, no shortcuts to learn English.
 </iframe>       </div>
       
       <div id="faqs" style="display: none;">
-      <form name="Quiz1">
+      <form name="quiz" id="quiz" action="quizProcess.php" method="POST">
       <?php
             $servername = "localhost:3306";
             $db_username = "root";
@@ -140,6 +140,16 @@ There are no shortcuts in life. Definitely, no shortcuts to learn English.
                 die("Connection failed: " . $conn->connect_error);
             }
 
+            $usn=$_SESSION["usn"];
+            $query = "select * from user_scores where usn='$usn' and topic_name='hts'";
+            $res=$conn->query($query);
+            
+            if ($res->num_rows == 1)
+            { 
+              $row = $res->fetch_assoc();
+              echo "Quiz already attemped! Your score: ".$row["quiz_score"];
+            }
+            else{
             $a= [1,2,3,4,5];
             $opt = ['a','b','c','d']; 
             $questionno = 1;
@@ -160,11 +170,11 @@ There are no shortcuts in life. Definitely, no shortcuts to learn English.
               echo "<span id=\"hts".$i."\"></span></p><br>";
               $questionno += 1;
             }
-            $conn->close();
-            
-            ?>
-            <input type="hidden" name="quizID" value="eng.hts.5">
-            <input type="submit" id="quizSub" class="ui left floated button" value="Submit">
+        echo "<input type=\"hidden\" name=\"quizID\" value=\"eng.hts.5\">";
+        echo "<input type=\"submit\" id=\"quizSub\" class=\"ui left floated button\" value=\"Submit\">";
+        }
+        $conn->close();
+        ?>
         </form><br><br>
       <div id="result"></div>
       </div>

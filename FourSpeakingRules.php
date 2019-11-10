@@ -41,16 +41,6 @@ if(session_status()==PHP_SESSION_NONE)
    <a class="item">
     About Us
   </a>
-    <?php
-    session_start();
-    if(!isset($_SESSION["username"])) echo "<a class=\"item\" href=\"login.php\">Login</a><a class=\"item\" href=\"register.php\">Register</a>";
-    else 
-    { 
-      echo "<a class=\"item\">"; 
-      echo $_SESSION['username'];
-      echo "</a><a class=\"item\" href=\"logoutprocess.php\">Logout</a>";
-    }
-    ?>
 </div>
 </div>
   <div class="ui container" id="cont">
@@ -141,6 +131,16 @@ Another problem I see is that many students study the news. However, the languag
                 die("Connection failed: " . $conn->connect_error);
             }
 
+            $usn=$_SESSION["usn"];
+            $query = "select * from user_scores where usn='$usn' and topic_name='fsr'";
+            $res=$conn->query($query);
+            
+            if ($res->num_rows == 1)
+            { 
+              $row = $res->fetch_assoc();
+              echo "Quiz already attemped! Your score: ".$row["quiz_score"];
+            }
+            else{
             $a= [1,2,3,4,5];
             $opt = ['a','b','c','d']; 
             $questionno = 1;
@@ -161,11 +161,12 @@ Another problem I see is that many students study the news. However, the languag
               echo "<span id=\"fsr".$i."\"></span></p><br>";
               $questionno += 1;
             }
-            $conn->close();
             
-            ?>
-            <input type="hidden" name="quizID" value="eng.fsr.5">
-            <input type="submit" id="quizSub" class="ui left floated button" value="Submit">
+        echo "<input type=\"hidden\" name=\"quizID\" value=\"eng.fsr.5\">";
+        echo "<input type=\"submit\" id=\"quizSub\" class=\"ui left floated button\" value=\"Submit\">";
+        }
+        $conn->close();
+        ?>
         </form><br><br>
       <div id="result"></div>
       </div>

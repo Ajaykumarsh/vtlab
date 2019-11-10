@@ -114,6 +114,16 @@ If you want to improve your business English, you are going to have to spend tim
                 die("Connection failed: " . $conn->connect_error);
             }
 
+            $usn=$_SESSION["usn"];
+            $query = "select * from user_scores where usn='$usn' and topic_name='en'";
+            $res=$conn->query($query);
+            
+            if ($res->num_rows == 1)
+            { 
+              $row = $res->fetch_assoc();
+              echo "Quiz already attemped! Your score: ".$row["quiz_score"];
+            }
+            else{
             $a= [1,2,3,4,5];
             $opt = ['a','b','c','d']; 
             $questionno = 1;
@@ -134,11 +144,12 @@ If you want to improve your business English, you are going to have to spend tim
               echo "<span id=\"en".$i."\"></span></p><br>";
               $questionno += 1;
             }
-            $conn->close();
             
-            ?>
-            <input type="hidden" name="quizID" value="eng.en.5">
-            <input type="submit" id="quizSub" class="ui left floated button" value="Submit">
+        echo "<input type=\"hidden\" name=\"quizID\" value=\"eng.en.5\">";
+        echo "<input type=\"submit\" id=\"quizSub\" class=\"ui left floated button\" value=\"Submit\">";
+        }
+        $conn->close();
+        ?>
             </form><br><br>
       <div id="result"></div>
       </div>
