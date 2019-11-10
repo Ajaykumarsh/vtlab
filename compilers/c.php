@@ -35,7 +35,7 @@
 		$fout=fread($filename_out,filesize("outputs\\run".$pname."out.txt"));
 		fclose($filename_out);
 		}
-	}`
+	}
 	else
 	{
 	$filename_in="inputs\\".$pname."in.txt";
