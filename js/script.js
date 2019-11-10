@@ -67,22 +67,6 @@ $(document).ready(function(){
           $('#toTop').fadeOut();
       }
   });
-
-  // $("#dion1").click(function(){
-  //   $("#accord1").slideToggle();
-  //   $("#accord2").slideUp();
-  //   $("#accord3").slideUp();
-  // });
-  // $("#dion2").click(function(){
-  //   $("#accord2").slideToggle();
-  //   $("#accord1").slideUp();
-  //   $("#accord3").slideUp();
-  // });
-  // $("#dion3").click(function(){
-  //   $("#accord3").slideToggle();
-  //   $("#accord1").slideUp();
-  //   $("#accord2").slideUp();
-  // });
   
   $("#toTop").click(function () {
      $("html, body").animate({scrollTop: 0}, 500);
@@ -104,3 +88,58 @@ $(document).ready(function(){
       x.style.display = "block";
     }
   }
+
+$(document).ready(function(){
+  $("#st").click(function(){
+        $("#outputBox").html("<div class=\"writeCode\">Loading ......</div>");
+        document.f2.extra.value = "runn";
+  });
+});
+
+$(document).ready(function(){
+  $("#subb").click(function(){
+        $("#outputBox").html("<div class=\"writeCode\">Loading ......</div>");
+        document.f2.extra.value = "subb";
+  });
+});
+
+  $(document).ready(function(){
+    //listen for form submission
+    $('#form').on('submit', function(e){
+      //prevent form from submitting and leaving page
+      e.preventDefault();
+      let url1="compile.php";
+      // AJAX 
+      $.ajax({
+            type: "POST", //type of submit
+            cache: false, //important or else you might get wrong data returned to you
+            url: url1, //destination
+            datatype: "html", //expected data format from process.php
+            data: $('form').serialize(), //target your form's data and serialize for a POST
+            success: function(result) { // data is the var which holds the output of your process.php
+
+                // locate the div with #result and fill it with returned data from process.php
+                $('#outputBox').html(result);
+            }
+        });
+    });
+
+    $('#quiz').on('submit', function(e){
+      //prevent form from submitting and leaving page
+      e.preventDefault();
+      let url1="quizProcess.php";
+      // AJAX 
+      $.ajax({
+            type: "POST", //type of submit
+            cache: false, //important or else you might get wrong data returned to you
+            url: url1, //destination
+            datatype: "html", //expected data format from process.php
+            data: $('form').serialize(), //target your form's data and serialize for a POST
+            success: function(result) { // data is the var which holds the output of your process.php
+
+                // locate the div with #result and fill it with returned data from process.php
+                $('#result').html(result);
+            }
+        });
+    });
+});

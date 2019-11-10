@@ -1,4 +1,4 @@
-<?php
+<?php 
 session_start();
 if($_POST)
 {
@@ -26,14 +26,14 @@ if($_POST)
     if($_POST["$name$a"]==$row["answer_no"])
     {
       $total += 1;
-      echo "<script>$(\"#$name$a\").html(\"<code>Correct Answer!</code><br>\");</script>";
+      echo "<script>$(\"#$name$a\").html(\"<code style='color:green;'>Correct Answer!</code><br>\");</script>";
     }
     else
     {
       $sql="select options_name from answer_$sub where option_no = '".$row["answer_no"]."';";
       $result=$conn->query($sql);
       $row=$result->fetch_assoc();
-      echo "<script>$(\"#$name$a\").html(\"<code>Incorrect answer.</code><br><code>Correct answer is ".$row["options_name"]."</code><br>\");</script>";
+      echo "<script>$(\"#$name$a\").html(\"<code style='color:red;'>Incorrect answer.</code><br><code style='color:red;'>Correct answer: ".$row["options_name"]."</code><br>\");</script>";
     }
 
     $a = $a - 1;

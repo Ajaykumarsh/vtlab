@@ -99,7 +99,7 @@ If you want to improve your business English, you are going to have to spend tim
 </iframe>      </div>
       
       <div id="faqs" style="display: none;">
-        <form name="Quiz1">
+      <form name="quiz" id="quiz" action="quizProcess.php" method="POST">
             <?php
             $servername = "localhost:3306";
             $db_username = "root";
@@ -137,8 +137,10 @@ If you want to improve your business English, you are going to have to spend tim
             $conn->close();
             
             ?>
-            <input type="submit" id="quizSub" class="ui left floated button" value="Submit" onclick="quizCorrection()">
-        </form>
+            <input type="hidden" name="quizID" value="eng.en.5">
+            <input type="submit" id="quizSub" class="ui left floated button" value="Submit">
+            </form><br><br>
+      <div id="result"></div>
       </div>
     </div>
   </div>

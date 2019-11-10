@@ -163,8 +163,10 @@ There are no shortcuts in life. Definitely, no shortcuts to learn English.
             $conn->close();
             
             ?>
-            <input type="submit" id="quizSub" class="ui left floated button" value="Submit" onclick="quizCorrection()">
-        </form>
+            <input type="hidden" name="quizID" value="eng.hts.5">
+            <input type="submit" id="quizSub" class="ui left floated button" value="Submit">
+        </form><br><br>
+      <div id="result"></div>
       </div>
       
     </div>

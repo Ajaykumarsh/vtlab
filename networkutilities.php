@@ -26,8 +26,8 @@ if(session_status()==PHP_SESSION_NONE)
 </head>
 <body>
   <h1 class="ui header" style="text-align:center" id = "head">
-      <a class="ui circular image" href="http://dsce.edu.in"><img src="https://cdn.glitch.com/f3f0a812-ef86-4316-8cee-84e24f8e112e%2Fdsce.png?v=1566407586257"></a>
-  Virtual Labs 
+      <a class="ui circular image" href="http://dsce.edu.in"><img src="images/dscelogo.jpg"></a>
+      <a href="titles.php">Virtual Labs</a>
 </h1>
   <div id="toTop"><i class="chevron up icon"></i></div>
   <div>
@@ -66,7 +66,7 @@ if(session_status()==PHP_SESSION_NONE)
     
 <div id="faqs" style="display: none;">
       
-      <form name="Quiz1"> 
+      <form name="quiz" id="quiz" action="quizProcess.php" method="POST">
       <?php
             $servername = "localhost:3306";
             $db_username = "root";
@@ -104,8 +104,10 @@ if(session_status()==PHP_SESSION_NONE)
             $conn->close();
             
             ?>
-            <input type="submit" id="quizSub" class="ui left floated button" value="Submit" onclick="quizCorrection()">
-        </form>
+            <input type="hidden" name="quizID" value="cn.nu.8">
+            <input type="submit" id="quizSub" class="ui left floated button" value="Submit">
+        </form><br><br>
+      <div id="result"></div>
       
       </div>
     </div>

@@ -116,7 +116,7 @@ Another problem I see is that many students study the news. However, the languag
       
       <div id="faqs" style="display: none;">
       
-      <form name="Quiz1">
+      <form name="quiz" id="quiz" action="quizProcess.php" method="POST">
       <?php
             $servername = "localhost:3306";
             $db_username = "root";
@@ -154,9 +154,10 @@ Another problem I see is that many students study the news. However, the languag
             $conn->close();
             
             ?>
-            <input type="submit" id="quizSub" class="ui left floated button" value="Submit" onclick="quizCorrection()">
-        </form>
-      
+            <input type="hidden" name="quizID" value="eng.fsr.5">
+            <input type="submit" id="quizSub" class="ui left floated button" value="Submit">
+        </form><br><br>
+      <div id="result"></div>
       </div>
     </div>
   </div>

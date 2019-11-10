@@ -172,66 +172,8 @@ void main()
         <input type="hidden" name="prog" value="queue" >
           <input type="submit" id="st" class="ui left floated button" value="Run Code" onclick="myFunction2()">
           <input type="submit" id="subb" class="ui left floated button" value="Submit" onclick="myFunction2()"><br><br><br>
+          </form><br>
 
-          </form>
-
-         <script type="text/javascript">
-          $(document).ready(function(){
-            $("#st").click(function(){
-                  $("#outputBox").html("<div class=\"writeCode\">Loading ......</div>");
-                  document.f2.extra.value = "runn";
-            });
-          });
-          </script>
-          <script type="text/javascript">
-          $(document).ready(function(){
-            $("#subb").click(function(){
-                  $("#outputBox").html("<div class=\"writeCode\">Loading ......</div>");
-                  document.f2.extra.value = "subb";
-            });
-          });
-          </script>
-
-          <script type="text/javascript">
-            $(document).ready(function(){
-              //listen for form submission
-              $('form').on('submit', function(e){
-                //prevent form from submitting and leaving page
-                e.preventDefault();
-                let url1="compile.php";
-
-                // jQuery('#quizSub').click(function(){
-                //     $(this).data('clicked', true);
-                // });
-
-                //if( $(this.closest(attr('id')) == quizSub)
-                if(jQuery('#quizSub').data('clicked')) {
-                    //clicked element, do-some-stuff
-                    url1="quizProcess.php";
-                } 
-                else if(jQuery('#st').data('clicked') || jQuery('#subb').data('clicked'))
-                {
-                  url1="compile.php";
-                }
-                // else url1="quizProcess.php";
-
-                // AJAX 
-                $.ajax({
-                      type: "POST", //type of submit
-                      cache: false, //important or else you might get wrong data returned to you
-                      url: url1, //destination
-                      datatype: "html", //expected data format from process.php
-                      data: $('form').serialize(), //target your form's data and serialize for a POST
-                      success: function(result) { // data is the var which holds the output of your process.php
-
-                          // locate the div with #result and fill it with returned data from process.php
-                          $('#outputBox').html(result);
-                      }
-                  });
-              });
-          });
-          </script>
-          <br>
           <div id="outputBox" style="display:None;">Output:<br><br>
           <div name="output"></div><br>
           </div>
@@ -240,7 +182,7 @@ void main()
       </div>
       
       <div id="faqs" style="display: none;">
-      <form name="queue_quiz" action="quizProcess.php" method="POST">
+      <form name="quiz" id="quiz" action="quizProcess.php" method="POST">
       <?php
         $servername = "localhost:3306";
         $db_username = "root";
@@ -281,8 +223,7 @@ void main()
         <input type="hidden" name="quizID" value="ds.que.8">
           <input type="submit" id="quizSub" class="ui left floated button" value="Submit">
         </form><br><br>
-        <div id="result">
-        </div>
+        <div id="result"></div>
         </div>
       </div>
       </div>
